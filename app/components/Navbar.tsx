@@ -14,7 +14,9 @@ const Navbar = () => {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="bg-transparent">
+              Services
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li>
@@ -83,7 +85,9 @@ const Navbar = () => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuTrigger>About</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="bg-transparent">
+              About
+            </NavigationMenuTrigger>
 
             <NavigationMenuContent>
               <ul className="flex flex-col gap-3 p-4 md:w-[400px] lg:w-[500px]">
