@@ -21,8 +21,6 @@ const HorizontalBand = () => {
     "/images/loba.png",
   ];
 
-  const names = ["Loba", "Loba", "Loba", "Loba", "Loba", "Loba"];
-
   return (
     <div className="bg-black">
       <div

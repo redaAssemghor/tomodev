@@ -8,7 +8,7 @@ export default function Home() {
       <Header />
       <Hero />
       <div className="flex flex-col gap-4">
-        <h1 className="text-3xl font-semibold">they trust us</h1>
+        <h1 className="text-3xl font-semibold px-4">they trust us</h1>
         <HorizontalBand />
       </div>
     </main>
