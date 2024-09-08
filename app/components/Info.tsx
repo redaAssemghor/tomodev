@@ -34,10 +34,10 @@ const Info = () => {
             </li>
 
             <li className="flex gap-4 items-center text-2xl">
-              <FaExternalLinkAlt className="text-[#04E4FF]" />
+              <FaExternalLinkAlt className="text-[--secondary]" />
               <h2>
                 Tailored Branding Strategies{" "}
-                <span className="font-bold text-[#04E4FF]">
+                <span className="font-bold text-[--secondary]">
                   To Drive Engagement
                 </span>
               </h2>
@@ -47,8 +47,10 @@ const Info = () => {
 
         <Image height={600} width={600} src="/info-img.png" alt="info-img" />
       </div>
-      <div>
+
+      <div className="relative bg-gradient-to-r from-[--accent] to-bg-inherit w-full h-[100px] flex justify-start items-center">
         <HeroVideoDialog
+          className="w-[200px]"
           thumbnailSrc="/meme.avif"
           videoSrc="https://youtu.be/ZHCnvmTlIHY"
         />

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #00042a;
+  --secondary: #04e4ff;
+  --accent: #791bce;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

@@ -26,7 +26,7 @@ const Hero = () => {
       <div className="absolute right-0 top-0 w-full z-0">
         <Marquee3D />
       </div>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-full bg-gradient-to-r from-[#1B2C5C] dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-full bg-gradient-to-r from-[--primary] dark:from-background"></div>
 
       <div className="flex h-full w-2/3 justify-center px-32 flex-col gap-8 z-10">
         <h1 className="z-10 text-lg max-w-3xl leading-relaxed lg:text-xl lg:max-w-3xl">
