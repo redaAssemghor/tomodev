@@ -50,7 +50,7 @@ const Info = () => {
       <div>
         <HeroVideoDialog
           thumbnailSrc="/meme.avif"
-          videoSrc="https://www.youtube.com/watch?v=ZHCnvmTlIHY"
+          videoSrc="https://youtu.be/ZHCnvmTlIHY"
         />
       </div>
     </div>
