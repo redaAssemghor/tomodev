@@ -4,7 +4,7 @@ import ShimmerButton from "@/components/magicui/shimmer-button";
 
 const Header = () => {
   return (
-    <nav className="flex justify-between items-center p-10 w-full z-50 fixed">
+    <nav className="flex justify-between items-center p-5 w-full z-50 fixed border-b text-white border-white">
       <div>
         <h1>Tomodev</h1>
       </div>

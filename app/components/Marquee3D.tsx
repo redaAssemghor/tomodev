@@ -52,9 +52,10 @@ const group3 = [
 
 const Marquee3D = () => {
   return (
-    <div className="absolute right-0 top-0 h-screen z-0">
+    <div className="absolute right-0 top-0 z-0">
       <div className="flex right-0 flex-row gap-32 h-full w-full justify-end">
         <Marquee
+          pauseOnHover
           reverse
           className=" justify-center overflow-hidden [--duration:100s] [--gap:1rem]"
           vertical
@@ -75,6 +76,7 @@ const Marquee3D = () => {
           ))}
         </Marquee>
         <Marquee
+          pauseOnHover
           className="justify-center overflow-hidden [--duration:100s] [--gap:1rem]"
           vertical
           style={{
