@@ -48,7 +48,10 @@ const Info = () => {
         <Image height={600} width={600} src="/info-img.png" alt="info-img" />
       </div>
       <div>
-        <HeroVideoDialog />
+        <HeroVideoDialog
+          thumbnailSrc="/meme.avif"
+          videoSrc="https://www.youtube.com/watch?v=ZHCnvmTlIHY"
+        />
       </div>
     </div>
   );
