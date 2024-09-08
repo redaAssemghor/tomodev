@@ -4,8 +4,11 @@
 
 :root {
   --primary: #00042a;
-  --secondary: #04e4ff;
+  --secondary: #01afe9;
   --accent: #791bce;
+  --light: #f1f5fe;
+  --text1: #009cff;
+  --text2: #5f6568;
 }
 
 @layer base {
