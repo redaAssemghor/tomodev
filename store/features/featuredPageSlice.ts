@@ -5,7 +5,7 @@ interface FeaturedPageState {
 }
 
 const initialState: FeaturedPageState = {
-  value: "",
+  value: "featured",
 };
 
 const featuredPageSlice = createSlice({
