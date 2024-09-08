@@ -110,7 +110,7 @@ const Marquee3D = () => {
               key={idx}
               src={data.img}
               alt={data.name}
-              className="w-[300px] mx-auto h-full w-full cursor-pointer rounded-xl border border-neutral-300 transition-all duration-300 hover:ring-1 hover:ring-neutral-300"
+              className=" mx-auto h-full  cursor-pointer rounded-xl"
             />
           ))}
         </Marquee>
