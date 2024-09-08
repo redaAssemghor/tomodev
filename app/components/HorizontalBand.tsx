@@ -11,7 +11,7 @@ const HorizontalBand = () => {
     if (ref.current) {
       horizontalAnimation(ref.current);
     }
-  });
+  }, []);
   const brands = [
     "/images/loba.png",
     "/images/loba.png",
@@ -22,7 +22,10 @@ const HorizontalBand = () => {
   ];
 
   return (
-    <div className="bg-black">
+    <div className="bg-black overflow-hidden relative">
+      <h1 className="absolute z-50 bg-black text-white text-2xl h-full flex items-center justify-center w-[500px]">
+        They trust us
+      </h1>
       <div
         ref={ref}
         className="flex gap-8 justify-between items-center p-4  text-white"

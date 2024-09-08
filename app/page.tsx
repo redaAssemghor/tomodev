@@ -7,10 +7,7 @@ export default function Home() {
     <main className="overflow-hidden">
       <Header />
       <Hero />
-      <div className="flex flex-col gap-4">
-        <h1 className="text-3xl font-semibold px-4">they trust us</h1>
-        <HorizontalBand />
-      </div>
+      <HorizontalBand />
     </main>
   );
 }

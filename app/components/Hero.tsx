@@ -2,11 +2,10 @@
 
 import { fadeIn } from "@/animations/fadeIn";
 import BlurIn from "@/components/magicui/blur-in";
-import Particles from "@/components/magicui/particles";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import { useGSAP } from "@gsap/react";
-import Image from "next/image";
 import { useRef } from "react";
+import Marquee3D from "./Marquee3D";
 
 const Hero = () => {
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -23,17 +22,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="flex justify-around items-center relative p-10">
-      <Particles
-        className="absolute inset-10"
-        quantity={200}
-        ease={80}
-        color="#000000"
-        refresh
-      />
-      <div className="flex flex-col gap-8 px-6 py-12 md:py-16 lg:py-24 lg:px-12 ">
+    <div className="relative flex justify-around items-center p-10">
+      <div className="absolute right-0 top-0 w-full h-full z-0">
+        <Marquee3D />
+      </div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-full bg-gradient-to-r from-white dark:from-background"></div>
+
+      <div className="flex flex-col gap-8 px-6 py-12 md:py-16 lg:py-24 lg:px-12 z-10">
         <div className="">
-          <BlurIn word={"#1 Digital Agency"} />
+          <BlurIn word={"We Grow Brands Online"} />
         </div>
         <p
           ref={textRef}
@@ -48,16 +45,6 @@ const Hero = () => {
         <div>
           <ShimmerButton>REQUEST YOUR QUOTE</ShimmerButton>
         </div>
-      </div>
-
-      <div ref={imgRef}>
-        <Image
-          src="/images/hero.png"
-          alt="Hero"
-          width={400}
-          height={400}
-          className="object-cover"
-        />
       </div>
     </div>
   );

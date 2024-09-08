@@ -11,7 +11,7 @@ export const fadeIn = (element: HTMLElement) => {
 export const horizontalAnimation = (element: HTMLElement) => {
   gsap.fromTo(
     element,
-    { xPercent: 100 },
+    { xPercent: 0 },
     { xPercent: -100, duration: 50, repeat: -1, ease: "none" }
   );
 };
