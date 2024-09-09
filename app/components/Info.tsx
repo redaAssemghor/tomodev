@@ -1,11 +1,25 @@
+import { scrollAnimation } from "@/animations/fadeIn";
 import HeroVideoDialog from "@/components/example/hero-video-dialog-demo-top-in-bottom-out";
+import { useGSAP } from "@gsap/react";
 import Image from "next/image";
+import { useRef } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Info = () => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (ref.current) {
+      scrollAnimation(ref.current);
+    }
+  });
+
   return (
     <div className="w-full h-full lg:p-32 px-4 py-20 bg-inherit text-white relative">
-      <div className="flex lg:flex-row flex-col gap-8  justify-between">
+      <div
+        ref={ref}
+        className="flex lg:flex-row flex-col gap-8  justify-between"
+      >
         <div className="flex flex-col gap-6">
           <h1 className="lg:text-4xl text-2xl pb-8">
             Creative Web Agency

@@ -2,12 +2,16 @@
 import Link from "next/link";
 import Navbar from "./Navbar";
 import ShimmerButton from "@/components/magicui/shimmer-button";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CiMenuBurger } from "react-icons/ci";
 import { FaChevronDown } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
+import { useGSAP } from "@gsap/react";
+import { burgerMenuAnimation } from "@/animations/fadeIn";
 
 const Header = () => {
+  const burgerRef = useRef(null);
+
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [openLinks, setOpenLinks] = useState("");
@@ -17,7 +21,7 @@ const Header = () => {
   };
 
   const handleMenu = () => {
-    setOpenMenu(!openMenu);
+    setOpenMenu((prev) => !prev);
   };
 
   useEffect(() => {
@@ -32,6 +36,12 @@ const Header = () => {
     };
   }, []);
 
+  useGSAP(() => {
+    if (burgerRef.current) {
+      burgerMenuAnimation(burgerRef.current, openMenu);
+    }
+  }, [openMenu]);
+
   return (
     <nav
       className={`flex justify-between items-center p-5 w-full z-50 fixed border-b-slate-50 text-white border-b duration-700 ${
@@ -42,12 +52,16 @@ const Header = () => {
         <h1>Tomodev</h1>
       </div>
       {/* Mobile Menu Toggle Button */}
-      <button className="block z-50 lg:hidden" onClick={handleMenu}>
+      <button
+        ref={burgerRef}
+        className="block z-50 lg:hidden"
+        onClick={handleMenu}
+      >
         {openMenu ? <RxCross1 size={40} /> : <CiMenuBurger size={40} />}
       </button>
 
       {/* Desktop Menu */}
-      <div className="hidden lg:flex items-center">
+      <div className="hidden lg:flex gap-10 items-center">
         <Navbar />
         <ul className="flex gap-4 items-center">
           <li className="border border-1 p-2 rounded-xl cursor-pointer">

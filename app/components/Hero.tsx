@@ -9,17 +9,16 @@ import ShinyButton from "@/components/magicui/shiny-button";
 
 const Hero = () => {
   const textRef = useRef<HTMLParagraphElement>(null);
-  const imgRef = useRef<HTMLParagraphElement>(null);
+  const text2Ref = useRef<HTMLParagraphElement>(null);
 
   useGSAP(() => {
     if (textRef.current) {
       fadeIn(textRef.current);
     }
-
-    if (imgRef.current) {
-      fadeIn(imgRef.current);
+    if (text2Ref.current) {
+      fadeIn(text2Ref.current);
     }
-  }, []);
+  });
 
   return (
     <div className="relative text-white h-screen">
@@ -29,7 +28,10 @@ const Hero = () => {
       <div className="pointer-events-none absolute inset-y-0 left-0 w-full bg-gradient-to-r from-[--primary] dark:from-background"></div>
 
       <div className="flex h-full lg:w-2/3 justify-center lg:px-32 px-4 flex-col gap-8 z-10">
-        <h1 className="z-10 text-lg max-w-3xl leading-relaxed lg:text-xl lg:max-w-3xl">
+        <h1
+          ref={text2Ref}
+          className="z-10 text-lg max-w-3xl leading-relaxed lg:text-xl lg:max-w-3xl"
+        >
           Top Web Design Agency
         </h1>
         <BlurIn className="" word={"We Grow Brands Online"} />
@@ -43,7 +45,7 @@ const Hero = () => {
         <div>
           {/* <ShimmerButton>SPEAK WITH OUR EXPERTS</ShimmerButton> */}
 
-          <ShinyButton className="z-40" text="SPEAK WITH OUR EXPERTS" />
+          <ShinyButton className="z-40 mt-8" text="SPEAK WITH OUR EXPERTS" />
         </div>
       </div>
     </div>

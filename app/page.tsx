@@ -8,11 +8,12 @@ import Info from "./components/Info";
 import { store } from "@/store/store";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
+import ServicePage from "./components/ServicePage";
 
 export default function Home() {
   return (
     <Provider store={store}>
-      <main className="overflow-hidden bg-[#00042A]">
+      <main className="overflow-hidden bg-[--primary]">
         <Header />
         <Hero />
         <HorizontalBand />
@@ -20,6 +21,7 @@ export default function Home() {
         <Featured />
         <Projects />
         <Services />
+        <ServicePage />
       </main>
     </Provider>
   );
