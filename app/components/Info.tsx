@@ -4,10 +4,10 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Info = () => {
   return (
-    <div className="w-full h-full p-32 bg-inherit text-white relative">
-      <div className="flex justify-between">
+    <div className="w-full h-full lg:p-32 px-4 py-20 bg-inherit text-white relative">
+      <div className="flex lg:flex-row flex-col gap-8  justify-between">
         <div className="flex flex-col gap-6">
-          <h1 className="text-4xl pb-8">
+          <h1 className="lg:text-4xl text-2xl pb-8">
             Creative Web Agency
             <span className="font-bold"> Delivering Custom Solutions</span>
           </h1>

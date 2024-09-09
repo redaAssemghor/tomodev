@@ -7,18 +7,20 @@ import { TbBulb } from "react-icons/tb";
 
 const Services = () => {
   return (
-    <div className="flex flex-col pt-24 gap-8 items-center justify-end bg-[--light] relative">
-      <div className="flex flex-col py-20 gap-3 items-center justify-center ">
-        <h1 className="text-[--text1] text-6xl font-bold">Our services</h1>
-        <p className="text-4xl text-[--text2]">
+    <div className="flex flex-col lg:pt-24 gap-8 items-center bg-[--light] relative">
+      <div className="flex flex-col lg:py-20 p-10 gap-3 items-center justify-center ">
+        <h1 className="text-[--text1] lg:text-6xl text-3xl font-bold">
+          Our services
+        </h1>
+        <p className="lg:text-4xl text-xl text-[--text2]">
           How to create a website tailored to your unique business goals?
         </p>
-        <h2 className="text-4xl font-medium text-[--text2]">
+        <h2 className="lg:text-4xl text-xl font-medium text-[--text2]">
           customized and goal-oriented digital solutions.
         </h2>
       </div>
 
-      <div className="flex gap-28">
+      <div className="lg:flex lg:gap-28 grid grid-cols-3 gap-8">
         <div className="flex flex-col gap-4 items-center w-[100px] h-[200px] justify-between">
           <h1 className="text-lg font-semibold text-center">
             Web Design & Development

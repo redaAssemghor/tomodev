@@ -57,7 +57,7 @@ const Marquee3D = () => {
         <Marquee
           pauseOnHover
           reverse
-          className=" justify-center overflow-hidden [--duration:100s] [--gap:1rem]"
+          className="justify-center overflow-hidden [--duration:100s] [--gap:1rem]"
           vertical
           style={{
             transform:

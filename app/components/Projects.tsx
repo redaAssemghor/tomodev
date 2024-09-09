@@ -104,7 +104,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="relative text-white bg-inherit py-10 px-8 grid grid-cols-2 gap-4">
+    <div className="relative text-white bg-inherit py-10 lg:px-8 px-4 grid lg:grid-cols-2 grid-cols-1 gap-4">
       {selectedPage &&
         selectedPage.map((project, i) => (
           <div
@@ -114,8 +114,10 @@ const Projects = () => {
             className="relative"
           >
             <div className="absolute bottom-0 left-0 py-14 px-10 flex flex-col gap-4">
-              <h1 className="font-bold text-3xl">{project.name}</h1>
-              <p className="text-xl font-semibold">{project.description}</p>
+              <h1 className="font-bold lg:text-3xl text-xl">{project.name}</h1>
+              <p className="lg:text-xl text-lg font-semibold">
+                {project.description}
+              </p>
             </div>
             <button
               className={`absolute w-[150px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-black bg-opacity-50 p-10 font-light text-2xl z-20 transition-opacity duration-700 ${

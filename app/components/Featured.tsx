@@ -24,9 +24,11 @@ const Featured = () => {
   return (
     <div className="text-white flex flex-col justify-center items-center bg-inherit relative ">
       <div className="w-full h-full flex flex-col items-center gap-5 bg-gradient-to-t from-[--accent] to-bg-inherit">
-        <h1 className="font-bold text-xl">OUR WORK</h1>
-        <h2 className="font-bold text-3xl">Featured Website Design Projects</h2>
-        <h3 className="font-thin text-xl">
+        <h1 className="font-bold lg:text-xl text-lg">OUR WORK</h1>
+        <h2 className="font-bold lg:text-3xl text-xl">
+          Featured Website Design Projects
+        </h2>
+        <h3 className="font-thin lg:text-xl text-lg">
           Custom B2C, B2B and eCommerce solutions
         </h3>
         <h6 className="font-thin text-xl">

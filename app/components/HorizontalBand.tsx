@@ -23,7 +23,7 @@ const HorizontalBand = () => {
 
   return (
     <div className="overflow-hidden relative bg-inherit">
-      <h1 className="absolute z-50 bg-inherit text-white text-2xl h-full flex items-center justify-center w-[500px]">
+      <h1 className="absolute z-40 bg-inherit text-white lg:text-2xl px-4 h-full flex items-center justify-center lg:w-[500px]">
         They trust us
       </h1>
       <div
