@@ -5,7 +5,7 @@ interface ServicesState {
 }
 
 const initialState: ServicesState = {
-  value: "",
+  value: "Web Design & Development",
 };
 
 const servicesSlice = createSlice({

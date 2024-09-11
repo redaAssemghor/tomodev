@@ -49,3 +49,18 @@ export const scrollAnimation = (element: HTMLElement) => {
     }
   );
 };
+
+// button click animation
+export const buttonAnimation = (element: HTMLElement) => {
+  gsap.fromTo(
+    element,
+    { opacity: 0, scale: 0.8, z: 40 },
+    {
+      opacity: 1,
+      scale: 1,
+      duration: 0.6,
+      z: 0,
+      ease: "elastic.out(1, 0.4)", // Elastic easing for a "pop" effect
+    }
+  );
+};

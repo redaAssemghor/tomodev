@@ -24,15 +24,15 @@ const ServicePage = () => {
   }, [selectedService]);
 
   return (
-    <div className="bg-white relative p-20 w-full h-auto overflow-hidden">
+    <div className="bg-white relative lg:p-20 py-10 w-full h-auto overflow-hidden">
       {currentService ? (
         <div
           ref={ref}
           className="flex flex-col w-full lg:flex-row lg:gap-8 gap-4 items-center p-8"
         >
-          <div className="flex justify-between w-full gap-2">
-            <div className="flex flex-col gap-4">
-              <h2 className="text-2xl text-[--text1] font-bold">
+          <div className="lg:flex justify-between w-full gap-4">
+            <div className="flex flex-col gap-8">
+              <h2 className="text-3xl text-[--text1] font-bold">
                 {currentService.title}
               </h2>
 
@@ -55,8 +55,8 @@ const ServicePage = () => {
               <Image
                 src={currentService.img}
                 alt={currentService.title}
-                width={200}
-                height={200}
+                width={460}
+                height={400}
               />
             </div>
           </div>

@@ -34,13 +34,14 @@ const Hero = () => {
         >
           Top Web Design Agency
         </h1>
-        <BlurIn className="" word={"We Grow Brands Online"} />
+        <BlurIn word={"Transforming Ideas into Digital Reality"} />
 
         <p
           ref={textRef}
           className="text-lg max-w-3xl leading-relaxed lg:text-xl lg:max-w-3xl"
         >
-          Custom Websites, Branding & Digital Marketing Solutions
+          We craft custom websites and applications that drive results,
+          combining cutting-edge technology with seamless user experience.
         </p>
         <div>
           {/* <ShimmerButton>SPEAK WITH OUR EXPERTS</ShimmerButton> */}

@@ -4,7 +4,7 @@ export const servicesData = [
     description:
       "We create responsive and engaging websites tailored to your business needs.",
     color: "text-blue-600",
-    img: "/images/icon-1.png",
+    img: "/images/1.png",
     steps: [
       "Planning and Strategy",
       "Design and Prototyping",
@@ -17,7 +17,7 @@ export const servicesData = [
     description:
       "Our UI/UX design services focus on creating user-friendly, intuitive experiences.",
     color: "text-violet-700",
-    img: "/images/icon-2.png",
+    img: "/images/2.png",
     steps: [
       "Research and Analysis",
       "Wireframing and Prototyping",
@@ -30,7 +30,7 @@ export const servicesData = [
     description:
       "We provide comprehensive e-commerce solutions for all your online business needs.",
     color: "text-yellow-400",
-    img: "/images/icon-3.png",
+    img: "/images/3.png",
     steps: [
       "Requirement Gathering",
       "Platform Setup and Integration",
@@ -43,7 +43,7 @@ export const servicesData = [
     description:
       "Our digital marketing strategies help you reach your target audience effectively.",
     color: "text-green-500",
-    img: "/images/icon-4.png",
+    img: "/images/4.png",
     steps: [
       "Market Research and Strategy",
       "Campaign Setup",
@@ -56,7 +56,7 @@ export const servicesData = [
     description:
       "We ensure the security of your website and data with our advanced security services.",
     color: "text-teal-400",
-    img: "/images/icon-5.png",
+    img: "/images/5.png",
     steps: [
       "Security Assessment",
       "Implementation of Security Measures",
@@ -69,7 +69,7 @@ export const servicesData = [
     description:
       "Our consulting services help you develop the right strategies for digital success.",
     color: "text-fuchsia-500",
-    img: "/images/icon-6.png",
+    img: "/images/6.png",
     steps: [
       "Initial Consultation",
       "Strategic Planning",
