@@ -1,13 +1,12 @@
 import { PiArrowElbowDownRightThin } from "react-icons/pi";
 import Link from "next/link";
 import FooterLogo from "./FooterLogo";
-import Boxes from "../svgs/Boxes";
 
 const Footer = () => {
   return (
-    <div className="relative h-full bg-gradient-to-tr from-[--text] to-[--secondary]">
-      <div className="absolute right-0 top-0 h-64 w-64 background-pattern"></div>
-      <div className="text-white px-4 py-20 h-full">
+    <div className="h-full bg-gradient-to-tr from-[--text] to-[--secondary]">
+      <div className="relative text-white px-4 py-20 h-full">
+        <div className="absolute right-0 top-0 h-full w-full background-pattern"></div>
         <h1 className="font-bold text-6xl m-20">Let&rsquo;s Grow Your Brand</h1>
         <div className="flex w-full justify-around gap-2">
           {/* Main Services Section */}
