@@ -8,6 +8,7 @@ import { store } from "@/store/store";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
 import ServicePage from "./components/ServicePage";
+import ContactPage from "./components/ContactPage";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Projects />
         <Services />
         <ServicePage />
+        <ContactPage />
       </main>
     </Provider>
   );

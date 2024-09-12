@@ -113,7 +113,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="relative z-30 text-white bg-inherit py-20 lg:px-8 px-4 grid lg:grid-cols-2 grid-cols-1 gap-6">
+    <div className="relative z-20 text-white bg-inherit py-20 lg:px-8 px-4 grid lg:grid-cols-2 grid-cols-1 gap-6">
       <div
         ref={ref}
         className="z-[1] absolute h-full w-full bg-[--primary] bg-opacity-50"
