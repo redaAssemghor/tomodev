@@ -26,10 +26,12 @@ const animationProps = {
   },
 } as AnimationProps;
 interface ShinyButtonProps {
+  setIcon?: boolean;
   text: string;
   className?: string;
 }
 const ShinyButton = ({
+  setIcon = true,
   text = "shiny-button",
   className,
 }: ShinyButtonProps) => {
@@ -57,7 +59,7 @@ const ShinyButton = ({
         }}
         className="absolute inset-0 z-10 block rounded-[inherit] bg-[linear-gradient(-75deg,hsl(var(--primary)/10%)_calc(var(--x)+20%),hsl(var(--primary)/50%)_calc(var(--x)+25%),hsl(var(--primary)/10%)_calc(var(--x)+100%))] p-px"
       ></span>
-      <FaAngleRight />
+      {setIcon && <FaAngleRight className="pt-1" size={30} />}
     </motion.button>
   );
 };

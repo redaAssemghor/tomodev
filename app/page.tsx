@@ -1,7 +1,6 @@
 "use client";
 import { Provider } from "react-redux";
 import Featured from "./components/Featured";
-import Header from "./components/Header";
 import Hero from "./components/Hero";
 import HorizontalBand from "./components/HorizontalBand";
 import Info from "./components/Info";
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <Provider store={store}>
       <main className="overflow-hidden bg-[--primary]">
-        <Header />
         <Hero />
         <HorizontalBand />
         <Info />

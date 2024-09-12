@@ -27,7 +27,7 @@ const Featured = () => {
   };
 
   return (
-    <div className="text-white flex flex-col justify-center items-center bg-inherit relative">
+    <div className="text-white backdrop-blur-3xl flex flex-col justify-center items-center bg-inherit relative">
       <div className="w-full h-full flex flex-col items-center gap-5 bg-gradient-to-t from-[--accent] to-bg-inherit">
         <div ref={ref} className="flex flex-col items-center gap-5">
           <h1 className="font-bold lg:text-xl text-lg text-[--text1]">
@@ -36,11 +36,11 @@ const Featured = () => {
           <h2 className="font-bold lg:text-3xl text-xl">
             Featured Website Design Projects
           </h2>
-          <h3 className="font-thin text-[--text2] lg:text-xl text-lg">
+          <h3 className="font-thin neon-text lg:text-xl text-lg">
             Our web development agency reimagines digital experiences for brands
             of all sizes and across industries.
           </h3>
-          <h6 className="font-thin text-[--text2] text-xl">
+          <h6 className="font-thin neon-text text-xl">
             optimized for traffic, engagement and conversion.
           </h6>
         </div>

@@ -64,3 +64,15 @@ export const buttonAnimation = (element: HTMLElement) => {
     }
   );
 };
+
+// background colors animation
+export const backgroundAnimation = (element: HTMLElement) => {
+  gsap.to(element, {
+    backgroundPosition: "100% 50%", // Move the gradient across the element
+    duration: 5, // Animation duration in seconds
+    ease: "power1.inOut", // Easing for smooth animation
+    repeat: -1, // Infinite loop
+    yoyo: true, // Make the animation reverse after each loop
+    backgroundSize: "200% 200%", // Set background size larger for better transition effect
+  });
+};

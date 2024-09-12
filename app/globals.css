@@ -9,6 +9,9 @@
   --light: #f1f5fe;
   --text1: #009cff;
   --text2: #5f6568;
+  --text3: #04e4ff;
+  --text: #1b398f;
+  --dark: #00031f;
 }
 
 @layer base {
@@ -75,4 +78,10 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Neon blue text */
+.neon-text {
+  text-shadow: 0 0 5px #01afe9, 0 0 10px #01afe9, 0 0 20px #01afe9,
+    0 0 40px #01afe9, 0 0 80px #01afe9; /* Neon blue glow */
 }

@@ -99,7 +99,7 @@ const Services = () => {
       </div>
 
       {/* Mobile view navigation */}
-      <div className="lg:hidden flex items-center">
+      <div className="lg:hidden flex items-center text-[--text1]">
         <button
           ref={leftButtonRef}
           onClick={navigateLeft}
@@ -136,14 +136,14 @@ const Services = () => {
       </div>
 
       {/* Desktop view */}
-      <div className="lg:flex lg:gap-28 hidden gap-8">
+      <div className="lg:flex lg:gap-28 hidden gap-8 text-[--text2]">
         {servicesData.map((service, index) => (
           <div
             key={index}
             onClick={() => setCurrentIndex(index)}
             className="flex flex-col gap-4 items-center w-[100px] justify-between cursor-pointer -mb-[50px] z-40"
           >
-            <h1 className="text-sm font-semibold text-center hover:text-[--text1]">
+            <h1 className="text-sm font-bold text-center hover:text-[--text1]">
               {service.title}
             </h1>
             <button
