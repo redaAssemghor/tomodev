@@ -68,7 +68,7 @@ const Info = () => {
         <HeroVideoDialog
           thumbnailAlt="click to play video"
           className="w-[200px] rounded-sm"
-          thumbnailSrc="/thumbnail.jpg"
+          thumbnailSrc="/thumbnail.webp"
           videoSrc="/video/video.mp4"
         />
         <h1 className="font-semibold text-xl pl-10">1 minute video</h1>

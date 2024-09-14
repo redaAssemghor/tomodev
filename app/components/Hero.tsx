@@ -46,7 +46,10 @@ const Hero = () => {
         <div>
           {/* <ShimmerButton>SPEAK WITH OUR EXPERTS</ShimmerButton> */}
 
-          <ShinyButton className="z-40 mt-8" text="SPEAK WITH OUR EXPERTS" />
+          <ShinyButton
+            className="z-40 mt-8 border-[0.5px] border-gray-300"
+            text="SPEAK WITH OUR EXPERTS"
+          />
         </div>
       </div>
     </div>

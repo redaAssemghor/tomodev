@@ -25,12 +25,12 @@ const Navbar = () => {
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/"
                     >
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        shadcn/ui
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Beautifully designed components built with Radix UI and
-                        Tailwind CSS.
+                      <div className="my-5 text-lg font-medium">TOMODEV</div>
+                      <p className="text-sm text-muted-foreground ">
+                        TOMODEV is a web agency that specializes in custom web
+                        design, branding, and eCommerce development, helping
+                        businesses create impactful digital experiences and grow
+                        online.
                       </p>
                     </Link>
                   </NavigationMenuLink>
@@ -43,10 +43,11 @@ const Navbar = () => {
                         href="/about"
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       >
-                        <h1 className="text-lg font-medium">About 1</h1>
+                        <h1 className="text-lg font-medium">
+                          Custom Web Design
+                        </h1>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          fill the container and center the content vertically
-                          and horizontally.
+                          create custom web design that is unique to your brand
                         </p>
                       </Link>
                     </NavigationMenuLink>
@@ -57,10 +58,11 @@ const Navbar = () => {
                         href="/about"
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       >
-                        <h1 className="text-lg font-medium">About 2</h1>
+                        <h1 className="text-lg font-medium">
+                          Branding Services
+                        </h1>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          fill the container and center the content vertically
-                          and horizontally.
+                          create a brand that represents your business
                         </p>
                       </Link>
                     </NavigationMenuLink>
@@ -71,10 +73,27 @@ const Navbar = () => {
                         href="/about"
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       >
-                        <h1 className="text-lg font-medium">About 3</h1>
+                        <h1 className="text-lg font-medium">
+                          eCommerce Design
+                        </h1>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          fill the container and center the content vertically
-                          and horizontally.
+                          create a custom eCommerce website
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/about"
+                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      >
+                        <h1 className="text-lg font-medium">
+                          Shopify Website Design
+                        </h1>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          create a custom Shopify website
                         </p>
                       </Link>
                     </NavigationMenuLink>
@@ -96,10 +115,9 @@ const Navbar = () => {
                     href="/about"
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                   >
-                    <h1 className="text-lg font-medium">About 3</h1>
+                    <h1 className="text-lg font-medium">Locations</h1>
                     <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                      fill the container and center the content vertically and
-                      horizontally.
+                      our locations and how to contact us
                     </p>
                   </Link>
                 </li>
@@ -109,10 +127,9 @@ const Navbar = () => {
                       href="/about"
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     >
-                      <h1 className="text-lg font-medium">About 3</h1>
+                      <h1 className="text-lg font-medium">Contact Us</h1>
                       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        fill the container and center the content vertically and
-                        horizontally.
+                        contact us to get started
                       </p>
                     </Link>
                   </NavigationMenuLink>
@@ -123,10 +140,9 @@ const Navbar = () => {
                       href="/about"
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     >
-                      <h1 className="text-lg font-medium">About 3</h1>
+                      <h1 className="text-lg font-medium">About Us</h1>
                       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        fill the container and center the content vertically and
-                        horizontally.
+                        learn more about TOMODEV
                       </p>
                     </Link>
                   </NavigationMenuLink>

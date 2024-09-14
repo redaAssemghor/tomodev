@@ -64,9 +64,9 @@ const Header = () => {
       <div className="hidden lg:flex gap-10 items-center">
         <Navbar />
         <ul className="flex gap-4 items-center">
-          <li className="border border-1 p-2 rounded-xl cursor-pointer">
+          {/* <li className="border border-1 p-2 rounded-xl cursor-pointer">
             <Link href="/s">EN</Link>
-          </li>
+          </li> */}
           <ShimmerButton>REQUEST YOUR QUOTE</ShimmerButton>
         </ul>
       </div>
@@ -157,7 +157,9 @@ const Header = () => {
         </div>
 
         {/* Shimmer Button in the Mobile Menu */}
-        <ShimmerButton className="mt-auto">REQUEST YOUR QUOTE</ShimmerButton>
+        <Link href={"/contact"}>
+          <ShimmerButton className="mt-auto">REQUEST YOUR QUOTE</ShimmerButton>
+        </Link>
       </div>
     </nav>
   );

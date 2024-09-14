@@ -43,7 +43,7 @@ const Footer = () => {
 
           {/* Apps & Development Section */}
           <div className="relative p-5 border-l">
-            <span className="absolute top-0 left-0 w-1 h-4 bg-white"></span>
+            <span className="absolute top-0 left-0 w-1 h-4 bg-white ronded-r-full"></span>
             <h1 className="font-bold text-3xl flex items-center justify-between cursor-pointer">
               Apps & Development
             </h1>
@@ -73,7 +73,7 @@ const Footer = () => {
 
           {/* Company Section */}
           <div className="relative p-5 border-l">
-            <span className="absolute top-0 left-0 w-1 h-4 bg-white"></span>
+            <span className="absolute top-0 left-0 w-1 h-4 bg-white ronded-r-full"></span>
             <h1 className="font-bold text-3xl flex items-center justify-between cursor-pointer">
               Show
             </h1>
@@ -102,7 +102,7 @@ const Footer = () => {
           </div>
 
           <div className="relative p-5 border-l">
-            <span className="absolute top-0 left-0 w-1 h-4 bg-white"></span>
+            <span className="absolute top-0 left-0 w-1 h-4 bg-white rounded-r-full"></span>
             <span className="footer-services widget_nav_menu"></span>
             <h1 className="font-bold text-3xl flex items-center justify-between cursor-pointer">
               Company

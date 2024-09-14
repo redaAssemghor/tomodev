@@ -66,7 +66,7 @@ const ContactPage = () => {
         <form className="relative w-full flex flex-col gap-4 p-6 max-w-lg">
           <div className="relative z-10 backdrop-blur-3xl blur-3xl h-full w-full">
             <span className="absolute z-10 top-20 left-20 w-[140px] h-[140px] rounded-full bg-[--text1]"></span>
-            <span className="absolute z-10 top-24 right-24 w-[140px] h-[140px] rounded-full bg-[--text1]"></span>
+            <span className="absolute z-10 top-24 right-24 w-[140px] h-[140px] rounded-full bg-[--accent]"></span>
           </div>
           <label
             htmlFor="Name"
