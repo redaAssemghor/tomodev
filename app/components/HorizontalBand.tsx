@@ -4,10 +4,6 @@ import { horizontalAnimation } from "@/animations/fadeIn";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import React from "../svgs/tech-icons/React";
-import Wordpress from "../svgs/tech-icons/Wordpress";
-import Unity from "../svgs/tech-icons/Unity";
-import Joomla from "../svgs/tech-icons/Joomla";
-import Shopify from "../svgs/tech-icons/Shopify";
 import Image from "next/image";
 
 const HorizontalBand = () => {
