@@ -5,10 +5,11 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import { FaAngleRight } from "react-icons/fa";
+import { FaAngleRight, FaLongArrowAltDown } from "react-icons/fa";
 import { PiPaperPlaneRightFill } from "react-icons/pi";
 import { TiHomeOutline } from "react-icons/ti";
 import Carousal from "./Carousal";
+import Form from "./Form";
 
 type ServiceHeroProps = {
   name: string;
@@ -40,7 +41,7 @@ const ServiceHero = ({
   });
 
   return (
-    <div className="relative h-full text-white">
+    <div className="relative text-white overflow-hidden">
       <div
         ref={ref}
         className="z-10 absolute h-full w-full bg-[--primary] bg-opacity-50"
@@ -50,6 +51,10 @@ const ServiceHero = ({
         }}
       ></div>
       <div className="relative flex lg:flex-row flex-col gap-10 z-40 py-28 lg:px-32 px-4">
+        <h1 className="absolute flex flex-col gap-8 left-2 text-xl justify-center items-center translate-y-52 opacity-30">
+          <span className="rotate-90">SCROLL</span>
+          <FaLongArrowAltDown />
+        </h1>
         <div>
           <ul className="flex gap-4">
             <li className="flex items-center gap-2">
@@ -83,8 +88,8 @@ const ServiceHero = ({
           />
         </div>
         <div className="relative max-w-[500px] p-5 shrink-0">
-          <h1 className="absolute top-0 -right-10 text-3xl font-bold transform translate-x-10">
-            TOMODEV
+          <h1 className="absolute right-0 text-4xl font-black translate-x-60 translate-y-52 rotate-90 opacity-30">
+            FEATURED WORK
           </h1>
           <Carousal>
             {modelsimg.map((img, i) => (
@@ -93,6 +98,7 @@ const ServiceHero = ({
           </Carousal>
         </div>
       </div>
+      <Form />
     </div>
   );
 };

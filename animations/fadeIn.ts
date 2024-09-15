@@ -76,22 +76,3 @@ export const backgroundAnimation = (element: HTMLElement) => {
     backgroundSize: "200% 200%", // Set background size larger for better transition effect
   });
 };
-export const imageSliderAnimation = (items: HTMLDivElement) => {
-  const children = Array.from(items.children); // Convert HTMLCollection to Array
-  const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-
-  gsap.set(children, { autoAlpha: 0 });
-
-  tl.fromTo(
-    children,
-    { opacity: 0, x: 100 },
-    {
-      opacity: 1,
-      x: 0,
-      duration: 1,
-      stagger: 0.5,
-      repeat: -1, // To loop the carousel
-      yoyo: true, // So it reverses smoothly
-    }
-  );
-};

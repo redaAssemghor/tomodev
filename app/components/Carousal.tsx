@@ -25,7 +25,7 @@ const Carousal = ({ children }: { children: ReactNode[] }) => {
       >
         {children}
       </div>
-      <div className="absolute w-full -bottom-16 flex items-center justify-between p-2">
+      <div className="absolute w-full -bottom-16 flex items-center justify-between p-4">
         <button onClick={prev} className="text-[--text3]">
           <SlArrowLeft size={40} />
         </button>
