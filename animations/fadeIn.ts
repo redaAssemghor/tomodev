@@ -1,5 +1,9 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { TextPlugin } from "gsap/TextPlugin";
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
 
 export const fadeIn = (element: HTMLElement) => {
   gsap.fromTo(
@@ -9,11 +13,37 @@ export const fadeIn = (element: HTMLElement) => {
   );
 };
 
-export const horizontalAnimation = (element: HTMLElement) => {
-  gsap.fromTo(
-    element,
-    { xPercent: 0 },
-    { xPercent: -100, duration: 50, repeat: -1, ease: "none" }
+// Marquee Effect animation
+export const horizontalAnimation = (
+  element1: HTMLElement,
+  element2: HTMLElement
+) => {
+  const tl = gsap.timeline();
+
+  tl.fromTo(
+    element1,
+    {
+      xPercent: 100,
+    },
+    {
+      xPercent: -100,
+      duration: 40,
+      repeat: -1,
+      ease: "none",
+    }
+  ).fromTo(
+    element2,
+    {
+      xPercent: 50,
+      opacity: 0,
+    },
+    {
+      xPercent: -50,
+      opacity: 1,
+      duration: 40,
+      repeat: -1,
+      ease: "none",
+    }
   );
 };
 
@@ -34,8 +64,6 @@ export const burgerMenuAnimation = (
 };
 
 // scroll animation
-
-gsap.registerPlugin(ScrollTrigger);
 export const scrollAnimation = (element: HTMLElement) => {
   gsap.fromTo(
     element,
@@ -69,10 +97,22 @@ export const buttonAnimation = (element: HTMLElement) => {
 export const backgroundAnimation = (element: HTMLElement) => {
   gsap.to(element, {
     backgroundPosition: "100% 50%", // Move the gradient across the element
-    duration: 5, // Animation duration in seconds
-    ease: "power1.inOut", // Easing for smooth animation
-    repeat: -1, // Infinite loop
-    yoyo: true, // Make the animation reverse after each loop
-    backgroundSize: "200% 200%", // Set background size larger for better transition effect
+    duration: 5,
+    ease: "power1.inOut",
+    repeat: -1,
+    yoyo: true,
+  });
+};
+
+//text reveal animation
+export const textRevealAnimation = (element: HTMLElement, text: string) => {
+  gsap.to(element, {
+    text: text,
+    duration: 5,
+    ease: "none",
+    scrollTrigger: {
+      trigger: element,
+      start: "top 90%",
+    },
   });
 };

@@ -2,6 +2,8 @@ import ShinyButton from "@/components/magicui/shiny-button";
 import { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
+import { useGSAP } from "@gsap/react";
+import { scrollAnimation, textRevealAnimation } from "@/animations/fadeIn";
 
 const data = [
   {
@@ -45,14 +47,37 @@ const Form = () => {
   const [index, setIndex] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
-  const form = useRef<HTMLFormElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const txtRef = useRef<HTMLParagraphElement>(null);
+  const header1Ref = useRef<HTMLHeadingElement>(null);
+  const header2Ref = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLDivElement>(null);
+
+  const txt =
+    "TOMODEV is a web development agency specializing in creating high-performance, scalable websites and applications. We focuson delivering tailored digital solutions that drive growth, enhance user experiences, and meet modern business needs. From responsive web design to full-stack development, we turn ideas into reality with cutting-edge technology and a client-centric approach.";
+
+  useGSAP(() => {
+    if (txtRef.current) {
+      textRevealAnimation(txtRef.current, txt);
+    }
+
+    if (header1Ref.current) {
+      scrollAnimation(header1Ref.current);
+    }
+    if (header2Ref.current) {
+      scrollAnimation(header2Ref.current);
+    }
+    if (imgRef.current) {
+      scrollAnimation(imgRef.current);
+    }
+  });
 
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
-    if (!form.current) return;
+    if (!formRef.current) return;
 
     emailjs
-      .sendForm("service_d8x35t6", "template_tdbycnl", form.current, {
+      .sendForm("service_d8x35t6", "template_tdbycnl", formRef.current, {
         publicKey: "qGvOnqjqYxrS_fhQo",
       })
       .then(
@@ -79,18 +104,13 @@ const Form = () => {
         <div className="flex lg:flex-row flex-col gap-4">
           <div className="relative h-full flex-1">
             <div className="my-16">
-              <h1 className="text-5xl font-bold text-[--text-new2] py-8">
+              <h1
+                ref={header1Ref}
+                className="text-5xl font-bold text-[--text-new2] py-8"
+              >
                 EXPLORE OUR SERVICES
               </h1>
-              <p className="text-lg text-[--text2]">
-                TOMODEV is a web development agency specializing in creating
-                high-performance, scalable websites and applications. We focus
-                on delivering tailored digital solutions that drive growth,
-                enhance user experiences, and meet modern business needs. From
-                responsive web design to full-stack development, we turn ideas
-                into reality with cutting-edge technology and a client-centric
-                approach.
-              </p>
+              <p ref={txtRef} className="text-lg text-[--text2]"></p>
             </div>
             <div className="">
               {data.map((service, i) => (
@@ -126,7 +146,7 @@ const Form = () => {
           </div>
 
           <div className="flex-1 max-h-fit bg-white p-10 rounded-lg shadow-lg">
-            <div className="py-8">
+            <div ref={header2Ref} className="py-8">
               <h1 className="text-[--secondary] text-3xl font-bold py-6">
                 Request A Quote
               </h1>
@@ -136,29 +156,33 @@ const Form = () => {
             </div>
             {!submitted ? (
               <form
-                ref={form}
+                ref={formRef}
                 onSubmit={sendEmail}
                 className="flex flex-col gap-6"
               >
                 <input
+                  required
                   className="px-2 py-4 border-[0.1px] outline-none text-[--text2] "
                   type="text"
                   placeholder="Name*"
                   name="user_name"
                 />
                 <input
+                  required
                   className="px-2 py-4 border-[0.1px] outline-none text-[--text2] "
                   type="text"
                   placeholder="Company Name*"
                   name="company_name"
                 />
                 <input
+                  required
                   className="px-2 py-4 border-[0.1px] outline-none text-[--text2] "
                   type="email"
                   placeholder="Email*"
                   name="user_email"
                 />
                 <input
+                  required
                   className="px-2 py-4 border-[0.1px] outline-none text-[--text2] "
                   type="tel"
                   placeholder="Phone*"
@@ -166,6 +190,7 @@ const Form = () => {
                 />
 
                 <textarea
+                  required
                   className="p-2 border-[0.1px] outline-none text-[--text2]"
                   name="message"
                   placeholder="Your Message"
@@ -193,7 +218,7 @@ const Form = () => {
         </div>
       </div>
 
-      <div className="relative mt-10">
+      <div ref={imgRef} className="relative mt-10">
         <div className="absolute items-center flex left-0 bottom-0 z-30">
           <span className="bg-gradient-to-r from-[--text1] to-bg-inherit h-[100px] w-[300px]"></span>
           <Image width={300} height={300} src={"/3web.webp"} alt="image" />

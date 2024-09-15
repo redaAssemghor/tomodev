@@ -12,7 +12,7 @@ const page = () => {
   ];
   const title = "Our Custom Wordpress Development Services";
   return (
-    <div className="">
+    <div>
       <ServiceHero
         name={name}
         description={description}

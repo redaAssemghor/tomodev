@@ -9,7 +9,11 @@ import Like from "../svgs/Like";
 import Stoke from "../svgs/Stoke";
 import PointyArrowDown from "../svgs/downArrow";
 import { useGSAP } from "@gsap/react";
-import { buttonAnimation, scrollAnimation } from "@/animations/fadeIn";
+import {
+  buttonAnimation,
+  scrollAnimation,
+  textRevealAnimation,
+} from "@/animations/fadeIn";
 import { TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
 
 const servicesData = [
@@ -51,10 +55,18 @@ const Services = () => {
   const servicesRef = useRef<HTMLDivElement>(null);
   const rightButtonRef = useRef<HTMLButtonElement>(null);
   const leftButtonRef = useRef<HTMLButtonElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
+
+  const text =
+    "How to create a website tailored to your unique business goals?";
 
   useGSAP(() => {
     if (servicesRef.current) {
       scrollAnimation(servicesRef.current);
+    }
+
+    if (textRef.current) {
+      textRevealAnimation(textRef.current, text);
     }
   });
 
@@ -90,9 +102,7 @@ const Services = () => {
         <h1 className="text-[--text1] lg:text-6xl text-3xl font-bold">
           Our services
         </h1>
-        <p className="lg:text-4xl text-xl text-[--text2]">
-          How to create a website tailored to your unique business goals?
-        </p>
+        <p ref={textRef} className="lg:text-4xl text-xl text-[--text2]"></p>
         <h2 className="lg:text-4xl text-xl font-medium text-[--text2]">
           Customized and goal-oriented digital solutions.
         </h2>

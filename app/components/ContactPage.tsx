@@ -3,16 +3,39 @@ import { backgroundAnimation } from "@/animations/fadeIn";
 import ShinyButton from "@/components/magicui/shiny-button";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { FormEvent, useRef, useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BiMessage } from "react-icons/bi";
 import { CiPhone } from "react-icons/ci";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { PiHouseLight } from "react-icons/pi";
 import { RxPerson } from "react-icons/rx";
+import emailjs from "@emailjs/browser";
 
 const ContactPage = () => {
+  const [submitted, setSubmitted] = useState(false);
+
   const ref = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: FormEvent) => {
+    e.preventDefault();
+    if (!form.current) return;
+
+    emailjs
+      .sendForm("service_d8x35t6", "template_tdbycnl", form.current, {
+        publicKey: "qGvOnqjqYxrS_fhQo",
+      })
+      .then(
+        () => {
+          setSubmitted(true);
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
 
   useGSAP(() => {
     if (ref.current) {
@@ -26,7 +49,7 @@ const ContactPage = () => {
         ref={ref}
         className="z-10 absolute h-full w-full bg-[--primary] bg-opacity-50"
         style={{
-          background: "linear-gradient(90deg, #00031f, #1b398f)",
+          background: "linear-gradient(90deg, #00031f, #791bce)",
           backgroundSize: "200% 200%",
         }}
       ></div>
@@ -63,73 +86,100 @@ const ContactPage = () => {
         </div>
 
         {/* Form Section */}
-        <form className="relative w-full flex flex-col gap-4 p-6 max-w-lg">
-          <div className="relative z-10 backdrop-blur-3xl blur-3xl h-full w-full">
-            <span className="absolute z-10 top-20 left-20 w-[140px] h-[140px] rounded-full bg-[--text1]"></span>
-            <span className="absolute z-10 top-24 right-24 w-[140px] h-[140px] rounded-full bg-[--accent]"></span>
+        {!submitted ? (
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="relative w-full flex flex-col gap-4 p-6 max-w-lg"
+          >
+            <div className="relative z-10 backdrop-blur-3xl blur-3xl h-full w-full">
+              <span className="absolute z-10 top-20 left-20 w-[140px] h-[140px] rounded-full bg-[--text1]"></span>
+              <span className="absolute z-10 top-24 right-24 w-[140px] h-[140px] rounded-full bg-[--accent]"></span>
+            </div>
+            <label
+              htmlFor="Name"
+              className="flex items-center py-3 z-40 border-b-[0.1px] border-[--text2] gap-3 text-xl"
+            >
+              <RxPerson className="text-2xl" />
+              <input
+                required
+                type="text"
+                placeholder="Name"
+                name="user_name"
+                className="w-full bg-transparent placeholder:font-light placeholder:text-white focus:outline-none"
+              />
+            </label>
+
+            <label
+              htmlFor="Company"
+              className="flex items-center py-3 z-40 border-b-[0.1px] border-[--text2] gap-3 text-xl"
+            >
+              <PiHouseLight className="text-2xl" />
+              <input
+                required
+                type="text"
+                placeholder="Company"
+                name="company_name"
+                className="w-full bg-transparent placeholder:font-light placeholder:text-white focus:outline-none"
+              />
+            </label>
+
+            <label
+              htmlFor="email"
+              className="flex items-center py-3 z-40 border-b-[0.1px] border-[--text2] gap-3 text-xl"
+            >
+              <AiOutlineMail className="text-2xl" />
+              <input
+                required
+                type="email"
+                placeholder="Email"
+                name="user_email"
+                className="w-full bg-transparent placeholder:font-light placeholder:text-white focus:outline-none"
+              />
+            </label>
+
+            <label
+              htmlFor="Phone"
+              className="flex items-center py-3 z-40 border-b-[0.1px] border-[--text2] gap-3 text-xl"
+            >
+              <CiPhone className="text-2xl" />
+              <input
+                required
+                type="text"
+                placeholder="Phone"
+                name="user_phone"
+                className="w-full bg-transparent placeholder:font-light placeholder:text-white focus:outline-none"
+              />
+            </label>
+
+            <label
+              htmlFor="Message"
+              className="flex items-start py-3 z-40 border-b-[0.1px] border-[--text2] gap-3 text-xl"
+            >
+              <BiMessage className="text-2xl mt-2" />
+              <textarea
+                required
+                placeholder="Message"
+                name="message"
+                className="w-full bg-transparent placeholder:font-light placeholder:text-white focus:outline-none resize-none h-32"
+              ></textarea>
+            </label>
+            <div className="w-full lg:flex justify-end pt-10">
+              <ShinyButton setIcon={false} className="border-2" text="Submit" />
+            </div>
+          </form>
+        ) : (
+          <div className="w-full flex flex-col gap-4 items-center justify-center p-6 max-w-lg text-center">
+            <h1 className="text-4xl font-bold">Thank You!</h1>
+            <p className="text-lg text-[--text2]">
+              Your message has been successfully submitted. We&rsquo;ll get back
+              to you soon.
+            </p>
+            <Link href="/" className="text-[--accent] hover:underline mt-6">
+              Return to Home
+            </Link>
           </div>
-          <label
-            htmlFor="Name"
-            className="flex items-center py-3 z-40 border-b-[0.1px] border-[--text2] gap-3 text-xl"
-          >
-            <RxPerson className="text-2xl" />
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full bg-transparent placeholder:font-light placeholder:text-white focus:outline-none"
-            />
-          </label>
-
-          <label
-            htmlFor="Company"
-            className="flex items-center py-3 z-40 border-b-[0.1px] border-[--text2] gap-3 text-xl"
-          >
-            <PiHouseLight className="text-2xl" />
-            <input
-              type="text"
-              placeholder="Company"
-              className="w-full bg-transparent placeholder:font-light placeholder:text-white focus:outline-none"
-            />
-          </label>
-
-          <label
-            htmlFor="email"
-            className="flex items-center py-3 z-40 border-b-[0.1px] border-[--text2] gap-3 text-xl"
-          >
-            <AiOutlineMail className="text-2xl" />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full bg-transparent placeholder:font-light placeholder:text-white focus:outline-none"
-            />
-          </label>
-
-          <label
-            htmlFor="Phone"
-            className="flex items-center py-3 z-40 border-b-[0.1px] border-[--text2] gap-3 text-xl"
-          >
-            <CiPhone className="text-2xl" />
-            <input
-              type="text"
-              placeholder="Phone"
-              className="w-full bg-transparent placeholder:font-light placeholder:text-white focus:outline-none"
-            />
-          </label>
-
-          <label
-            htmlFor="Message"
-            className="flex items-start py-3 z-40 border-b-[0.1px] border-[--text2] gap-3 text-xl"
-          >
-            <BiMessage className="text-2xl mt-2" />
-            <textarea
-              placeholder="Message"
-              className="w-full bg-transparent placeholder:font-light placeholder:text-white focus:outline-none resize-none h-32"
-            ></textarea>
-          </label>
-          <div className="w-full lg:flex justify-end pt-10">
-            <ShinyButton setIcon={false} className="border-2" text="Submit" />
-          </div>
-        </form>
+        )}
 
         <div className="flex gap-8 items-center min-h-[200px] lg:hidden">
           <div className="flex gap-4 justify-center items-center">

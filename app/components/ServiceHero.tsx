@@ -1,5 +1,5 @@
 "use client";
-import { backgroundAnimation } from "@/animations/fadeIn";
+import { backgroundAnimation, textRevealAnimation } from "@/animations/fadeIn";
 import ShinyButton from "@/components/magicui/shiny-button";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
@@ -33,10 +33,15 @@ const ServiceHero = ({
   title,
 }: ServiceHeroProps) => {
   const ref = useRef(null);
+  const txtRef = useRef(null);
 
   useGSAP(() => {
     if (ref.current) {
       backgroundAnimation(ref.current);
+    }
+
+    if (txtRef.current) {
+      textRevealAnimation(txtRef.current, description);
     }
   });
 
@@ -71,7 +76,7 @@ const ServiceHero = ({
             </li>
           </ul>
           <h1 className="text-4xl font-bold  my-8">{title}</h1>
-          <p className="text-lg">{description}</p>
+          <p ref={txtRef} className="text-lg"></p>
           <ul className="flex flex-col gap-4 mt-8">
             {services &&
               services.map((service, i) => (

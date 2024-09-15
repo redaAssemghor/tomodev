@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <div className="h-full bg-gradient-to-b from-[--text] to-[--secondary]">
       <div className="relative text-white px-4 py-20 h-full">
-        <div className="absolute blur-sm right-0 top-0 h-1/2 z-0 opacity-55 w-full background-pattern"></div>
         <h1 className="font-bold text-6xl m-20 z-40">
           Let&rsquo;s Grow Your Brand
         </h1>

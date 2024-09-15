@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import Marquee3D from "./Marquee3D";
 import ShinyButton from "@/components/magicui/shiny-button";
+import Link from "next/link";
 
 const Hero = () => {
   const textRef = useRef<HTMLParagraphElement>(null);
@@ -46,10 +47,12 @@ const Hero = () => {
         <div>
           {/* <ShimmerButton>SPEAK WITH OUR EXPERTS</ShimmerButton> */}
 
-          <ShinyButton
-            className="z-40 mt-8 border-[0.5px] border-gray-300"
-            text="SPEAK WITH OUR EXPERTS"
-          />
+          <Link href="/contact">
+            <ShinyButton
+              className="z-40 mt-8 border-[0.5px] border-gray-300"
+              text="SPEAK WITH OUR EXPERTS"
+            />
+          </Link>
         </div>
       </div>
     </div>
