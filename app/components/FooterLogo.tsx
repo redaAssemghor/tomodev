@@ -4,8 +4,6 @@ const FooterLogo = () => {
   return (
     <footer>
       <div className="relative text-white p-10 h-full">
-        <div className="absolute blur-xl right-0 bottom-0 h-full z-0 opacity-55 w-full background-pattern"></div>
-
         <div className="flex items-center gap-3">
           <h1 className="text-3xl font-bold pb-10">TOMODEV</h1>
           <span className="w-full border-b"></span>

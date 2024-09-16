@@ -78,3 +78,50 @@ export const servicesData = [
     ],
   },
 ];
+
+//wordpress page data
+export const wordpressData = [
+  {
+    service: "Custom Website Design Services",
+    description:
+      "Work with our experts and award-winning designers to create a unique, custom website and optimize it for performance, from SEO to conversions.",
+  },
+  {
+    service: "Custom Web Development Services",
+    description:
+      "We develop custom web applications that are tailored to your business needs. Our web applications are built to be scalable, secure, and user-friendly.",
+  },
+  {
+    service: "E-Commerce Website Development Services",
+    description:
+      "We develop e-commerce websites that are tailored to your business needs. Our e-commerce websites are built to be user-friendly, secure, and scalable.",
+  },
+  {
+    service: "WordPress Development Services",
+    description:
+      "We develop custom WordPress websites that are tailored to your business needs. Our WordPress websites are built to be user-friendly, secure, and scalable.",
+  },
+  {
+    service: "Shopify Development Services",
+    description:
+      "We develop custom Shopify websites that are tailored to your business needs. Our Shopify websites are built to be user-friendly, secure, and scalable.",
+  },
+  {
+    service: "WooCommerce Development Services",
+    description:
+      "We develop custom WooCommerce websites that are tailored to your business needs. Our WooCommerce websites are built to be user-friendly, secure, and scalable.",
+  },
+  {
+    service: "Magento Development Services",
+    description:
+      "We develop custom Magento websites that are tailored to your business needs. Our Magento websites are built to be user-friendly, secure, and scalable.",
+  },
+];
+
+export const wordpressModels = [
+  "/models/wordpress/1.webp",
+  "/models/wordpress/2.webp",
+  "/models/wordpress/3.webp",
+  "/models/wordpress/4.webp",
+  "/models/wordpress/5.webp",
+];

@@ -4,44 +4,7 @@ import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import { scrollAnimation, textRevealAnimation } from "@/animations/fadeIn";
-
-const data = [
-  {
-    service: "Custom Website Design Services",
-    description:
-      "We design and develop custom websites that are tailored to your business needs. Our websites are built to be responsive, fast, and secure.",
-  },
-  {
-    service: "Custom Web Development Services",
-    description:
-      "We develop custom web applications that are tailored to your business needs. Our web applications are built to be scalable, secure, and user-friendly.",
-  },
-  {
-    service: "E-Commerce Website Development Services",
-    description:
-      "We develop e-commerce websites that are tailored to your business needs. Our e-commerce websites are built to be user-friendly, secure, and scalable.",
-  },
-  {
-    service: "WordPress Development Services",
-    description:
-      "We develop custom WordPress websites that are tailored to your business needs. Our WordPress websites are built to be user-friendly, secure, and scalable.",
-  },
-  {
-    service: "Shopify Development Services",
-    description:
-      "We develop custom Shopify websites that are tailored to your business needs. Our Shopify websites are built to be user-friendly, secure, and scalable.",
-  },
-  {
-    service: "WooCommerce Development Services",
-    description:
-      "We develop custom WooCommerce websites that are tailored to your business needs. Our WooCommerce websites are built to be user-friendly, secure, and scalable.",
-  },
-  {
-    service: "Magento Development Services",
-    description:
-      "We develop custom Magento websites that are tailored to your business needs. Our Magento websites are built to be user-friendly, secure, and scalable.",
-  },
-];
+import { wordpressData } from "../data/servicesData";
 
 const Form = () => {
   const [index, setIndex] = useState<number | null>(null);
@@ -110,10 +73,13 @@ const Form = () => {
               >
                 EXPLORE OUR SERVICES
               </h1>
-              <p ref={txtRef} className="text-lg text-[--text2]"></p>
+              <p
+                ref={txtRef}
+                className="text-lg text-[--text2] min-h-[160px]"
+              ></p>
             </div>
             <div className="">
-              {data.map((service, i) => (
+              {wordpressData.map((service, i) => (
                 <div key={i}>
                   <div
                     className={`relative my-4 p-4 ${

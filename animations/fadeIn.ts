@@ -18,33 +18,14 @@ export const horizontalAnimation = (
   element1: HTMLElement,
   element2: HTMLElement
 ) => {
-  const tl = gsap.timeline();
+  const tl = gsap.timeline({ repeat: -1, ease: "none" });
 
   tl.fromTo(
     element1,
-    {
-      xPercent: 100,
-    },
-    {
-      xPercent: -100,
-      duration: 40,
-      repeat: -1,
-      ease: "none",
-    }
-  ).fromTo(
-    element2,
-    {
-      xPercent: 50,
-      opacity: 0,
-    },
-    {
-      xPercent: -50,
-      opacity: 1,
-      duration: 40,
-      repeat: -1,
-      ease: "none",
-    }
-  );
+    { xPercent: 90 },
+    { xPercent: 260, duration: 50 },
+    0
+  ).fromTo(element2, { xPercent: -250 }, { xPercent: 0, duration: 50 }, 0);
 };
 
 export const cardAnimation = (element: HTMLDivElement) => {
@@ -114,5 +95,25 @@ export const textRevealAnimation = (element: HTMLElement, text: string) => {
       trigger: element,
       start: "top 90%",
     },
+  });
+};
+
+// hozontaal scroll animation
+export const horizontalScrollAnimation = (
+  element: HTMLDivElement,
+  trigger: HTMLDivElement
+) => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: trigger,
+      pin: true,
+      start: "top top",
+      scrub: 1,
+    },
+  });
+
+  tl.to(element, {
+    xPercent: -120,
+    ease: "none",
   });
 };

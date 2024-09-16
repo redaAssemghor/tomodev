@@ -16,21 +16,15 @@ type ServiceHeroProps = {
   description: string;
   services: string[];
   title: string;
+  imgs: string[];
 };
-
-const modelsimg = [
-  "/models/model1.png",
-  "/models/model2.webp",
-  "/models/model3.png",
-  "/models/model4.png",
-  "/models/model5.png",
-];
 
 const ServiceHero = ({
   name,
   description,
   services,
   title,
+  imgs,
 }: ServiceHeroProps) => {
   const ref = useRef(null);
   const txtRef = useRef(null);
@@ -86,18 +80,20 @@ const ServiceHero = ({
                 </li>
               ))}
           </ul>
-          <ShinyButton
-            setIcon={false}
-            className="border-[0.5px] border-gray-300 my-8"
-            text="REQUEST A QUOTE"
-          />
+          <Link href={"/contact"}>
+            <ShinyButton
+              setIcon={false}
+              className="border-[0.5px] border-gray-300 my-8"
+              text="REQUEST A QUOTE"
+            />
+          </Link>
         </div>
         <div className="relative max-w-[500px] p-5 shrink-0">
           <h1 className="absolute right-0 text-4xl font-black translate-x-60 translate-y-52 rotate-90 opacity-30">
             FEATURED WORK
           </h1>
           <Carousal>
-            {modelsimg.map((img, i) => (
+            {imgs.map((img, i) => (
               <Image key={i} src={img} alt="models" width={500} height={500} />
             ))}
           </Carousal>

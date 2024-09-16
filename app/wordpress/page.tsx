@@ -1,24 +1,28 @@
+import Process from "../components/Process";
 import ServiceHero from "../components/ServiceHero";
+import { wordpressModels } from "../data/servicesData";
 
 const page = () => {
   const name = "Wordpress";
+  const title = "Our Custom Wordpress Development Services";
   const description =
-    "We offer a wide range of custom Wordpress development services tohelp you build a website that meets your unique needs. Whether you need a simple blog or a complex e-commerce site, we have the skills and experience to create a site that is tailored to your specific requirements.";
+    "From corporate WordPress websites to WooCommerce stores, work with our experts to make the most of this robust platform.";
   const services = [
     "Custom Wordpress Themes",
     "Custom Wordpress Plugins",
     "Custom Wordpress Development",
     "Custom Wordpress Design",
   ];
-  const title = "Our Custom Wordpress Development Services";
   return (
     <div>
       <ServiceHero
+        imgs={wordpressModels}
         name={name}
         description={description}
         services={services}
         title={title}
       />
+      <Process />
     </div>
   );
 };

@@ -3,12 +3,11 @@
 import { horizontalAnimation } from "@/animations/fadeIn";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import React from "../svgs/tech-icons/React";
 import Image from "next/image";
 
 const HorizontalBand = () => {
-  const ref = useRef<HTMLParagraphElement>(null);
-  const ref2 = useRef<HTMLParagraphElement>(null);
+  const ref1 = useRef<HTMLDivElement>(null);
+  const ref2 = useRef<HTMLDivElement>(null);
 
   const svgLinks = [
     "/svg/joomla.svg",
@@ -19,22 +18,19 @@ const HorizontalBand = () => {
   ];
 
   useGSAP(() => {
-    if (ref.current && ref2.current) {
-      horizontalAnimation(
-        ref.current as HTMLElement,
-        ref2.current as HTMLElement
-      );
+    if (ref1.current && ref2.current) {
+      horizontalAnimation(ref1.current, ref2.current);
     }
   }, []);
 
   return (
     <div className="overflow-hidden relative bg-inherit">
       <h1 className="absolute z-40 bg-inherit text-white lg:text-2xl px-4 h-full flex items-center justify-center lg:w-[500px]">
-        What I&rsquo;ve Use
+        What I&rsquo;ve Used
       </h1>
-      <div className="flex">
-        <div ref={ref} className="flex justify-evenly gap-4 p-4">
-          {svgLinks.concat(svgLinks, svgLinks).map((link, i) => (
+      <div className="flex gap-10">
+        <div ref={ref1} className="flex justify-between gap-16 p-4 w-full">
+          {svgLinks.concat(svgLinks).map((link, i) => (
             <Image
               key={i}
               src={link}
@@ -45,8 +41,8 @@ const HorizontalBand = () => {
             />
           ))}
         </div>
-        <div ref={ref2} className="flex justify-evenly gap-4 p-4">
-          {svgLinks.concat(svgLinks, svgLinks).map((link, i) => (
+        <div ref={ref2} className="flex justify-between gap-16 p-4 w-full">
+          {svgLinks.concat(svgLinks).map((link, i) => (
             <Image
               key={i}
               src={link}
