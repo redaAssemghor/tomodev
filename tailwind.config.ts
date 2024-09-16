@@ -11,6 +11,9 @@ const config = {
   prefix: "",
   theme: {
     extend: {
+      boxShadow: {
+        neon: "0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 0, 255, 0.6), 0 0 40px rgba(255, 0, 255, 1)", // Custom neon shadow effect
+      },
       animation: {
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
         slide: "slide var(--speed) ease-in-out infinite alternate",

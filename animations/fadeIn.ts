@@ -107,13 +107,41 @@ export const horizontalScrollAnimation = (
     scrollTrigger: {
       trigger: trigger,
       pin: true,
-      start: "top top",
-      scrub: 1,
+      start: "bottom bottom",
+      end: "+=2000",
+      scrub: 4,
     },
   });
 
   tl.to(element, {
     xPercent: -120,
     ease: "none",
+  });
+};
+
+// line animation
+export const lineAnimation = (
+  element: HTMLElement,
+  elementRef: HTMLElement
+) => {
+  gsap.fromTo(
+    element,
+    { width: 0 },
+    {
+      width: "140%",
+      duration: 5,
+      ease: "power2.inOut",
+      scrollTrigger: { trigger: elementRef, start: "bottom bottom", scrub: 4 },
+    }
+  );
+};
+
+// circle animation
+export const circleAnimation = (element: HTMLElement) => {
+  gsap.to(element, {
+    opacity: 1,
+    scale: 1.5,
+    ease: "none",
+    scrollTrigger: { trigger: element, start: "top 90%", scrub: 4 },
   });
 };

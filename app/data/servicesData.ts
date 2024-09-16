@@ -125,3 +125,19 @@ export const wordpressModels = [
   "/models/wordpress/4.webp",
   "/models/wordpress/5.webp",
 ];
+
+export const ecommerceModels = [
+  "/models/model1.png",
+  "/models/model2.webp",
+  "/models/model3.png",
+  "/models/model4.png",
+  "/models/model5.png",
+];
+
+export const designModels = [
+  "/models/webdesign/1.webp",
+  "/models/webdesign/2.webp",
+  "/models/webdesign/3.webp",
+  "/models/webdesign/4.webp",
+  "/models/webdesign/5.webp",
+];

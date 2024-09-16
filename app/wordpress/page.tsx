@@ -1,6 +1,7 @@
 import Process from "../components/Process";
 import ServiceHero from "../components/ServiceHero";
 import { wordpressModels } from "../data/servicesData";
+import { wordpressDevelopmentSteps } from "../data/process";
 
 const page = () => {
   const name = "Wordpress";
@@ -22,7 +23,7 @@ const page = () => {
         services={services}
         title={title}
       />
-      <Process />
+      <Process sections={wordpressDevelopmentSteps} />
     </div>
   );
 };

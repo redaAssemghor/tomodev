@@ -40,7 +40,7 @@ const Navbar = () => {
                   <li>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/about"
+                        href="/web-design"
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       >
                         <h1 className="text-lg font-medium">
@@ -55,12 +55,10 @@ const Navbar = () => {
                   <li>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/about"
+                        href="/wordpress"
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       >
-                        <h1 className="text-lg font-medium">
-                          Branding Services
-                        </h1>
+                        <h1 className="text-lg font-medium">Wordpress</h1>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           create a brand that represents your business
                         </p>
@@ -70,11 +68,11 @@ const Navbar = () => {
                   <li>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/about"
+                        href="/ecommerce-development"
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       >
                         <h1 className="text-lg font-medium">
-                          eCommerce Design
+                          Ecommerce Development
                         </h1>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           create a custom eCommerce website
@@ -86,7 +84,7 @@ const Navbar = () => {
                   <li>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/about"
+                        href="/shopify"
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       >
                         <h1 className="text-lg font-medium">
@@ -112,7 +110,7 @@ const Navbar = () => {
               <ul className="flex flex-col gap-3 p-4 md:w-[400px] lg:w-[500px]">
                 <li>
                   <Link
-                    href="/about"
+                    href="/contact"
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                   >
                     <h1 className="text-lg font-medium">Locations</h1>
@@ -124,7 +122,7 @@ const Navbar = () => {
                 <li>
                   <NavigationMenuLink asChild>
                     <Link
-                      href="/about"
+                      href="/contact"
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     >
                       <h1 className="text-lg font-medium">Contact Us</h1>
@@ -137,26 +135,12 @@ const Navbar = () => {
                 <li>
                   <NavigationMenuLink asChild>
                     <Link
-                      href="/about"
+                      href="/contact"
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     >
                       <h1 className="text-lg font-medium">About Us</h1>
                       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                         learn more about TOMODEV
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      href="/about"
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    >
-                      <h1 className="text-lg font-medium">About 3</h1>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        fill the container and center the content vertically and
-                        horizontally.
                       </p>
                     </Link>
                   </NavigationMenuLink>
