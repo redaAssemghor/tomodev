@@ -44,13 +44,13 @@ const Header = () => {
 
   return (
     <nav
-      className={`flex justify-between items-center p-5 w-full z-50 fixed border-b-slate-50 text-white border-b duration-700 ${
-        scrolled ? "bg-[--primary]" : ""
+      className={`flex justify-between items-center p-5 w-full z-50 fixed border-b-[--light] text-white duration-700 ${
+        scrolled ? "bg-[--primary] opacity-90" : "border-b-[0.1px]"
       }`}
     >
-      <div>
-        <h1>Tomodev</h1>
-      </div>
+      <Link href={"/"}>
+        <h1>TOMODEV</h1>
+      </Link>
       {/* Mobile Menu Toggle Button */}
       <button
         ref={burgerRef}
@@ -83,25 +83,25 @@ const Header = () => {
           <div>
             <button
               onClick={() => handleLinks("services")}
-              className="flex gap-2 items-center font-bold text-2xl justify-between w-full"
+              className="flex gap-2 pb-8 items-center font-bold text-2xl justify-between w-full"
             >
               Services <FaChevronDown />
             </button>
             <ul
-              className={`flex flex-col gap-2 text-lg mt-2 transition-all duration-700 ${
+              className={`flex flex-col gap-4 text-lg text-[--light] mt-2 transition-all duration-700 ${
                 openLinks === "services"
                   ? "max-h-40"
                   : "max-h-0 overflow-hidden"
               }`}
             >
               <li>
-                <Link href={"/"}>Link 1</Link>
+                <Link href={"/web-design"}>Custom Web Design</Link>
               </li>
               <li>
-                <Link href={"/"}>Link 2</Link>
+                <Link href={"/wordpress"}>Wordpress</Link>
               </li>
               <li>
-                <Link href={"/"}>Link 3</Link>
+                <Link href={"/shopify"}>Shopify Website Design</Link>
               </li>
             </ul>
           </div>
@@ -110,53 +110,36 @@ const Header = () => {
           <div>
             <button
               onClick={() => handleLinks("about")}
-              className="flex gap-2 items-center font-bold text-2xl justify-between w-full"
+              className="flex gap-2 pb-4 items-center font-bold text-2xl justify-between w-full"
             >
               About <FaChevronDown />
             </button>
             <ul
-              className={`flex flex-col gap-2 text-lg mt-2 transition-all duration-700 ${
+              className={`flex flex-col gap-4 text-lg text-[--light] mt-2 transition-all duration-700 ${
                 openLinks === "about" ? "max-h-40" : "max-h-0 overflow-hidden"
               }`}
             >
               <li>
-                <Link href={"/"}>Link 1</Link>
+                <Link href={"/contact"}>Custom Web Design</Link>
               </li>
               <li>
-                <Link href={"/"}>Link 2</Link>
+                <Link href={"/contact"}>About Us</Link>
               </li>
               <li>
-                <Link href={"/"}>Link 3</Link>
+                <Link href={"/contact"}>Contact Us</Link>
               </li>
             </ul>
           </div>
 
           {/* Documentation Section */}
-          <div>
-            <button
-              onClick={() => handleLinks("docs")}
-              className="flex gap-2 items-center font-bold text-2xl justify-between w-full"
-            >
-              Documentation <FaChevronDown />
-            </button>
-            <ul
-              className={`flex flex-col gap-2 text-lg mt-2 transition-all duration-700 ${
-                openLinks === "docs" ? "max-h-40" : "max-h-0 overflow-hidden"
-              }`}
-            >
-              <li>
-                <Link href={"/"}>Link 1</Link>
-              </li>
-              <li>
-                <Link href={"/"}>Link 2</Link>
-              </li>
-              <li>
-                <Link href={"/"}>Link 3</Link>
-              </li>
-            </ul>
-          </div>
+          <Link
+            href={"/documentation"}
+            className="flex gap-2 items-center font-bold text-2xl justify-between w-full"
+          >
+            Documentation
+          </Link>
         </div>
-        <div className="mt-auto">
+        <div className="mt-24">
           <Link href="/contact">
             <ShimmerButton className="mt-auto">
               REQUEST YOUR QUOTE

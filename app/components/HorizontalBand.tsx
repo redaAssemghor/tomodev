@@ -25,9 +25,6 @@ const HorizontalBand = () => {
 
   return (
     <div className="overflow-hidden relative bg-inherit">
-      <h1 className="absolute z-40 bg-inherit text-white lg:text-2xl px-4 h-full flex items-center justify-center lg:w-[500px]">
-        What I&rsquo;ve Used
-      </h1>
       <div className="flex gap-10">
         <div ref={ref1} className="flex justify-between gap-16 p-4 w-full">
           {svgLinks.concat(svgLinks).map((link, i) => (
@@ -37,7 +34,7 @@ const HorizontalBand = () => {
               alt="tech-icon"
               height={64}
               width={64}
-              className="text-white"
+              className="text-gray-400"
             />
           ))}
         </div>
@@ -49,7 +46,7 @@ const HorizontalBand = () => {
               alt="tech-icon"
               height={64}
               width={64}
-              className="text-white"
+              className="text-gray-400"
             />
           ))}
         </div>

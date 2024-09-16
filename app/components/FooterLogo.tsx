@@ -15,7 +15,7 @@ const FooterLogo = () => {
               <h1>©2024 TOMODEV. All rights reserved</h1>
             </li>
             <li className="underline">
-              <Link href="#">
+              <Link href="privacy-policy">
                 <h1>Privacy Policy</h1>
               </Link>
             </li>

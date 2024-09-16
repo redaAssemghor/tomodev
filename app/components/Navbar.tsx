@@ -14,7 +14,7 @@ const Navbar = () => {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-transparent">
+            <NavigationMenuTrigger className="bg-transparent font-black">
               Services
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -102,7 +102,7 @@ const Navbar = () => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-transparent">
+            <NavigationMenuTrigger className="bg-transparent font-black">
               About
             </NavigationMenuTrigger>
 
