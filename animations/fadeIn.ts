@@ -14,16 +14,6 @@ export const fadeIn = (element: HTMLElement) => {
 };
 
 // Marquee Effect animation
-export const horizontalAnimation = (
-  element1: HTMLElement,
-  element2: HTMLElement
-) => {
-  const tl = gsap.timeline({ repeat: -1, ease: "none" });
-
-  tl.fromTo(element1, { xPercent: -200 }, { xPercent: 200, duration: 4 }, 0);
-
-  tl.fromTo(element2, { xPercent: -200 }, { xPercent: 200, duration: 4 }, 4);
-};
 
 export const cardAnimation = (element: HTMLDivElement) => {
   gsap.fromTo(element, { xPercent: -100 }, { xPercent: 0, duration: 0.5 });
@@ -140,5 +130,30 @@ export const circleAnimation = (element: HTMLElement) => {
     scale: 1.5,
     ease: "none",
     scrollTrigger: { trigger: element, start: "top 90%", scrub: 4 },
+  });
+};
+
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+
+// Register the MotionPathPlugin
+gsap.registerPlugin(MotionPathPlugin);
+
+export const spotLightAnimation = (element: HTMLElement) => {
+  gsap.to(element, {
+    duration: 5,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut",
+    motionPath: {
+      path: [
+        { x: 0, y: -40 }, // Starting point (top of the circle)
+        { x: 40, y: 0 }, // Right
+        { x: 0, y: 20 }, // Bottom
+        { x: -20, y: 0 }, // Left
+        { x: 0, y: -20 }, // Back to the top
+      ],
+      curviness: 1, // Makes the motion smooth and circular
+      autoRotate: true, // Rotates the element along the path
+    },
   });
 };

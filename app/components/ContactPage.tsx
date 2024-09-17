@@ -1,5 +1,5 @@
 "use client";
-import { backgroundAnimation } from "@/animations/fadeIn";
+import { backgroundAnimation, spotLightAnimation } from "@/animations/fadeIn";
 import ShinyButton from "@/components/magicui/shiny-button";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
@@ -11,12 +11,14 @@ import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { PiHouseLight } from "react-icons/pi";
 import { RxPerson } from "react-icons/rx";
 import emailjs from "@emailjs/browser";
+import gsap from "gsap";
 
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const ref = useRef(null);
   const form = useRef<HTMLFormElement>(null);
+  const lightRef = useRef<HTMLDivElement>(null);
 
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
@@ -40,6 +42,13 @@ const ContactPage = () => {
   useGSAP(() => {
     if (ref.current) {
       backgroundAnimation(ref.current);
+    }
+    if (lightRef.current) {
+      const elements = gsap.utils.toArray(".spotlight");
+      console.log(elements);
+      elements.forEach((el) => {
+        spotLightAnimation(el as HTMLElement);
+      });
     }
   });
 
@@ -93,8 +102,10 @@ const ContactPage = () => {
             className="relative w-full flex flex-col gap-4 p-6 max-w-lg"
           >
             <div className="relative z-10 backdrop-blur-3xl blur-3xl h-full w-full">
-              <span className="absolute z-10 top-20 left-20 w-[140px] h-[140px] rounded-full bg-[--text1]"></span>
-              <span className="absolute z-10 top-24 right-24 w-[140px] h-[140px] rounded-full bg-[--accent]"></span>
+              <div ref={lightRef} className="relative">
+                <span className="absolute spotlight z-10 top-20 left-20 w-[140px] h-[140px] rounded-full bg-[--text1]"></span>
+                <span className="absolute spotlight z-10 top-24 right-24 w-[140px] h-[140px] rounded-full bg-[--accent]"></span>
+              </div>
             </div>
             <label
               htmlFor="Name"

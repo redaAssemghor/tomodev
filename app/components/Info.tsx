@@ -18,10 +18,7 @@ const Info = () => {
 
   return (
     <div className="w-full h-full lg:p-32 px-4 py-20 bg-inherit text-white relative">
-      <div
-        ref={ref}
-        className="flex lg:flex-row flex-col gap-8  justify-between"
-      >
+      <div ref={ref} className="flex lg:flex-row flex-col justify-between">
         <div className="flex flex-col gap-6">
           <h1 className="lg:text-4xl text-xl">
             Creative Web Agency
@@ -61,7 +58,7 @@ const Info = () => {
           </ul>
         </div>
 
-        <Image height={600} width={600} src="/info-img.png" alt="info-img" />
+        <Image height={800} width={800} src="/info-img.png" alt="info-img" />
       </div>
 
       <div className="relative bg-gradient-to-r from-[--accent] to-bg-inherit w-full h-[100px] flex justify-start items-center">
