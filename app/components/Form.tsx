@@ -63,7 +63,7 @@ const Form = ({ data }: { data: wordpressFormDataType[] }) => {
     setIndex(null);
   };
   return (
-    <div className="relative flex flex-col gap-24 z-40 bg-[--light]">
+    <div className="relative flex justify-between flex-col gap-24 z-30 bg-[--light]">
       <div className=" p-8 lg:p-32 ">
         <div className="flex lg:flex-row flex-col gap-4">
           <div className="relative h-full flex-1">

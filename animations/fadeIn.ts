@@ -95,7 +95,6 @@ export const horizontalScrollAnimation = (
       trigger: trigger,
       pin: true,
       start: "bottom bottom",
-      end: "+=2000",
       scrub: 4,
     },
   });
