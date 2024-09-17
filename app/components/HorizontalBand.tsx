@@ -19,7 +19,7 @@ const HorizontalBand = () => {
     <div className="overflow-hidden relative bg-inherit">
       <div className="flex gap-10">
         <Marquee gradient={false} speed={40}>
-          <div className="flex justify-between gap-16 p-4 w-screen">
+          <div className="flex justify-between gap-16 p-4 w-screen px-12">
             {svgLinks.map((link, i) => (
               <Image
                 key={i}

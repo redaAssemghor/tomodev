@@ -24,6 +24,7 @@ const page = () => {
         description={description}
         services={services}
         title={title}
+        gif=""
       />
       <Form data={wordpressData} />
       <Process sections={wordpressDevelopmentSteps} />

@@ -18,14 +18,14 @@ const Navbar = () => {
               Services
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] grid-cols-1 lg:grid-cols-[.75fr_1fr]">
+              <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[550px] grid-cols-1 lg:grid-cols-[.75fr_1fr]">
                 <li>
                   <NavigationMenuLink asChild>
                     <Link
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-3 no-underline outline-none focus:shadow-md"
                       href="/"
                     >
-                      <div className="my-5 text-lg font-medium">TOMODEV</div>
+                      <div className="my-2 text-lg font-medium">TOMODEV</div>
                       <p className="text-sm text-muted-foreground ">
                         TOMODEV is a web agency that specializes in custom web
                         design, branding, and eCommerce development, helping
@@ -36,7 +36,7 @@ const Navbar = () => {
                   </NavigationMenuLink>
                 </li>
 
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-1">
                   <li>
                     <NavigationMenuLink asChild>
                       <Link
@@ -92,6 +92,20 @@ const Navbar = () => {
                         </h1>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           create a custom Shopify website
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/chatbot"
+                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                      >
+                        <h1 className="text-lg font-medium">Chatbot</h1>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Chatbot Integration Services
                         </p>
                       </Link>
                     </NavigationMenuLink>

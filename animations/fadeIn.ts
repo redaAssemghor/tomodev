@@ -148,9 +148,9 @@ export const spotLightAnimation = (element: HTMLElement) => {
       path: [
         { x: 0, y: -40 }, // Starting point (top of the circle)
         { x: 40, y: 0 }, // Right
-        { x: 0, y: 20 }, // Bottom
-        { x: -20, y: 0 }, // Left
-        { x: 0, y: -20 }, // Back to the top
+        { x: 0, y: 40 }, // Bottom
+        { x: -40, y: 0 }, // Left
+        { x: 0, y: -40 }, // Back to the top
       ],
       curviness: 1, // Makes the motion smooth and circular
       autoRotate: true, // Rotates the element along the path
