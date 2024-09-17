@@ -26,6 +26,7 @@ const page = () => {
         description={description}
         services={services}
         title={title}
+        gif=""
       />
       <Form data={webDesignData} />
       <Process sections={webDesignServiceSteps} />
