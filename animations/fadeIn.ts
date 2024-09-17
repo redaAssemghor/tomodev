@@ -20,12 +20,9 @@ export const horizontalAnimation = (
 ) => {
   const tl = gsap.timeline({ repeat: -1, ease: "none" });
 
-  tl.fromTo(
-    element1,
-    { xPercent: 90 },
-    { xPercent: 260, duration: 50 },
-    0
-  ).fromTo(element2, { xPercent: -250 }, { xPercent: 0, duration: 50 }, 0);
+  tl.fromTo(element1, { xPercent: -200 }, { xPercent: 200, duration: 4 }, 0);
+
+  tl.fromTo(element2, { xPercent: -200 }, { xPercent: 200, duration: 4 }, 4);
 };
 
 export const cardAnimation = (element: HTMLDivElement) => {
@@ -98,7 +95,7 @@ export const textRevealAnimation = (element: HTMLElement, text: string) => {
   });
 };
 
-// hozontaal scroll animation
+// horizontal scroll animation
 export const horizontalScrollAnimation = (
   element: HTMLDivElement,
   trigger: HTMLDivElement

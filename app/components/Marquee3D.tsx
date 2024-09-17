@@ -71,7 +71,7 @@ const Marquee3D = () => {
               key={idx}
               src={data.img}
               alt={data.name}
-              className=" cursor-pointer rounded-xl border border-neutral-300 transition-all duration-300 hover:ring-1 hover:ring-neutral-300"
+              className="rounded-xl border border-neutral-300 transition-all duration-300 hover:ring-1 hover:ring-neutral-300"
             />
           ))}
         </Marquee>
@@ -112,7 +112,7 @@ const Marquee3D = () => {
               key={idx}
               src={data.img}
               alt={data.name}
-              className=" mx-auto h-full  cursor-pointer rounded-xl"
+              className=" mx-auto h-full rounded-xl"
             />
           ))}
         </Marquee>

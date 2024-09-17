@@ -4,6 +4,7 @@ import { horizontalAnimation } from "@/animations/fadeIn";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 const HorizontalBand = () => {
   const ref1 = useRef<HTMLDivElement>(null);
@@ -15,6 +16,10 @@ const HorizontalBand = () => {
     "/svg/shopify.svg",
     "/svg/unity.svg",
     "/svg/wordpress-icon.svg",
+    "/svg/google-bard.svg",
+    "/svg/dotnet.svg",
+    "/svg/figma.svg",
+    "/svg/nextjs.svg",
   ];
 
   useGSAP(() => {
@@ -26,30 +31,20 @@ const HorizontalBand = () => {
   return (
     <div className="overflow-hidden relative bg-inherit">
       <div className="flex gap-10">
-        <div ref={ref1} className="flex justify-between gap-16 p-4 w-full">
-          {svgLinks.concat(svgLinks).map((link, i) => (
-            <Image
-              key={i}
-              src={link}
-              alt="tech-icon"
-              height={64}
-              width={64}
-              className="text-gray-400"
-            />
-          ))}
-        </div>
-        <div ref={ref2} className="flex justify-between gap-16 p-4 w-full">
-          {svgLinks.concat(svgLinks).map((link, i) => (
-            <Image
-              key={i}
-              src={link}
-              alt="tech-icon"
-              height={64}
-              width={64}
-              className="text-gray-400"
-            />
-          ))}
-        </div>
+        <Marquee gradient={false} speed={40}>
+          <div className="flex justify-between gap-16 p-4 w-full">
+            {svgLinks.map((link, i) => (
+              <Image
+                key={i}
+                src={link}
+                alt="tech-icon"
+                height={64}
+                width={64}
+                className="text-gray-400"
+              />
+            ))}
+          </div>
+        </Marquee>
       </div>
     </div>
   );

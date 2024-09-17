@@ -9,8 +9,6 @@ import Projects from "./components/Projects";
 import Services from "./components/Services";
 import ServicePage from "./components/ServicePage";
 import ContactPage from "./components/ContactPage";
-import Process from "./components/Process";
-import { mainSections } from "./data/process";
 
 export default function Home() {
   return (
@@ -24,7 +22,6 @@ export default function Home() {
         <Services />
         <ServicePage />
         <ContactPage />
-        <Process sections={mainSections} />
       </main>
     </Provider>
   );
