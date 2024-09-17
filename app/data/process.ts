@@ -330,3 +330,79 @@ export const webDesignServiceSteps = [
     imageSrc: "/images/6.png",
   },
 ];
+
+// chatbot/page.tsx
+export const chatbotServiceSteps = [
+  {
+    id: "01",
+    title: "Requirement Gathering & Planning",
+    description:
+      "At TOMODEV, the first step in chatbot integration is understanding your business needs, customer interactions, and communication goals. We collaborate with you to define the scope and strategy for the chatbot, ensuring it aligns with your objectives and enhances user experience.",
+    listItems: [
+      "Understand your business requirements and user personas",
+      "Define project scope, timelines, and chatbot goals",
+      "Map out key conversation flows and chatbot functionality",
+    ],
+    imageSrc: "/models/chatbot/imgs/1.png",
+  },
+  {
+    id: "02",
+    title: "Conversation Design & UX Planning",
+    description:
+      "Our team designs intuitive conversation flows to create meaningful interactions between your chatbot and users. We ensure the chatbot is easy to use, guiding users through a seamless journey while providing quick and effective responses.",
+    listItems: [
+      "Design conversation flows for smooth user interactions",
+      "Focus on user experience and ease of communication",
+      "Ensure chatbot responsiveness across various devices and platforms",
+    ],
+    imageSrc: "/models/chatbot/imgs/2.jpg",
+  },
+  {
+    id: "03",
+    title: "Natural Language Processing (NLP) & AI Integration",
+    description:
+      "We integrate advanced AI and NLP capabilities to enable your chatbot to understand and respond to users naturally. Whether it's customer support, lead generation, or FAQs, we optimize the chatbot for accurate and human-like responses.",
+    listItems: [
+      "Implement AI and NLP to enhance conversation understanding",
+      "Optimize for natural and contextual user responses",
+      "Integrate machine learning for chatbot improvement over time",
+    ],
+    imageSrc: "/models/chatbot/imgs/3.jpg",
+  },
+  {
+    id: "04",
+    title: "Custom Chatbot Development & Integration",
+    description:
+      "Our development team brings the conversation design to life by building a custom chatbot solution tailored to your business. We ensure seamless integration with your existing platforms such as CRM, eCommerce systems, or customer support tools.",
+    listItems: [
+      "Develop a custom chatbot based on your unique requirements",
+      "Ensure smooth integration with CRM, eCommerce, and other platforms",
+      "Implement custom features and capabilities for enhanced functionality",
+    ],
+    imageSrc: "/models/chatbot/imgs/4.webp",
+  },
+  {
+    id: "05",
+    title: "Testing & Optimization",
+    description:
+      "Before launching, we rigorously test the chatbot to ensure it performs optimally across all devices and platforms. We fine-tune the responses, check for any issues, and ensure the chatbot is ready for live user interactions.",
+    listItems: [
+      "Test chatbot interactions across devices and platforms",
+      "Conduct security and data protection audits",
+      "Optimize chatbot performance for fast and accurate responses",
+    ],
+    imageSrc: "/models/chatbot/imgs/5.webp",
+  },
+  {
+    id: "06",
+    title: "Launch & Ongoing Support",
+    description:
+      "We manage the seamless launch of your chatbot and provide ongoing support to ensure its success. Post-launch, we monitor performance, update conversation flows, and continuously optimize to meet evolving business needs.",
+    listItems: [
+      "Launch the chatbot and ensure a smooth go-live process",
+      "Provide ongoing maintenance and updates as required",
+      "Monitor chatbot performance and optimize based on user feedback",
+    ],
+    imageSrc: "/models/chatbot/imgs/6.webp",
+  },
+];

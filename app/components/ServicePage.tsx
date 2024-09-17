@@ -3,9 +3,9 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import { PiPaperPlaneRightFill } from "react-icons/pi";
 import { useSelector } from "react-redux";
-import { servicesData } from "../data/servicesData";
 import { cardAnimation } from "@/animations/fadeIn";
 import { useGSAP } from "@gsap/react";
+import { servicesData } from "../data/formData";
 
 const ServicePage = () => {
   const ref = useRef(null);

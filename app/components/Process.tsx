@@ -37,7 +37,7 @@ const Section = ({
   return (
     <div ref={elementRef} className="relative shrink-0 max-w-[600px] px-12">
       <Image
-        className="transform scale-x-[-1]"
+        className="transform scale-x-[-1] rounded-lg"
         src={imageSrc}
         alt="img"
         height={200}

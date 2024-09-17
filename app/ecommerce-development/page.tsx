@@ -1,6 +1,8 @@
+import Form from "../components/Form";
 import Process from "../components/Process";
 import ServiceHero from "../components/ServiceHero";
-import { ecommerceModels } from "../data/servicesData";
+import { ecommerceData } from "../data/formData";
+import { ecommerceModels } from "../data/imgModels";
 import { shopifyDevelopmentSteps } from "../data/process";
 
 const page = () => {
@@ -25,6 +27,7 @@ const page = () => {
         services={services}
         title={title}
       />
+      <Form data={ecommerceData} />
       <Process sections={shopifyDevelopmentSteps} />
     </div>
   );

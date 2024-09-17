@@ -1,12 +1,13 @@
+"use client";
 import ShinyButton from "@/components/magicui/shiny-button";
 import { FormEvent, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import { scrollAnimation, textRevealAnimation } from "@/animations/fadeIn";
-import { wordpressData } from "../data/servicesData";
+import { wordpressFormDataType } from "../lib/types";
 
-const Form = () => {
+const Form = ({ data }: { data: wordpressFormDataType[] }) => {
   const [index, setIndex] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
@@ -79,7 +80,7 @@ const Form = () => {
               ></p>
             </div>
             <div className="">
-              {wordpressData.map((service, i) => (
+              {data.map((service, i) => (
                 <div key={i}>
                   <div
                     className={`relative my-4 p-4 ${

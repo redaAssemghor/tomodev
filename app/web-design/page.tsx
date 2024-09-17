@@ -1,6 +1,8 @@
+import Form from "../components/Form";
 import Process from "../components/Process";
 import ServiceHero from "../components/ServiceHero";
-import { designModels } from "../data/servicesData";
+import { webDesignData } from "../data/formData";
+import { designModels } from "../data/imgModels";
 import { webDesignServiceSteps } from "../data/process";
 
 const page = () => {
@@ -25,6 +27,7 @@ const page = () => {
         services={services}
         title={title}
       />
+      <Form data={webDesignData} />
       <Process sections={webDesignServiceSteps} />
     </div>
   );

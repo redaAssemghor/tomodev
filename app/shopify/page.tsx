@@ -1,6 +1,8 @@
+import Form from "../components/Form";
 import Process from "../components/Process";
 import ServiceHero from "../components/ServiceHero";
-import { wordpressModels } from "../data/servicesData";
+import { shopifyData } from "../data/formData";
+import { wordpressModels } from "../data/imgModels";
 import { shopifyDevelopmentSteps } from "../data/process";
 
 const page = () => {
@@ -18,12 +20,14 @@ const page = () => {
   return (
     <div>
       <ServiceHero
+        gif=""
         imgs={wordpressModels}
         name={name}
         description={description}
         services={services}
         title={title}
       />
+      <Form data={shopifyData} />
       <Process sections={shopifyDevelopmentSteps} />
     </div>
   );

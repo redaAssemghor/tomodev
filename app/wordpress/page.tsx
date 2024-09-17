@@ -1,6 +1,8 @@
+import Form from "../components/Form";
 import Process from "../components/Process";
 import ServiceHero from "../components/ServiceHero";
-import { wordpressModels } from "../data/servicesData";
+import { wordpressData } from "../data/formData";
+import { wordpressModels } from "../data/imgModels";
 import { wordpressDevelopmentSteps } from "../data/process";
 
 const page = () => {
@@ -23,6 +25,7 @@ const page = () => {
         services={services}
         title={title}
       />
+      <Form data={wordpressData} />
       <Process sections={wordpressDevelopmentSteps} />
     </div>
   );

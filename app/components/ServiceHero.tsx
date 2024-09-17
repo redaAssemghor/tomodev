@@ -9,15 +9,7 @@ import { FaAngleRight, FaLongArrowAltDown } from "react-icons/fa";
 import { PiPaperPlaneRightFill } from "react-icons/pi";
 import { TiHomeOutline } from "react-icons/ti";
 import Carousal from "./Carousal";
-import Form from "./Form";
-
-type ServiceHeroProps = {
-  name: string;
-  description: string;
-  services: string[];
-  title: string;
-  imgs: string[];
-};
+import { ServiceHeroProps } from "../lib/types";
 
 const ServiceHero = ({
   name,
@@ -25,6 +17,8 @@ const ServiceHero = ({
   services,
   title,
   imgs,
+  gif,
+  bgColors,
 }: ServiceHeroProps) => {
   const ref = useRef(null);
   const txtRef = useRef(null);
@@ -45,7 +39,11 @@ const ServiceHero = ({
         ref={ref}
         className="z-10 absolute h-full w-full bg-[--primary] bg-opacity-50"
         style={{
-          background: "linear-gradient(130deg, #01afe9, #1b398f, #791bce)",
+          background: `${
+            bgColors
+              ? bgColors
+              : "linear-gradient(130deg, #01afe9, #1b398f, #791bce)"
+          }`,
           backgroundSize: "200% 200%",
         }}
       ></div>
@@ -70,7 +68,7 @@ const ServiceHero = ({
             </li>
           </ul>
           <h1 className="text-4xl font-bold  my-8">{title}</h1>
-          <p ref={txtRef} className="text-lg"></p>
+          <p ref={txtRef} className="text-lg max-w-[550px]"></p>
           <ul className="flex flex-col gap-4 mt-8">
             {services &&
               services.map((service, i) => (
@@ -92,14 +90,30 @@ const ServiceHero = ({
           <h1 className="absolute right-0 text-4xl font-black translate-x-60 translate-y-52 rotate-90 opacity-30">
             FEATURED WORK
           </h1>
-          <Carousal>
-            {imgs.map((img, i) => (
-              <Image key={i} src={img} alt="models" width={500} height={500} />
-            ))}
-          </Carousal>
+          {gif ? (
+            <Image
+              src={gif}
+              alt="chatbot gif"
+              layout="intrinsic" // This is more predictable and allows better control over width and height
+              width={1000}
+              height={1400}
+              style={{ objectFit: "contain" }} // Ensures the GIF is properly fitted within the container
+            />
+          ) : (
+            <Carousal>
+              {imgs.map((img, i) => (
+                <Image
+                  key={i}
+                  src={img}
+                  alt="models"
+                  width={500}
+                  height={500}
+                />
+              ))}
+            </Carousal>
+          )}
         </div>
       </div>
-      <Form />
     </div>
   );
 };
