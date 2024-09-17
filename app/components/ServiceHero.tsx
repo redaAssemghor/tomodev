@@ -34,7 +34,7 @@ const ServiceHero = ({
   });
 
   return (
-    <div className="relative text-white overflow-hidden">
+    <div className="relative w-full text-white overflow-hidden">
       <div
         ref={ref}
         className="z-10 absolute h-full w-full bg-[--primary] bg-opacity-50"
@@ -47,7 +47,7 @@ const ServiceHero = ({
           backgroundSize: "200% 200%",
         }}
       ></div>
-      <div className="relative flex lg:flex-row flex-col gap-10 z-40 py-28 lg:px-32 px-4">
+      <div className="relative flex lg:flex-row justify-between flex-col gap-10 z-40 py-28 lg:px-32 px-4">
         <h1 className="absolute flex flex-col gap-8 left-2 text-xl justify-center items-center translate-y-52 opacity-30">
           <span className="rotate-90">SCROLL</span>
           <FaLongArrowAltDown />
