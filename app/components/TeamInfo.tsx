@@ -66,7 +66,7 @@ const TeamInfo = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
           {teamInfo.map((member, index) => (
             <div
               ref={(el) => {
@@ -101,19 +101,19 @@ const TeamInfo = () => {
         </div>
       </div>
 
-      <div className="text-white flex flex-col items-center gap-8 relative z-40 p-24">
+      <div className="text-white flex flex-col items-center gap-8 relative z-40 lg:p-24 p-5">
         <h1 className="text-4xl font-bold text-glow-blue">Got Talent?</h1>
-        <p className="text-3xl text-center max-w-prose">
+        <p className="lg:text-3xl text-xl text-center max-w-prose">
           We are always seeking talented people with passion, experience and the
           ability to <span className="text-glow-blue">make a difference</span>{" "}
           for our clients.
         </p>
-        <p className="text-3xl text-center max-w-prose">
+        <p className="lg:text-3xl text-xl text-center max-w-prose">
           If you’re interested in joining the Digital Silk team,
           <br /> send your resume and cover letter to{" "}
           <span className="text-glow-blue">jobs@tomodev.com</span>
         </p>
-        <h1 className="text-[160px] font-black text-glow-blue -mb-40 z-10">
+        <h1 className="lg:text-[160px] text-6xl font-black text-glow-blue lg:-mb-40 z-10">
           Join our team
         </h1>
       </div>

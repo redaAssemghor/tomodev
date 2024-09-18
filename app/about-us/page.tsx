@@ -6,14 +6,14 @@ import TeamInfo from "../components/TeamInfo";
 const page = () => {
   return (
     <div>
-      <div className="relative p-24 text-[--light] flex flex-col justify-center items-center gap-4 bg-[url('/be-deferent.webp')] bg-cover bg-center h-screen">
-        <h2 className="lg:text-4xl text-2xl font-semibold">
+      <div className="relative lg:p-24 p-5 text-[--light] flex flex-col justify-center items-center gap-4 bg-[url('/be-deferent.webp')] bg-cover bg-center h-screen">
+        <h2 className="lg:text-4xl text-xl text-center font-semibold">
           Dedicated Industry Experts With Proven Track Records
         </h2>
-        <h1 className="lg:text-6xl text-4xl font-bold">
+        <h1 className="lg:text-6xl text-2xl font-bold">
           The Team You Want On Your Project
         </h1>
-        <ul className="w-full flex justify-evenly my-8">
+        <ul className="w-full flex flex-col lg:flex-row gap-4 lg:gap-0 justify-evenly my-8">
           <li className="flex flex-col items-center gap-2">
             <h1 className="text-6xl text-[--secondary-color2] font-semibold">
               Expert
@@ -36,7 +36,7 @@ const page = () => {
           </li>
         </ul>
         <Image
-          className="absolute left-10 bottom-20 opacity-70"
+          className="absolute left-10 bottom-28 opacity-70"
           alt="scroll"
           src={"/scroll.svg"}
           height={20}
