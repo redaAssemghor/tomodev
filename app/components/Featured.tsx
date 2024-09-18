@@ -27,7 +27,10 @@ const Featured = () => {
   };
 
   return (
-    <div className="text-white z-40 backdrop-blur-3xl flex flex-col justify-center items-center bg-inherit relative">
+    <div
+      id="projects"
+      className="text-white z-30 backdrop-blur-3xl flex flex-col justify-center items-center bg-inherit relative"
+    >
       <div className="w-full h-full flex flex-col items-center gap-5 bg-gradient-to-t from-[--accent] to-bg-inherit">
         <div ref={ref} className="flex flex-col items-center gap-5">
           <h1 className="font-bold lg:text-xl text-lg text-[--text1]">

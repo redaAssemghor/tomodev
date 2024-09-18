@@ -1,3 +1,4 @@
+import ChatbotSlider from "../components/ChatbotSlider";
 import Form from "../components/Form";
 import Process from "../components/Process";
 import ServiceHero from "../components/ServiceHero";
@@ -18,7 +19,7 @@ const page = () => {
   ];
 
   return (
-    <div>
+    <div className="bg-[--primary]">
       <ServiceHero
         imgs={chatbotModels}
         name={name}
@@ -27,7 +28,9 @@ const page = () => {
         title={title}
         gif="/models/chatbot/chatbot-gif.gif"
         bgColors="linear-gradient(90deg, #1b398f, #04e4ff)"
-      />
+      >
+        <ChatbotSlider />
+      </ServiceHero>
       <Form data={chatbotData} />
       <Process sections={chatbotServiceSteps} />
     </div>

@@ -100,7 +100,7 @@ const Form = ({ data }: { data: wordpressFormDataType[] }) => {
                       {service.service}
                     </h1>
                     <p
-                      className={`text-[--text2] transition-max-height duration-1000 ease-in overflow-hidden text-lg ${
+                      className={`text-[--text2] transition-max-height duration-1000 ease-in overflow-hidden text-base ${
                         index === i ? "max-h-96" : "max-h-0"
                       }`}
                     >
@@ -112,7 +112,7 @@ const Form = ({ data }: { data: wordpressFormDataType[] }) => {
             </div>
           </div>
 
-          <div className="flex-1 max-h-fit bg-white p-10 rounded-lg shadow-lg">
+          <div className="flex-1 h-[900px] bg-white p-10 rounded-lg shadow-lg">
             <div ref={header2Ref} className="py-8">
               <h1 className="text-[--secondary] text-3xl font-bold py-6">
                 Request A Quote

@@ -1,9 +1,12 @@
+import { ReactNode } from "react";
+
 export type wordpressFormDataType = {
   service: string;
   description: string;
 };
 
 export type ServiceHeroProps = {
+  children: ReactNode;
   name: string;
   description: string;
   services: string[];
@@ -12,3 +15,9 @@ export type ServiceHeroProps = {
   gif: string;
   bgColors?: string;
 };
+
+export interface Project {
+  name: string;
+  description: string;
+  img: string;
+}

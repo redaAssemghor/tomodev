@@ -94,13 +94,13 @@ export const horizontalScrollAnimation = (
     scrollTrigger: {
       trigger: trigger,
       pin: true,
-      start: "bottom bottom",
-      scrub: 4,
+      start: "top top",
+      scrub: 1,
     },
   });
 
   tl.to(element, {
-    xPercent: -120,
+    xPercent: -140,
     ease: "none",
   });
 };
@@ -154,5 +154,29 @@ export const spotLightAnimation = (element: HTMLElement) => {
       curviness: 1, // Makes the motion smooth and circular
       autoRotate: true, // Rotates the element along the path
     },
+  });
+};
+
+// talent background animation
+export const animateBackgroundHover = (
+  element: HTMLElement,
+  container: HTMLElement
+) => {
+  // Start the animation when the mouse enters (hover)
+  container.addEventListener("mouseenter", () => {
+    gsap.to(element, {
+      width: "100%", // Animate the width to 100%
+      duration: 0.8, // Adjust the duration as needed
+      ease: "power2.out", // Smooth easing
+    });
+  });
+
+  // Reset the background when the mouse leaves
+  container.addEventListener("mouseleave", () => {
+    gsap.to(element, {
+      width: "0%",
+      duration: 0.8,
+      ease: "power2.in",
+    });
   });
 };

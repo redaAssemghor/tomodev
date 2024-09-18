@@ -4,7 +4,7 @@ import FooterLogo from "./FooterLogo";
 
 const Footer = () => {
   return (
-    <div className="h-full bg-gradient-to-b from-[--text] to-[--secondary]">
+    <div className="relative z-40 h-full bg-gradient-to-b from-[--text] to-[--secondary]">
       <div className="relative text-white px-4 py-20 h-full">
         <h1 className="font-bold text-6xl m-20 z-40">
           Let&rsquo;s Grow Your Brand

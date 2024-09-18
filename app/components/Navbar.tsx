@@ -22,10 +22,10 @@ const Navbar = () => {
                 <li>
                   <NavigationMenuLink asChild>
                     <Link
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-3 no-underline outline-none focus:shadow-md"
-                      href="/"
+                      className="flex gap-6 h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-3 no-underline outline-none focus:shadow-md"
+                      href="/about-us"
                     >
-                      <div className="my-2 text-lg font-medium">TOMODEV</div>
+                      <div className="my-2 text-lg font-bold">TOMODEV</div>
                       <p className="text-sm text-muted-foreground ">
                         TOMODEV is a web agency that specializes in custom web
                         design, branding, and eCommerce development, helping
@@ -149,7 +149,7 @@ const Navbar = () => {
                 <li>
                   <NavigationMenuLink asChild>
                     <Link
-                      href="/contact"
+                      href="/about-us"
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     >
                       <h1 className="text-lg font-medium">About Us</h1>
@@ -164,8 +164,10 @@ const Navbar = () => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink>Documentation</NavigationMenuLink>
+            <Link href="#projects" legacyBehavior passHref>
+              <NavigationMenuLink>
+                <h1 className="font-black">Projects</h1>
+              </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>

@@ -12,6 +12,7 @@ import Carousal from "./Carousal";
 import { ServiceHeroProps } from "../lib/types";
 
 const ServiceHero = ({
+  children,
   name,
   description,
   services,
@@ -68,7 +69,7 @@ const ServiceHero = ({
             </li>
           </ul>
           <h1 className="text-4xl font-bold  my-8">{title}</h1>
-          <p ref={txtRef} className="text-lg max-w-[550px]"></p>
+          <p ref={txtRef} className="text-lg max-w-[550px] h-[140px]"></p>
           <ul className="flex flex-col gap-4 mt-8">
             {services &&
               services.map((service, i) => (
@@ -114,6 +115,7 @@ const ServiceHero = ({
           )}
         </div>
       </div>
+      {children}
     </div>
   );
 };

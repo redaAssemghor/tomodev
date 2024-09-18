@@ -4,83 +4,15 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
+import { Project } from "../lib/types";
 
-interface Project {
-  name: string;
-  description: string;
-  img: string;
-}
+type Projects = {
+  featured: Project[];
+  wallet: Project[];
+  cart: Project[];
+};
 
-const featured = [
-  {
-    name: "Microsoft",
-    description:
-      "Microsoft is a technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    img: "/template/0.jpg",
-  },
-  {
-    name: "Microsoft",
-    description:
-      "Microsoft is a technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    img: "/template/1.webp",
-  },
-  {
-    name: "Apple",
-    description:
-      "Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software, and online services.",
-    img: "/template/2.jpg",
-  },
-];
-
-const wallet = [
-  {
-    name: "Google",
-    description:
-      "Google is an American multinational technology company that specializes in Internet-related services and products.",
-    img: "/template/3.jpg",
-  },
-  {
-    name: "Facebook",
-    description:
-      "Facebook is an American online social media and social networking service company based in Menlo Park, California.",
-    img: "/template/4.jpg",
-  },
-  {
-    name: "LinkedIn",
-    description:
-      "LinkedIn is an American business and employment-oriented online service that operates via websites and mobile apps.",
-    img: "/template/5.png",
-  },
-  {
-    name: "Twitter",
-    description:
-      "Twitter is an American microblogging and social networking service on which users post and interact with messages known as tweets.",
-    img: "/template/6.jpg",
-  },
-];
-
-const cart = [
-  {
-    name: "Apple",
-    description:
-      "Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software, and online services.",
-    img: "/template/7.webp",
-  },
-  {
-    name: "Twitter",
-    description:
-      "Twitter is an American microblogging and social networking service on which users post and interact with messages known as tweets.",
-    img: "/template/8.jpg",
-  },
-  {
-    name: "Twitter",
-    description:
-      "Twitter is an American microblogging and social networking service on which users post and interact with messages known as tweets.",
-    img: "/template/9.png",
-  },
-];
-
-const Projects = () => {
+const Projects = ({ featured, wallet, cart }: Projects) => {
   const [selectedPage, setSelectedPage] = useState<Project[] | null>(null);
   const [mouseEnter, setMouseEnter] = useState<number | null>(null);
   const projects = useSelector((state: RootState) => state.featuredPage.value);
@@ -116,7 +48,7 @@ const Projects = () => {
     <div className="relative z-20 text-white bg-inherit py-20 lg:px-8 px-4 grid lg:grid-cols-2 grid-cols-1 gap-6">
       <div
         ref={ref}
-        className="z-[1] absolute h-full w-full bg-[--primary] bg-opacity-50"
+        className="z-10 absolute h-full w-full bg-[--primary] bg-opacity-50"
         style={{
           background: "linear-gradient(90deg, #00031f, #1b398f)",
           backgroundSize: "200% 200%",

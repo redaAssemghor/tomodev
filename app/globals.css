@@ -5,6 +5,7 @@
 :root {
   --primary: #00042a;
   --secondary: #01afe9;
+  --secondary-color2: #04e4ff;
   --accent: #791bce;
   --light: #f1f5fe;
   --text1: #009cff;
@@ -13,6 +14,17 @@
   --text: #1b398f;
   --dark: #00031f;
   --text-new2: #3b7bce;
+}
+
+/* glow blue */
+@layer utilities {
+  .text-glow-blue {
+    @apply bg-clip-text text-transparent;
+    background: linear-gradient(131.8deg, #04e4ff 0%, #009cff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(4, 228, 255, 0.5);
+  }
 }
 
 @layer base {

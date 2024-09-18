@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import Services from "./components/Services";
 import ServicePage from "./components/ServicePage";
 import ContactPage from "./components/ContactPage";
+import { cart, featured, wallet } from "./data/demoProjects";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
         <HorizontalBand />
         <Info />
         <Featured />
-        <Projects />
+        <Projects cart={cart} featured={featured} wallet={wallet} />
         <Services />
         <ServicePage />
         <ContactPage />
