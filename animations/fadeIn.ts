@@ -46,6 +46,21 @@ export const scrollAnimation = (element: HTMLElement) => {
   );
 };
 
+// reveal animation onscroll
+export const revealAnimation = (element: HTMLElement) => {
+  gsap.fromTo(
+    element,
+    { opacity: 0, x: -60 },
+    {
+      opacity: 1,
+      duration: 1,
+      x: 0,
+      stagger: 0.5,
+      scrollTrigger: { trigger: element, start: "top 90%" },
+    }
+  );
+};
+
 // button click animation
 export const buttonAnimation = (element: HTMLElement) => {
   gsap.fromTo(
@@ -72,7 +87,7 @@ export const backgroundAnimation = (element: HTMLElement) => {
   });
 };
 
-//text reveal animation
+// text reveal animation
 export const textRevealAnimation = (element: HTMLElement, text: string) => {
   gsap.to(element, {
     text: text,
@@ -105,7 +120,7 @@ export const horizontalScrollAnimation = (
   });
 };
 
-// line animation
+// progress line animation
 export const lineAnimation = (
   element: HTMLElement,
   elementRef: HTMLElement

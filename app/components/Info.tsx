@@ -63,6 +63,7 @@ const Info = () => {
 
       <div className="relative bg-gradient-to-r from-[--accent] to-bg-inherit w-full h-[100px] flex justify-start items-center">
         <HeroVideoDialog
+          animationStyle="from-bottom"
           thumbnailAlt="click to play video"
           className="w-[200px] rounded-sm"
           thumbnailSrc="/thumbnail.webp"

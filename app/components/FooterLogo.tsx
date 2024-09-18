@@ -21,13 +21,7 @@ const FooterLogo = () => {
             </li>
             <li className="underline">
               <Link href="#">
-                <h1>Accessibility</h1>
-              </Link>
-              <h1></h1>
-            </li>
-            <li className="underline">
-              <Link href="#">
-                <h1>Call us at (800) 206-9003</h1>
+                <h1>Call us at (800) 000-0000</h1>
               </Link>
             </li>
           </ul>

@@ -83,12 +83,12 @@ const Header = () => {
           <div>
             <button
               onClick={() => handleLinks("services")}
-              className="flex gap-2 pb-8 items-center font-bold text-2xl justify-between w-full"
+              className="flex gap-2 pb-4 items-center font-bold text-2xl justify-between w-full"
             >
               Services <FaChevronDown />
             </button>
             <ul
-              className={`flex flex-col gap-4 text-lg text-[--light] mt-2 transition-all duration-700 ${
+              className={`flex flex-col gap-4 text-sm text-[--text1] mt-2 transition-all duration-700 ${
                 openLinks === "services"
                   ? "max-h-40"
                   : "max-h-0 overflow-hidden"
@@ -103,6 +103,14 @@ const Header = () => {
               <li>
                 <Link href={"/shopify"}>Shopify Website Design</Link>
               </li>
+              <li>
+                <Link href={"/ecommerce-development"}>
+                  Ecommerce Development
+                </Link>
+              </li>
+              <li>
+                <Link href={"/chatbot"}>Chatbot Integration Services</Link>
+              </li>
             </ul>
           </div>
 
@@ -115,15 +123,15 @@ const Header = () => {
               About <FaChevronDown />
             </button>
             <ul
-              className={`flex flex-col gap-4 text-lg text-[--light] mt-2 transition-all duration-700 ${
+              className={`flex flex-col gap-4 text-sm text-[--text1] mt-2 transition-all duration-700 ${
                 openLinks === "about" ? "max-h-40" : "max-h-0 overflow-hidden"
               }`}
             >
               <li>
-                <Link href={"/contact"}>Custom Web Design</Link>
+                <Link href={"/contact"}>Locations</Link>
               </li>
               <li>
-                <Link href={"/contact"}>About Us</Link>
+                <Link href={"/about-us"}>About Us</Link>
               </li>
               <li>
                 <Link href={"/contact"}>Contact Us</Link>
@@ -133,10 +141,10 @@ const Header = () => {
 
           {/* Documentation Section */}
           <Link
-            href={"/documentation"}
+            href={"/#projects"}
             className="flex gap-2 items-center font-bold text-2xl justify-between w-full"
           >
-            Documentation
+            Projects
           </Link>
         </div>
         <div className="mt-24">

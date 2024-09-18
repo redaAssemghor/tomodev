@@ -25,7 +25,7 @@ const page = () => {
             <h1 className="text-6xl text-[--secondary-color2] font-semibold">
               150+
             </h1>
-            <h2 className="text-2xl">TEAM MEMBERS</h2>
+            <h2 className="text-2xl">SATISFIED CLIENTS</h2>
           </li>
 
           <li className="flex flex-col items-center gap-2">

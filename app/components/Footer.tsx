@@ -19,23 +19,19 @@ const Footer = () => {
             <ul className="flex flex-col gap-5 text-[16px] py-8">
               <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                 <PiArrowElbowDownRightThin />
-                <Link href="#">Custom Web Design</Link>
+                <Link href="/wordpress">Wordpress</Link>
               </li>
               <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                 <PiArrowElbowDownRightThin />
-                <Link href="#">Branding Services</Link>
+                <Link href="/web-design">Custom Web Design</Link>
               </li>
               <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                 <PiArrowElbowDownRightThin />
-                <Link href="#">eCommerce Design</Link>
+                <Link href="/shopify">Shopify Website Design</Link>
               </li>
               <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                 <PiArrowElbowDownRightThin />
-                <Link href="#">Shopify Website Design</Link>
-              </li>
-              <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                <PiArrowElbowDownRightThin />
-                <Link href="#">WordPress Web Design</Link>
+                <Link href="/chatbot">Chatbot Integration Services</Link>
               </li>
             </ul>
           </div>
@@ -49,7 +45,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-5 text-[16px] py-8">
               <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                 <PiArrowElbowDownRightThin />
-                <Link href="#">Website Cost Calculator</Link>
+                <Link href="/contact">Website Cost Calculator</Link>
               </li>
               <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                 <PiArrowElbowDownRightThin />
@@ -57,45 +53,11 @@ const Footer = () => {
               </li>
               <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                 <PiArrowElbowDownRightThin />
-                <Link href="#">Custom Web Development</Link>
+                <Link href="/contact">Custom Web Development</Link>
               </li>
               <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                 <PiArrowElbowDownRightThin />
-                <Link href="#">Magento Development</Link>
-              </li>
-              <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                <PiArrowElbowDownRightThin />
-                <Link href="#">eCommerce Development</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company Section */}
-          <div className="relative p-5 border-l">
-            <span className="absolute top-0 left-0 w-1 h-4 bg-white ronded-r-full"></span>
-            <h1 className="font-bold text-3xl flex items-center justify-between cursor-pointer">
-              Show
-            </h1>
-            <ul className="flex flex-col gap-5 text-[16px] py-8">
-              <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                <PiArrowElbowDownRightThin />
-                <Link href="#">Case Studies</Link>
-              </li>
-              <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                <PiArrowElbowDownRightThin />
-                <Link href="#">Digital Trends</Link>
-              </li>
-              <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                <PiArrowElbowDownRightThin />
-                <Link href="#">Top Companies</Link>
-              </li>
-              <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                <PiArrowElbowDownRightThin />
-                <Link href="#">Reviews</Link>
-              </li>
-              <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                <PiArrowElbowDownRightThin />
-                <Link href="#">Sitemap</Link>
+                <Link href="/ecommerce-development">Ecommerce Development</Link>
               </li>
             </ul>
           </div>
@@ -109,11 +71,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-5 text-[16px] py-8">
               <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                 <PiArrowElbowDownRightThin />
-                <Link href="#">About Us</Link>
-              </li>
-              <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                <PiArrowElbowDownRightThin />
-                <Link href="#">Digital Trends</Link>
+                <Link href="/about-us">About Us</Link>
               </li>
               <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                 <PiArrowElbowDownRightThin />
@@ -125,7 +83,7 @@ const Footer = () => {
               </li>
               <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                 <PiArrowElbowDownRightThin />
-                <Link href="#">Contact Us</Link>
+                <Link href="/contact">Contact Us</Link>
               </li>
             </ul>
           </div>

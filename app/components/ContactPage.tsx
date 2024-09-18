@@ -1,5 +1,9 @@
 "use client";
-import { backgroundAnimation, spotLightAnimation } from "@/animations/fadeIn";
+import {
+  backgroundAnimation,
+  revealAnimation,
+  spotLightAnimation,
+} from "@/animations/fadeIn";
 import ShinyButton from "@/components/magicui/shiny-button";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
@@ -45,11 +49,14 @@ const ContactPage = () => {
     }
     if (lightRef.current) {
       const elements = gsap.utils.toArray(".spotlight");
-      console.log(elements);
       elements.forEach((el) => {
         spotLightAnimation(el as HTMLElement);
       });
     }
+    const textArr = gsap.utils.toArray(".text");
+    textArr.forEach((el) => {
+      revealAnimation(el as HTMLElement);
+    });
   });
 
   return (
@@ -65,28 +72,30 @@ const ContactPage = () => {
       <div className="flex lg:flex-row flex-col z-40 pt-40 lg:pt-0 text-white lg:justify-between justify-center items-center h-full w-full">
         {/* Header Section */}
         <div className="flex flex-col p-5 lg:items-start items-center gap-4 mb-auto">
-          <h2 className="text-xl font-bold">Take The Silk Road To</h2>
-          <h1 className="text-3xl neon-text text-center font-black">
+          <h2 className="text text-xl font-bold">Take The Silk Road To</h2>
+          <h1 className="text text-3xl neon-text text-center font-black">
             Digitizing Your Business Growth
           </h1>
-          <h1 className="text-2xl font-bold">Start A Conversation With Us</h1>
+          <h1 className="text text-2xl font-bold">
+            Start A Conversation With Us
+          </h1>
 
           <div className="lg:flex gap-8 items-center min-h-[200px] hidden">
             <div className="flex gap-4 justify-center items-center">
               <span className="w-[60px] h-[2px] bg-[--text3] inline-block"></span>
-              <h1 className="text-xl font-black">Follow Us</h1>
+              <h1 className="text text-xl font-black">Follow Us</h1>
             </div>
 
             <div className="flex gap-4">
               <Link
                 href="#"
-                className="text-xl border-2 rounded-full p-2 border-[--text2] hover:border-[--text3] hover:bg-[--text3] transition duration-500"
+                className="text text-xl border-2 rounded-full p-2 border-[--text2] hover:border-[--text3] hover:bg-[--text3] transition duration-500"
               >
                 <FaInstagram />
               </Link>
               <Link
                 href="#"
-                className="text-xl border-2 rounded-full p-2 border-[--text2] hover:border-[--text3] hover:bg-[--text3] transition duration-500"
+                className="text text-xl border-2 rounded-full p-2 border-[--text2] hover:border-[--text3] hover:bg-[--text3] transition duration-500"
               >
                 <FaLinkedinIn />
               </Link>
