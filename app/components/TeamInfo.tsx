@@ -10,22 +10,22 @@ import { useRef } from "react";
 const teamInfo = [
   {
     name: "Reda Assemghor",
-    image: "/thumbnail.webp",
+    image: "/IMG.jpg",
     role: "full-stack developer",
   },
   {
     name: "Reda Assemghor",
-    image: "/thumbnail.webp",
+    image: "/IMG.jpg",
     role: "full-stack developer",
   },
   {
     name: "Reda Assemghor",
-    image: "/thumbnail.webp",
+    image: "/IMG.jpg",
     role: "full-stack developer",
   },
   {
     name: "Reda Assemghor",
-    image: "/thumbnail.webp",
+    image: "/IMG.jpg",
     role: "full-stack developer",
   },
 ];
@@ -113,7 +113,7 @@ const TeamInfo = () => {
           <br /> send your resume and cover letter to{" "}
           <span className="text-glow-blue">jobs@tomodev.com</span>
         </p>
-        <h1 className="lg:text-[160px] text-6xl font-black text-glow-blue lg:-mb-40 z-10">
+        <h1 className="lg:text-[160px] text-6xl font-black text-glow-blue lg:-mb-32 z-10">
           Join our team
         </h1>
       </div>
