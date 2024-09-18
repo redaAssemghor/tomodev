@@ -6,13 +6,13 @@ export type wordpressFormDataType = {
 };
 
 export type ServiceHeroProps = {
-  children: ReactNode;
+  children?: ReactNode;
   name: string;
   description: string;
   services: string[];
   title: string;
   imgs: string[];
-  gif: string;
+  gif?: string;
   bgColors?: string;
 };
 

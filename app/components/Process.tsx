@@ -47,7 +47,7 @@ const Section = ({
         ref={circleRef}
         className="absolute top-3 left-0 w-4 h-4 rounded-full shadow-neon opacity-0 bg-[--accent] z-40"
       ></span>
-      <h1 className="text-3xl font-semibold text-[--text1] py-2">{title}</h1>
+      <h1 className="lg:text-3xl font-semibold text-[--text1] py-2">{title}</h1>
       <p>{description}</p>
       <ul className="">
         <li className="text-lg py-4">Here’s how our team does it:</li>
@@ -103,9 +103,9 @@ const Process = ({ sections }: { sections: SectionProps[] }) => {
         }}
       ></div>
 
-      <div className="flex flex-col items-center z-40">
+      <div className="flex flex-col items-center z-40 p-5">
         <h1 className="text-3xl font-bold py-4">Website Design Process</h1>
-        <p className="text-xl text-center">
+        <p className="lg:text-xl texl-lg text-center">
           Take a peek behind the curtain and explore the custom web design
           process our team follows.
           <br /> We build custom sites for brands of all sizes that deliver {""}
@@ -120,7 +120,7 @@ const Process = ({ sections }: { sections: SectionProps[] }) => {
         className="absolute z-40 top-40 h-2 bg-gradient-to-r from-[--accent] to-[--text]"
       ></span>
 
-      <div ref={conatinerRef} className="flex p-5 z-40">
+      <div ref={conatinerRef} className="flex lg:p-5 z-40">
         {sections.map((section) => (
           <Section
             key={section.id}

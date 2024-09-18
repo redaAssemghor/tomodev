@@ -6,15 +6,13 @@ import { PiArrowElbowDownRightThin } from "react-icons/pi";
 import FooterLogo from "./FooterLogo";
 
 const MobileFooter = () => {
-  // State to control which section is open
   const [openSection, setOpenSection] = useState<string | null>(null);
 
-  // Toggle function for sections
   const toggleSection = (section: string) => {
     if (openSection === section) {
-      setOpenSection(null); // Close if it's already open
+      setOpenSection(null);
     } else {
-      setOpenSection(section); // Open the clicked section
+      setOpenSection(section);
     }
   };
 
@@ -39,23 +37,25 @@ const MobileFooter = () => {
               <ul className="flex flex-col gap-5 text-[16px] py-8">
                 <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                   <PiArrowElbowDownRightThin />
-                  <Link href="#">Custom Web Design</Link>
+                  <Link href="/web-design">Custom Web Design</Link>
                 </li>
                 <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                   <PiArrowElbowDownRightThin />
-                  <Link href="#">Branding Services</Link>
+                  <Link href="/wordpress">Wordpress</Link>
                 </li>
                 <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                   <PiArrowElbowDownRightThin />
-                  <Link href="#">eCommerce Design</Link>
+                  <Link href="/ecommerce-development">
+                    Ecommerce Development
+                  </Link>
                 </li>
                 <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                   <PiArrowElbowDownRightThin />
-                  <Link href="#">Shopify Website Design</Link>
+                  <Link href="/shopify">Shopify Website Design</Link>
                 </li>
                 <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                   <PiArrowElbowDownRightThin />
-                  <Link href="#">WordPress Web Design</Link>
+                  <Link href="/chatbot">Chatbot Integration Services</Link>
                 </li>
               </ul>
             )}
@@ -67,7 +67,7 @@ const MobileFooter = () => {
               className="font-semibold text-xl flex items-center justify-between border-b py-5 cursor-pointer"
               onClick={() => toggleSection("appsDevelopment")}
             >
-              Apps & Development
+              Company
               <span>
                 <DownArrowAvg />
               </span>
@@ -76,80 +76,26 @@ const MobileFooter = () => {
               <ul className="flex flex-col gap-5 text-[16px] py-8">
                 <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                   <PiArrowElbowDownRightThin />
-                  <Link href="#">Website Cost Calculator</Link>
+                  <Link href="/about-us">About Us</Link>
                 </li>
                 <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                   <PiArrowElbowDownRightThin />
-                  <Link href="#">Conversion Rate Calculator</Link>
+                  <Link href="/contact">Locations</Link>
                 </li>
                 <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
                   <PiArrowElbowDownRightThin />
-                  <Link href="#">Custom Web Development</Link>
-                </li>
-                <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                  <PiArrowElbowDownRightThin />
-                  <Link href="#">Magento Development</Link>
-                </li>
-                <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                  <PiArrowElbowDownRightThin />
-                  <Link href="#">eCommerce Development</Link>
-                </li>
-                <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                  <PiArrowElbowDownRightThin />
-                  <Link href="#">WooCommerce Development</Link>
+                  <Link href="/contact">Contact Us</Link>
                 </li>
               </ul>
             )}
           </div>
 
           {/* Company Section */}
-          <div>
-            <h1
-              className="font-semibold text-xl flex items-center justify-between border-b py-5 cursor-pointer"
-              onClick={() => toggleSection("company")}
-            >
-              Company
-              <span>
-                <DownArrowAvg />
-              </span>
+          <Link href="/contact">
+            <h1 className="font-semibold text-xl flex items-center justify-between border-b py-5 cursor-pointer">
+              Projects
             </h1>
-            {openSection === "company" && (
-              <ul className="flex flex-col gap-5 text-[16px] py-8">
-                <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                  <PiArrowElbowDownRightThin />
-                  <Link href="#">About Us</Link>
-                </li>
-                <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                  <PiArrowElbowDownRightThin />
-                  <Link href="#">Case Studies</Link>
-                </li>
-                <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                  <PiArrowElbowDownRightThin />
-                  <Link href="#">Digital Trends</Link>
-                </li>
-                <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                  <PiArrowElbowDownRightThin />
-                  <Link href="#">Top Companies</Link>
-                </li>
-                <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                  <PiArrowElbowDownRightThin />
-                  <Link href="#">Reviews</Link>
-                </li>
-                <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                  <PiArrowElbowDownRightThin />
-                  <Link href="#">Sitemap</Link>
-                </li>
-                <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                  <PiArrowElbowDownRightThin />
-                  <Link href="#">Locations</Link>
-                </li>
-                <li className="flex gap-2 items-center hover:underline hover:text-[--text] transition duration-300">
-                  <PiArrowElbowDownRightThin />
-                  <Link href="#">Contact Us</Link>
-                </li>
-              </ul>
-            )}
-          </div>
+          </Link>
         </div>
       </div>
 

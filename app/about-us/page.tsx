@@ -6,7 +6,7 @@ import TeamInfo from "../components/TeamInfo";
 const page = () => {
   return (
     <div>
-      <div className="relative lg:p-24 p-5 text-[--light] flex flex-col justify-center items-center gap-4 bg-[url('/be-deferent.webp')] bg-cover bg-center h-screen">
+      <div className="relative lg:p-24 p-5 pt-28 text-[--light] flex flex-col justify-center items-center gap-4 bg-[url('/be-deferent.webp')] bg-cover bg-center h-screen">
         <h2 className="lg:text-4xl text-xl text-center font-semibold">
           Dedicated Industry Experts With Proven Track Records
         </h2>

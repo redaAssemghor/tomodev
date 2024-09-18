@@ -95,21 +95,29 @@ const Header = () => {
               }`}
             >
               <li>
-                <Link href={"/web-design"}>Custom Web Design</Link>
+                <Link onClick={handleMenu} href={"/web-design"}>
+                  Custom Web Design
+                </Link>
               </li>
               <li>
-                <Link href={"/wordpress"}>Wordpress</Link>
+                <Link onClick={handleMenu} href={"/wordpress"}>
+                  Wordpress
+                </Link>
               </li>
               <li>
-                <Link href={"/shopify"}>Shopify Website Design</Link>
+                <Link onClick={handleMenu} href={"/shopify"}>
+                  Shopify Website Design
+                </Link>
               </li>
               <li>
-                <Link href={"/ecommerce-development"}>
+                <Link onClick={handleMenu} href={"/ecommerce-development"}>
                   Ecommerce Development
                 </Link>
               </li>
               <li>
-                <Link href={"/chatbot"}>Chatbot Integration Services</Link>
+                <Link onClick={handleMenu} href={"/chatbot"}>
+                  Chatbot Integration Services
+                </Link>
               </li>
             </ul>
           </div>
@@ -128,19 +136,26 @@ const Header = () => {
               }`}
             >
               <li>
-                <Link href={"/contact"}>Locations</Link>
+                <Link onClick={handleMenu} href={"/contact"}>
+                  Locations
+                </Link>
               </li>
               <li>
-                <Link href={"/about-us"}>About Us</Link>
+                <Link onClick={handleMenu} href={"/about-us"}>
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link href={"/contact"}>Contact Us</Link>
+                <Link onClick={handleMenu} href={"/contact"}>
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Documentation Section */}
           <Link
+            onClick={handleMenu}
             href={"/#projects"}
             className="flex gap-2 items-center font-bold text-2xl justify-between w-full"
           >
