@@ -27,12 +27,10 @@ const Awards = () => {
       ></div>
       <div className="flex flex-col justify-center items-center gap-6 relative z-40 h-full w-full bg-[url('/bg-blurr.png')] bg-cover bg-center">
         <div className="flex flex-col gap-3 items-center pb-8">
-          <h2 className="text-xl font-bold">We Partner With Brands To</h2>
-          <h1 className="text-5xl font-bold">
-            Create Superior Digital Experiences
-          </h1>
+          <h2 className="text-xl font-bold">Our Experts Have Won Top</h2>
+          <h1 className="text-5xl font-bold">Agency Industry Awards</h1>
         </div>
-        <div className="grid grid-cols-3 gap-x-20 gap-y-8">
+        <div className="flex gap-x-20 py-8">
           <Image alt="" src={"/svg/nextjs.svg"} width={100} height={100} />
           <Image alt="" src={"/svg/nextjs.svg"} width={100} height={100} />
           <Image alt="" src={"/svg/nextjs.svg"} width={100} height={100} />

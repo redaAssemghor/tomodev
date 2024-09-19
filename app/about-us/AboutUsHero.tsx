@@ -23,7 +23,9 @@ const AboutUsHero = () => {
             }`}
           >
             <IoMdInformationCircleOutline />
-            <button onClick={() => setName("about")}>ABOUT</button>
+            <button className="neon-text" onClick={() => setName("about")}>
+              ABOUT
+            </button>
           </li>
           <li
             className={`flex gap-2 items-center py-2 px-20 border-x transition duration-500 ${
@@ -31,7 +33,9 @@ const AboutUsHero = () => {
             }`}
           >
             <BsPersonCheck />
-            <button onClick={() => setName("awards")}>AWARDS</button>
+            <button className="neon-text" onClick={() => setName("awards")}>
+              AWARDS
+            </button>
           </li>
           <li
             className={`flex gap-2 items-center py-2 px-20 border-x transition duration-500 ${
@@ -39,7 +43,9 @@ const AboutUsHero = () => {
             }`}
           >
             <LiaAwardSolid />
-            <button onClick={() => setName("clients")}>CLIENTS</button>
+            <button className="neon-text" onClick={() => setName("clients")}>
+              CLIENTS
+            </button>
           </li>
         </ul>
       </div>

@@ -32,12 +32,14 @@ const Clients = () => {
             Create Superior Digital Experiences
           </h1>
         </div>
-        <div className="grid grid-cols-3 gap-x-20 gap-y-8 items-center">
-          <Image alt="" src={"/svg/nextjs.svg"} width={100} height={100} />
-          <Image alt="" src={"/svg/nextjs.svg"} width={100} height={100} />
-          <Image alt="" src={"/svg/nextjs.svg"} width={100} height={100} />
-          <Image alt="" src={"/svg/nextjs.svg"} width={100} height={100} />
-          <Image alt="" src={"/svg/nextjs.svg"} width={100} height={100} />
+        <div className="flex gap-x-20 py-8">
+          <Image alt="" src={"/logos/ess-logo.png"} width={100} height={100} />
+          <Image
+            alt=""
+            src={"/logos/federation.png"}
+            width={100}
+            height={100}
+          />
         </div>
         <Link className="mt-4" href="/contact-us">
           <ShinyButton text="SPEAK WITH OUR EXPERTS" />
