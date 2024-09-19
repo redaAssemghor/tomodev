@@ -181,7 +181,7 @@ export const animateBackgroundHover = (
   container.addEventListener("mouseenter", () => {
     gsap.to(element, {
       width: "100%", // Animate the width to 100%
-      duration: 0.8, // Adjust the duration as needed
+      duration: 0.4, // Adjust the duration as needed
       ease: "power2.out", // Smooth easing
     });
   });
@@ -190,7 +190,7 @@ export const animateBackgroundHover = (
   container.addEventListener("mouseleave", () => {
     gsap.to(element, {
       width: "0%",
-      duration: 0.8,
+      duration: 0.4,
       ease: "power2.in",
     });
   });

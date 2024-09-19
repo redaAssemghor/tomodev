@@ -18,7 +18,7 @@ const teamInfo = [
   {
     name: "Djardi Messaoud",
     image: "/team/messaoud.png",
-    role: "Backend developer/ C# Developer",
+    role: "Backend developer",
   },
   {
     name: "Mohamed Safi",
@@ -55,7 +55,7 @@ const TeamInfo = () => {
         ref={ref}
         className="z-10 absolute h-full w-full bg-[--primary] bg-opacity-50"
         style={{
-          background: "linear-gradient(90deg, #00031f, #1b398f)",
+          background: "linear-gradient(90deg, #04e4ff, #791bce, #1b398f)",
           backgroundSize: "200% 200%",
         }}
       ></div>
@@ -82,18 +82,18 @@ const TeamInfo = () => {
             >
               <div className="relative">
                 <span
-                  className={`h-full w-full bg-[url('/bg-blurr.png')] bg-cover bg-center absolute transition-opacity duration-700 ${
-                    isHovered === index ? "opacity-75" : "opacity-0"
+                  className={`h-full w-full bg-[url('/bg-blurr.png')] bg-center absolute transition-opacity duration-700 ${
+                    isHovered === index ? "opacity-45" : "opacity-0"
                   }`}
                 ></span>
                 <Image
-                  className="h-[350px] max-w-[300px]"
+                  className="h-[350px] w-[300px] object-cover "
                   height={300}
                   width={300}
                   src={member.image}
                   alt="image"
                 />
-                <div className="absolute bottom-0 p-5 w-full">
+                <div className="absolute bottom-0 p-4 w-full">
                   <div className="p-2 relative">
                     <span
                       className="absolute left-0 bg-gradient-to-r from-[--secondary-color2] to-[--accent] w-0 h-full z-0"
