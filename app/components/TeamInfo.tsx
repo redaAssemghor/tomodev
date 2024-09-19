@@ -2,10 +2,12 @@
 import {
   animateBackgroundHover,
   backgroundAnimation,
+  scrollAnimation,
 } from "@/animations/fadeIn";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const teamInfo = [
   {
@@ -34,6 +36,7 @@ const TeamInfo = () => {
   const ref = useRef(null);
   const containerRef = useRef<HTMLDivElement[]>([]);
   const talentRef = useRef<HTMLSpanElement[]>([]);
+  const [isHovered, setIsHovered] = useState<number | null>(null);
 
   useGSAP(() => {
     if (ref.current) {
@@ -46,6 +49,10 @@ const TeamInfo = () => {
         animateBackgroundHover(talent, container);
       });
     }
+    const textAnimation = gsap.utils.toArray(".text");
+    textAnimation.forEach((element) => {
+      scrollAnimation(element as HTMLElement);
+    });
   });
   return (
     <div className="relative">
@@ -59,8 +66,8 @@ const TeamInfo = () => {
       ></div>
       <div className="relative p-5 flex flex-col gap-5 items-center text-white z-40">
         <div className="py-20 flex flex-col gap-5 items-center">
-          <h1 className="text-4xl font-bold">Meet Our Team</h1>
-          <p className="lg:text-3xl text-xl max-w-prose mx-auto text-center">
+          <h1 className="text text-4xl font-bold">Meet Our Team</h1>
+          <p className="text lg:text-3xl text-xl max-w-prose mx-auto text-center">
             Our team is made up of talented, dedicated professionals who bring a
             wealth of experience to the table.
           </p>
@@ -69,6 +76,8 @@ const TeamInfo = () => {
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
           {teamInfo.map((member, index) => (
             <div
+              onMouseEnter={() => setIsHovered(index)}
+              onMouseLeave={() => setIsHovered(null)}
               ref={(el) => {
                 if (el) {
                   containerRef.current[index] = el;
@@ -77,7 +86,11 @@ const TeamInfo = () => {
               key={index}
             >
               <div className="relative">
-                <span className="h-full w-full bg-[url('/bg-blurr.png')] bg-cover bg-center absolute opacity-0 hover:opacity-60 transition-opacity duration-700"></span>
+                <span
+                  className={`h-full w-full bg-[url('/bg-blurr.png')] bg-cover bg-center absolute transition-opacity duration-700 ${
+                    isHovered === index ? "opacity-75" : "opacity-0"
+                  }`}
+                ></span>
                 <Image height={500} width={500} src={member.image} alt="" />
                 <div className="absolute bottom-0 p-5 w-full">
                   <div className="p-2 relative">
@@ -102,18 +115,18 @@ const TeamInfo = () => {
       </div>
 
       <div className="text-white flex flex-col items-center gap-8 relative z-40 lg:p-24 p-5">
-        <h1 className="text-4xl font-bold text-glow-blue">Got Talent?</h1>
-        <p className="lg:text-3xl text-xl text-center max-w-prose">
+        <h1 className="text text-4xl font-bold text-glow-blue">Got Talent?</h1>
+        <p className="text lg:text-3xl text-xl text-center max-w-prose">
           We are always seeking talented people with passion, experience and the
           ability to <span className="text-glow-blue">make a difference</span>{" "}
           for our clients.
         </p>
-        <p className="lg:text-3xl text-xl text-center max-w-prose">
+        <p className="text lg:text-3xl text-xl text-center max-w-prose">
           If you’re interested in joining the Digital Silk team,
           <br /> send your resume and cover letter to{" "}
           <span className="text-glow-blue">jobs@tomodev.com</span>
         </p>
-        <h1 className="lg:text-[160px] text-6xl font-black text-glow-blue lg:-mb-32 z-10">
+        <h1 className="text lg:text-[160px] text-6xl font-black text-glow-blue lg:-mb-32 z-10">
           Join our team
         </h1>
       </div>

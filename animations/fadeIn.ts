@@ -130,7 +130,7 @@ export const lineAnimation = (
     { width: 0 },
     {
       width: "140%",
-      duration: 5,
+      duration: 4,
       ease: "power2.inOut",
       scrollTrigger: { trigger: elementRef, start: "bottom bottom", scrub: 4 },
     }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState } from "react";
 import Marquee from "react-fast-marquee";
 import { FaHandPointRight } from "react-icons/fa6";
 
@@ -12,6 +13,8 @@ type CarouselChatbotProps = {
 };
 
 const CarouselChatbot = ({ cards }: CarouselChatbotProps) => {
+  const [isHovered, setIsHovered] = useState<number | null>(null);
+
   return (
     <div className="flex bg-inherit mt-10">
       <Marquee speed={40} pauseOnHover>
@@ -20,9 +23,13 @@ const CarouselChatbot = ({ cards }: CarouselChatbotProps) => {
             key={index}
             className="relative overflow-hidden rounded-xl py-10 px-5 w-[500px] mx-5"
             style={{ border: "0.1px solid var(--text2)" }}
+            onMouseEnter={() => setIsHovered(index)}
+            onMouseLeave={() => setIsHovered(null)}
           >
             <Image
-              className="absolute -top-10 -left-10 z-0 opacity-40 rotate-12 hover:scale-110 transition-all duration-300"
+              className={`absolute -top-10 -left-10 z-0 opacity-40 rotate-12 transition-all duration-300 ${
+                isHovered === index ? "scale-110" : ""
+              }`}
               src={item.icon}
               alt="icon"
               width={240}
