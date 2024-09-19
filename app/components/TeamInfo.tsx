@@ -12,23 +12,18 @@ import { useRef, useState } from "react";
 const teamInfo = [
   {
     name: "Reda Assemghor",
-    image: "/IMG.jpg",
+    image: "/team/reda.png",
     role: "full-stack developer",
   },
   {
-    name: "Reda Assemghor",
-    image: "/IMG.jpg",
-    role: "full-stack developer",
+    name: "Djardi Messaoud",
+    image: "/team/messaoud.png",
+    role: "Backend developer/ C# Developer",
   },
   {
-    name: "Reda Assemghor",
-    image: "/IMG.jpg",
-    role: "full-stack developer",
-  },
-  {
-    name: "Reda Assemghor",
-    image: "/IMG.jpg",
-    role: "full-stack developer",
+    name: "Mohamed Safi",
+    image: "/team/safi.png",
+    role: "head of design department",
   },
 ];
 
@@ -73,7 +68,7 @@ const TeamInfo = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
+        <div className="flex">
           {teamInfo.map((member, index) => (
             <div
               onMouseEnter={() => setIsHovered(index)}
@@ -91,7 +86,13 @@ const TeamInfo = () => {
                     isHovered === index ? "opacity-75" : "opacity-0"
                   }`}
                 ></span>
-                <Image height={500} width={500} src={member.image} alt="" />
+                <Image
+                  className="h-[350px] max-w-[300px]"
+                  height={300}
+                  width={300}
+                  src={member.image}
+                  alt="image"
+                />
                 <div className="absolute bottom-0 p-5 w-full">
                   <div className="p-2 relative">
                     <span
@@ -122,7 +123,7 @@ const TeamInfo = () => {
           for our clients.
         </p>
         <p className="text lg:text-3xl text-xl text-center max-w-prose">
-          If you’re interested in joining the Digital Silk team,
+          If you’re interested in joining the Tomodev team,
           <br /> send your resume and cover letter to{" "}
           <span className="text-glow-blue">jobs@tomodev.com</span>
         </p>
