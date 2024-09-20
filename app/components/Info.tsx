@@ -18,18 +18,21 @@ const Info = () => {
 
   return (
     <div className="w-full h-full lg:p-32 px-4 py-20 bg-inherit text-white relative">
-      <div ref={ref} className="flex lg:flex-row flex-col justify-between">
+      <div
+        ref={ref}
+        className="relative flex lg:flex-row flex-col justify-between"
+      >
         <div className="flex flex-col gap-6">
           <h1 className="lg:text-4xl text-xl">
-            Creative Web Agency
-            <span className="font-bold"> Delivering Custom Solutions</span>
+            Our
+            <span className="font-bold"> fields of expertise</span>
           </h1>
 
           <ul className="flex flex-col gap-6 py-8">
             <li className="flex gap-4 items-center lg:text-2xl">
               <FaExternalLinkAlt className="text-[#04E4FF]" />
               <h2>
-                Custom Web Design Solutions{" "}
+                Custom Development{" "}
                 <span className="font-bold text-[#04E4FF]">
                   To Drive Conversions
                 </span>
@@ -39,7 +42,7 @@ const Info = () => {
             <li className="flex gap-4 items-center lg:text-2xl">
               <FaExternalLinkAlt className="text-[#04E4FF]" />
               <h2>
-                Effective Marketing Campaigns{" "}
+                CMS and E-commerce{" "}
                 <span className="font-bold text-[#04E4FF] ">
                   To Generate Growth
                 </span>
@@ -58,23 +61,35 @@ const Info = () => {
           </ul>
         </div>
 
-        <Image height={800} width={800} src="/info-img.png" alt="info-img" />
-      </div>
-
-      <div className="relative bg-gradient-to-r from-[--accent] to-bg-inherit w-full h-[100px] flex justify-start items-center">
-        <HeroVideoDialog
-          animationStyle="from-bottom"
-          thumbnailAlt="click to play video"
-          className="w-[200px] rounded-sm"
-          thumbnailSrc="/thumbnail.webp"
-          videoSrc="/video/video.mp4"
+        <Image
+          className="scale-x-[-1] z-40"
+          height={600}
+          width={600}
+          src="/hero.webp"
+          alt="info-img"
         />
-        <h1 className="font-semibold text-xl pl-10">1 minute video</h1>
-      </div>
-      <div className="flex gap-4 items-center pt-4">
-        <Pms />
-        <Image height={60} width={60} src="/company2022.png" alt="info-img" />
-        <Aws />
+        <div className="absolute lg:-bottom-20 -bottom-48 z-0 w-full">
+          <div className="relative bg-gradient-to-r from-[--accent] to-bg-inherit w-full h-[80px] flex justify-start items-center">
+            <HeroVideoDialog
+              className="w-[200px]"
+              animationStyle="from-bottom"
+              thumbnailAlt="click to play video"
+              thumbnailSrc="/thumbnail.webp"
+              videoSrc="/video/video.mp4"
+            />
+            <h1 className="font-semibold text-xl pl-10">1 minute video</h1>
+          </div>
+          <div className="flex gap-4 items-center pt-4">
+            <Pms />
+            <Image
+              height={60}
+              width={60}
+              src="/company2022.png"
+              alt="info-img"
+            />
+            <Aws />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -18,6 +18,5 @@ export type ServiceHeroProps = {
 
 export interface Project {
   name: string;
-  description: string;
   img: string;
 }

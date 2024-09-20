@@ -9,17 +9,21 @@ import Projects from "./components/Projects";
 import Services from "./components/Services";
 import ServicePage from "./components/ServicePage";
 import ContactPage from "./components/ContactPage";
-import { cart, featured, wallet } from "./data/demoProjects";
+import { ecommerce, landingPages, business } from "./data/demoProjects";
 
 export default function Home() {
   return (
     <Provider store={store}>
-      <main className="overflow-hidden bg-[--primary]">
+      <main className="relative overflow-hidden bg-[--primary]">
         <Hero />
         <HorizontalBand />
         <Info />
         <Featured />
-        <Projects cart={cart} featured={featured} wallet={wallet} />
+        <Projects
+          ecommerce={ecommerce}
+          landingPages={landingPages}
+          business={business}
+        />
         <Services />
         <ServicePage />
         <ContactPage />

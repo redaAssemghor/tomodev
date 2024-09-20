@@ -2,6 +2,7 @@
 import { scrollAnimation } from "@/animations/fadeIn";
 import { setPage } from "@/store/features/featuredPageSlice";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { useRef, useState } from "react";
 import { CiShoppingCart, CiWallet } from "react-icons/ci";
 import { FaAngleDown } from "react-icons/fa6";
@@ -11,7 +12,7 @@ import { useDispatch } from "react-redux";
 const Featured = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [selectedButton, setSelectedButton] = useState<string | null>(
-    "featured"
+    "landing-pages"
   );
 
   const dispatch = useDispatch();
@@ -19,6 +20,10 @@ const Featured = () => {
     if (ref.current) {
       scrollAnimation(ref.current);
     }
+    const btnArr = gsap.utils.toArray(".btn");
+    btnArr.forEach((btn) => {
+      scrollAnimation(btn as HTMLElement);
+    });
   });
 
   const handleClick = (button: string) => {
@@ -29,21 +34,21 @@ const Featured = () => {
   return (
     <div
       id="projects"
-      className="text-white z-30 backdrop-blur-3xl flex flex-col justify-center items-center bg-inherit relative"
+      className="text-white z-[51] backdrop-blur-3xl flex flex-col justify-center items-center bg-inherit relative"
     >
       <div className="w-full h-full flex flex-col items-center gap-5 bg-gradient-to-t from-[--accent] to-bg-inherit">
         <div ref={ref} className="flex flex-col items-center gap-5">
-          <h1 className="font-bold lg:text-xl text-lg text-[--text1]">
+          <h1 className="font-bold lg:text-xl text-lg text-glow-blue">
             OUR WORK
           </h1>
           <h2 className="font-bold lg:text-3xl text-xl">
             Featured Website Design Projects
           </h2>
-          <h3 className="font-thin neon-text lg:text-xl text-lg">
+          <h3 className="font-thin lg:text-xl text-lg">
             Our web development agency reimagines digital experiences for brands
             of all sizes and across industries.
           </h3>
-          <h6 className="font-thin neon-text text-xl">
+          <h6 className="font-thin text-xl">
             optimized for traffic, engagement and conversion.
           </h6>
         </div>
@@ -51,38 +56,38 @@ const Featured = () => {
         <ul className="flex lg:gap-10 mt-10">
           {/* Button 1 */}
           <button
-            onClick={() => handleClick("featured")}
-            className={`flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-sm lg:text-xl items-center  ${
-              selectedButton === "featured" ? "bg-white text-black" : ""
+            onClick={() => handleClick("landing-pages")}
+            className={`btn flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-sm lg:text-xl items-center  ${
+              selectedButton === "landing-pages" ? "bg-white text-black" : ""
             }`}
           >
             <IoIosStarOutline size={40} />
-            <h1>Featured</h1>
-            {selectedButton === "featured" && <FaAngleDown />}
+            <h1>LandingPages</h1>
+            {selectedButton === "landing-pages" && <FaAngleDown />}
           </button>
 
           {/* Button 2 */}
           <button
-            onClick={() => handleClick("wallet")}
-            className={`flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-sm lg:text-xl items-center  ${
-              selectedButton === "wallet" ? "bg-white text-black" : ""
+            onClick={() => handleClick("business")}
+            className={`btn flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-sm lg:text-xl items-center  ${
+              selectedButton === "business" ? "bg-white text-black" : ""
             }`}
           >
             <CiWallet size={40} />
-            <h1>Wallet</h1>
-            {selectedButton === "wallet" && <FaAngleDown />}
+            <h1>Business</h1>
+            {selectedButton === "business" && <FaAngleDown />}
           </button>
 
           {/* Button 3 */}
           <button
-            onClick={() => handleClick("cart")}
-            className={`flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-sm lg:text-xl items-center  ${
-              selectedButton === "cart" ? "bg-white text-black" : ""
+            onClick={() => handleClick("ecommerce")}
+            className={`btn flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-sm lg:text-xl items-center  ${
+              selectedButton === "ecommerce" ? "bg-white text-black" : ""
             }`}
           >
             <CiShoppingCart size={40} />
-            <h1>Cart</h1>
-            {selectedButton === "cart" && <FaAngleDown />}
+            <h1>ecommerce</h1>
+            {selectedButton === "ecommerce" && <FaAngleDown />}
           </button>
         </ul>
       </div>
