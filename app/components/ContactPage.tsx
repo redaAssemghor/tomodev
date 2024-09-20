@@ -73,7 +73,7 @@ const ContactPage = () => {
         {/* Header Section */}
         <div className="flex flex-col p-5 lg:items-start items-center gap-4 mb-auto">
           <h2 className="text text-xl font-bold">Take The Silk Road To</h2>
-          <h1 className="text text-3xl neon-text text-center font-black">
+          <h1 className="text lg:text-3xl text-lg neon-text text-center font-black">
             Digitizing Your Business Growth
           </h1>
           <h1 className="text text-2xl font-bold">

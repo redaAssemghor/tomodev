@@ -36,7 +36,7 @@ const Featured = () => {
       id="projects"
       className="text-white z-[51] backdrop-blur-3xl flex flex-col justify-center items-center bg-inherit relative"
     >
-      <div className="w-full h-full flex flex-col items-center gap-5 bg-gradient-to-t from-[--accent] to-bg-inherit">
+      <div className="p-3 w-full h-full flex flex-col items-center gap-5 bg-gradient-to-t from-[--accent] to-bg-inherit">
         <div ref={ref} className="flex flex-col items-center gap-5">
           <h1 className="font-bold lg:text-xl text-lg text-glow-blue">
             OUR WORK
@@ -44,11 +44,11 @@ const Featured = () => {
           <h2 className="font-bold lg:text-3xl text-xl">
             Featured Website Design Projects
           </h2>
-          <h3 className="font-thin lg:text-xl text-lg">
+          <h3 className="font-thin lg:text-xl text-lg text-center">
             Our web development agency reimagines digital experiences for brands
             of all sizes and across industries.
           </h3>
-          <h6 className="font-thin text-xl">
+          <h6 className="font-thin text-xl text-center">
             optimized for traffic, engagement and conversion.
           </h6>
         </div>
@@ -57,7 +57,7 @@ const Featured = () => {
           {/* Button 1 */}
           <button
             onClick={() => handleClick("landing-pages")}
-            className={`btn flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-sm lg:text-xl items-center  ${
+            className={`btn flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-xs lg:text-xl items-center  ${
               selectedButton === "landing-pages" ? "bg-white text-black" : ""
             }`}
           >
@@ -69,7 +69,7 @@ const Featured = () => {
           {/* Button 2 */}
           <button
             onClick={() => handleClick("business")}
-            className={`btn flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-sm lg:text-xl items-center  ${
+            className={`btn flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-xs lg:text-xl items-center  ${
               selectedButton === "business" ? "bg-white text-black" : ""
             }`}
           >
@@ -81,7 +81,7 @@ const Featured = () => {
           {/* Button 3 */}
           <button
             onClick={() => handleClick("ecommerce")}
-            className={`btn flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-sm lg:text-xl items-center  ${
+            className={`btn flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-xs lg:text-xl items-center  ${
               selectedButton === "ecommerce" ? "bg-white text-black" : ""
             }`}
           >
