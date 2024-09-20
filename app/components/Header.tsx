@@ -94,27 +94,27 @@ const Header = () => {
                   : "max-h-0 overflow-hidden"
               }`}
             >
-              <li>
+              <li className="hover:underline transition duration-300">
                 <Link onClick={handleMenu} href={"/web-design"}>
                   Custom Web Design
                 </Link>
               </li>
-              <li>
+              <li className="hover:underline transition duration-300">
                 <Link onClick={handleMenu} href={"/wordpress"}>
                   Wordpress
                 </Link>
               </li>
-              <li>
+              <li className="hover:underline transition duration-300">
                 <Link onClick={handleMenu} href={"/shopify"}>
                   Shopify Website Design
                 </Link>
               </li>
-              <li>
+              <li className="hover:underline transition duration-300">
                 <Link onClick={handleMenu} href={"/ecommerce-development"}>
                   Ecommerce Development
                 </Link>
               </li>
-              <li>
+              <li className="hover:underline transition duration-300">
                 <Link onClick={handleMenu} href={"/chatbot"}>
                   Chatbot Integration Services
                 </Link>
@@ -135,17 +135,17 @@ const Header = () => {
                 openLinks === "about" ? "max-h-40" : "max-h-0 overflow-hidden"
               }`}
             >
-              <li>
+              <li className="hover:underline transition duration-300">
                 <Link onClick={handleMenu} href={"/contact"}>
                   Locations
                 </Link>
               </li>
-              <li>
+              <li className="hover:underline transition duration-300">
                 <Link onClick={handleMenu} href={"/about-us"}>
                   About Us
                 </Link>
               </li>
-              <li>
+              <li className="hover:underline transition duration-300">
                 <Link onClick={handleMenu} href={"/contact"}>
                   Contact Us
                 </Link>

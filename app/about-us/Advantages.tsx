@@ -8,6 +8,7 @@ import { IoLanguageSharp } from "react-icons/io5";
 import {
   MdAttachMoney,
   MdOutlineWorkspacePremium,
+  MdSecurity,
   MdSupportAgent,
 } from "react-icons/md";
 import { PiStudentBold } from "react-icons/pi";
@@ -38,6 +39,11 @@ const advantageData = [
     title: "Multi-Language",
     description: "Our team speaks fluent English and 5+ languages.",
   },
+  {
+    icon: <MdSecurity size={50} />,
+    title: "Security",
+    description: "industry-leading security practices.",
+  },
 ];
 
 const Advantages = () => {
@@ -64,7 +70,7 @@ const Advantages = () => {
           <h2 className="text-xl font-bold">Why Choose TOMODEV</h2>
           <h1 className="text-5xl font-bold">Our Primary Advantages</h1>
         </div>
-        <div className="grid grid-cols-3 gap-5 gap-y-12">
+        <div className="grid grid-cols-3 gap-4 gap-y-12">
           {advantageData.map((advantage, index) => (
             <div key={index} className="flex gap-2">
               {advantage.icon}

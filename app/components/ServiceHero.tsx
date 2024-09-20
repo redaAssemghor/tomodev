@@ -54,21 +54,17 @@ const ServiceHero = ({
           <FaLongArrowAltDown />
         </h1>
         <div>
-          <ul className="flex gap-4">
+          <ul className="flex gap-4 text-xs lg:text-sm">
             <li className="flex items-center gap-2">
               <TiHomeOutline className="text-[--text3]" size={20} />
               <Link href="/">Home</Link>
-              <FaAngleRight />
+              <FaAngleRight className="pt-1" size={20} />
             </li>
-            <li className="flex gap-2 items-center">
+            <li className="flex gap-2 items-center justify-center">
               <Link href="/wordpress">{name}</Link>
-              <FaAngleRight />
-            </li>
-            <li>
-              <h1>Custom Web Development</h1>
             </li>
           </ul>
-          <h1 className="text-4xl font-bold  my-8">{title}</h1>
+          <h1 className="lg:text-4xl text-xl font-bold  my-8">{title}</h1>
           <p ref={txtRef} className="text-lg max-w-[550px] h-[140px]"></p>
           <ul className="flex flex-col gap-4 mt-8">
             {services &&

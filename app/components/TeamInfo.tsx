@@ -7,6 +7,7 @@ import {
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState } from "react";
 
 const teamInfo = [
@@ -116,16 +117,21 @@ const TeamInfo = () => {
       </div>
 
       <div className="text-white flex flex-col items-center gap-8 relative z-40 lg:p-24 p-5">
-        <h1 className="text text-4xl font-bold text-glow-blue">Got Talent?</h1>
+        <h1 className="text text-4xl font-bold text-glow-blue">
+          Got a project?
+        </h1>
         <p className="text lg:text-3xl text-xl text-center max-w-prose">
-          We are always seeking talented people with passion, experience and the
-          ability to <span className="text-glow-blue">make a difference</span>{" "}
-          for our clients.
+          Let&rsquo;s talk !{" "}
+          <span className="text-glow-blue">Free and without obligation</span>{" "}
+          Get in touch.
         </p>
         <p className="text lg:text-3xl text-xl text-center max-w-prose">
-          If you’re interested in joining the Tomodev team,
-          <br /> send your resume and cover letter to{" "}
-          <span className="text-glow-blue">jobs@tomodev.com</span>
+          Ready to turn your ideas into reality?
+          <br />
+          Whether you&rsquo;re starting from scratch or need expert guidance,{" "}
+          <Link href={"/contact"} className="text-glow-blue">
+            Contact Us
+          </Link>
         </p>
         <h1 className="text lg:text-[160px] text-6xl font-black text-glow-blue lg:-mb-32 z-10">
           Join our team

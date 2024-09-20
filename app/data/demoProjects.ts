@@ -38,19 +38,19 @@ export const business = [
 
 export const ecommerce = [
   {
-    name: "Apple",
+    name: "Clothing Store",
     img: "/ecommerce/2.jpg",
   },
   {
-    name: "Apple",
+    name: "Tech Store",
     img: "/ecommerce/3.jpg",
   },
   {
-    name: "Apple",
+    name: "Animals Store",
     img: "/ecommerce/4.jpg",
   },
   {
-    name: "Apple",
+    name: "Kids Store",
     img: "/ecommerce/5.jpg",
   },
 ];

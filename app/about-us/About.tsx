@@ -41,7 +41,7 @@ const About = () => {
           height={20}
           width={20}
         />
-        <Link href="/contact-us">
+        <Link href="/contact">
           <ShinyButton text="SPEAK WITH OUR EXPERTS" />
         </Link>
       </div>

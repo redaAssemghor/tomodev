@@ -70,13 +70,13 @@ const Form = ({ data }: { data: wordpressFormDataType[] }) => {
             <div className="my-16">
               <h1
                 ref={header1Ref}
-                className="text-5xl font-bold text-[--text-new2] py-8"
+                className="lg:text-5xl text-2xl font-bold text-[--text-new2] py-8"
               >
                 EXPLORE OUR SERVICES
               </h1>
               <p
                 ref={txtRef}
-                className="text-lg text-[--text2] min-h-[160px]"
+                className="lg:text-lg text-[--text2] min-h-[160px]"
               ></p>
             </div>
             <div className="">
@@ -93,14 +93,14 @@ const Form = ({ data }: { data: wordpressFormDataType[] }) => {
                       } absolute w-0 h-0 top-1/2 left-0 border-t-8 border-b-8 border-l-4 border-transparent border-l-[--text1]`}
                     ></span>
                     <h1
-                      className="text-xl font-bold text-[--text1] cursor-pointer"
+                      className="lg:text-xl text-sm font-bold text-[--text1] cursor-pointer"
                       onMouseEnter={() => handleMouseEnter(i)}
                       onMouseLeave={() => handleMouseLeave}
                     >
                       {service.service}
                     </h1>
                     <p
-                      className={`text-[--text2] transition-max-height duration-1000 ease-in overflow-hidden text-base ${
+                      className={`text-[--text2] text-xs transition-max-height duration-1000 ease-in overflow-hidden lg:text-base ${
                         index === i ? "max-h-96" : "max-h-0"
                       }`}
                     >
@@ -114,10 +114,10 @@ const Form = ({ data }: { data: wordpressFormDataType[] }) => {
 
           <div className="flex-1 h-[900px] bg-white p-10 rounded-lg shadow-lg">
             <div ref={header2Ref} className="py-8">
-              <h1 className="text-[--secondary] text-3xl font-bold py-6">
+              <h1 className="text-[--secondary] lg:text-3xl text-sm font-bold py-6">
                 Request A Quote
               </h1>
-              <h1 className="text-[--text] text-3xl font-bold">
+              <h1 className="text-[--text] lg:text-3xl text-lg font-bold">
                 Maximize Your Website’s Potential With Digital Silk
               </h1>
             </div>
@@ -129,28 +129,28 @@ const Form = ({ data }: { data: wordpressFormDataType[] }) => {
               >
                 <input
                   required
-                  className="px-2 py-4 border-[0.1px] outline-none text-[--text2] "
+                  className="px-2 lg:py-4 py-2 border-[0.1px] outline-none text-[--text2] "
                   type="text"
                   placeholder="Name*"
                   name="user_name"
                 />
                 <input
                   required
-                  className="px-2 py-4 border-[0.1px] outline-none text-[--text2] "
+                  className="px-2 lg:py-4 py-2 border-[0.1px] outline-none text-[--text2] "
                   type="text"
                   placeholder="Company Name*"
                   name="company_name"
                 />
                 <input
                   required
-                  className="px-2 py-4 border-[0.1px] outline-none text-[--text2] "
+                  className="px-2 lg:py-4 py-2 border-[0.1px] outline-none text-[--text2] "
                   type="email"
                   placeholder="Email*"
                   name="user_email"
                 />
                 <input
                   required
-                  className="px-2 py-4 border-[0.1px] outline-none text-[--text2] "
+                  className="px-2 lg:py-4 py-2 border-[0.1px] outline-none text-[--text2] "
                   type="tel"
                   placeholder="Phone*"
                   name="user_phone"

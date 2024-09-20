@@ -27,10 +27,8 @@ const Clients = () => {
       ></div>
       <div className="flex flex-col justify-center items-center gap-6 relative z-40 h-full w-full bg-[url('/bg-blurr.png')] bg-cover bg-center">
         <div className="flex flex-col gap-3 items-center pb-8">
-          <h2 className="text-xl font-bold">We Partner With Brands To</h2>
-          <h1 className="text-5xl font-bold">
-            Create Superior Digital Experiences
-          </h1>
+          <h2 className="text-xl font-bold">We Partner With Brands</h2>
+          <h1 className="text-5xl font-bold">Our Memorable Clients</h1>
         </div>
         <div className="flex gap-x-20 py-8">
           <Image alt="" src={"/logos/ess-logo.png"} width={100} height={100} />
