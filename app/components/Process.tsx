@@ -4,8 +4,10 @@ import {
   circleAnimation,
   horizontalScrollAnimation,
   lineAnimation,
+  mobileHorizontalScrollAnimation,
 } from "@/animations/fadeIn";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
 import { useRef } from "react";
 import { PiPaperPlaneRightFill } from "react-icons/pi";
@@ -25,17 +27,15 @@ const Section = ({
   listItems,
   imageSrc,
 }: SectionProps) => {
-  const elementRef = useRef<HTMLDivElement>(null);
-  const circleRef = useRef<HTMLSpanElement>(null);
-
   useGSAP(() => {
-    if (circleRef.current) {
-      circleAnimation(circleRef.current);
+    const circleArr = gsap.utils.toArray(".circel");
+    if (circleArr.length > 0) {
+      circleAnimation(circleArr as HTMLElement[]);
     }
   });
 
   return (
-    <div ref={elementRef} className="relative shrink-0 max-w-[600px] px-12">
+    <div className="relative shrink-0 max-w-[600px] px-12">
       <Image
         className="transform scale-x-[-1] rounded-lg"
         src={imageSrc}
@@ -43,10 +43,7 @@ const Section = ({
         height={200}
         width={200}
       />
-      <span
-        ref={circleRef}
-        className="absolute top-3 left-0 w-4 h-4 rounded-full shadow-neon opacity-0 bg-[--accent] z-40"
-      ></span>
+      <span className="circel absolute -top-3 left-0 w-4 h-4 rounded-full shadow-neon opacity-0 bg-[--accent] z-40"></span>
       <h1 className="lg:text-3xl font-semibold text-[--text1] py-2">{title}</h1>
       <p>{description}</p>
       <ul className="">
@@ -74,6 +71,7 @@ const Section = ({
 const Process = ({ sections }: { sections: SectionProps[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const conatinerRef = useRef<HTMLDivElement>(null);
+  const mobileConatinerRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLSpanElement>(null);
 
@@ -86,6 +84,12 @@ const Process = ({ sections }: { sections: SectionProps[] }) => {
     }
     if (lineRef.current && triggerRef.current) {
       lineAnimation(lineRef.current, triggerRef.current);
+    }
+    if (mobileConatinerRef.current && triggerRef.current) {
+      mobileHorizontalScrollAnimation(
+        mobileConatinerRef.current,
+        triggerRef.current
+      );
     }
   });
 
@@ -117,10 +121,22 @@ const Process = ({ sections }: { sections: SectionProps[] }) => {
       </div>
       <span
         ref={lineRef}
-        className="absolute z-40 top-40 h-2 bg-gradient-to-r from-[--accent] to-[--text]"
+        className="absolute z-10 lg:top-44 top-48 h-2 bg-gradient-to-r from-[--accent] to-[--text]"
       ></span>
 
-      <div ref={conatinerRef} className="flex lg:p-5 z-40">
+      <div ref={conatinerRef} className="hidden lg:flex lg:p-5 z-40">
+        {sections.map((section) => (
+          <Section
+            key={section.id}
+            id={section.id}
+            title={section.title}
+            description={section.description}
+            listItems={section.listItems}
+            imageSrc={section.imageSrc}
+          />
+        ))}
+      </div>
+      <div ref={mobileConatinerRef} className="lg:hidden flex lg:p-5 z-40">
         {sections.map((section) => (
           <Section
             key={section.id}

@@ -1,6 +1,9 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { TextPlugin } from "gsap/TextPlugin";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+
+gsap.registerPlugin(MotionPathPlugin);
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -105,17 +108,43 @@ export const horizontalScrollAnimation = (
   element: HTMLDivElement,
   trigger: HTMLDivElement
 ) => {
+  // const sections = gsap.utils.toArray(element.children) as HTMLElement[];
+
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: trigger,
       pin: true,
       start: "top top",
       scrub: 1,
+      end: `+=${element.offsetWidth}`,
     },
   });
 
   tl.to(element, {
-    xPercent: -140,
+    xPercent: -100 * 1.5,
+    ease: "none",
+  });
+};
+
+// mobile horizontal scroll animation
+export const mobileHorizontalScrollAnimation = (
+  element: HTMLDivElement,
+  trigger: HTMLDivElement
+) => {
+  // const sections = gsap.utils.toArray(element.children) as HTMLElement[];
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: trigger,
+      pin: true,
+      start: "top top",
+      scrub: 1,
+      end: `+=${element.offsetWidth}`,
+    },
+  });
+
+  tl.to(element, {
+    xPercent: -100 * 8,
     ease: "none",
   });
 };
@@ -127,30 +156,27 @@ export const lineAnimation = (
 ) => {
   gsap.fromTo(
     element,
-    { width: 0 },
+    { width: "30%" },
     {
-      width: "140%",
+      width: "200%",
       duration: 4,
       ease: "power2.inOut",
-      scrollTrigger: { trigger: elementRef, start: "bottom bottom", scrub: 4 },
+      scrollTrigger: { trigger: elementRef, start: "bottom bottom", scrub: 1 },
     }
   );
 };
 
 // circle animation
-export const circleAnimation = (element: HTMLElement) => {
+export const circleAnimation = (element: HTMLElement[]) => {
   gsap.to(element, {
     opacity: 1,
+    duration: 1,
     scale: 1.5,
+    stagger: 1,
     ease: "none",
     scrollTrigger: { trigger: element, start: "top 90%", scrub: 4 },
   });
 };
-
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-
-// Register the MotionPathPlugin
-gsap.registerPlugin(MotionPathPlugin);
 
 export const spotLightAnimation = (element: HTMLElement) => {
   gsap.to(element, {
