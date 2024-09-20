@@ -40,7 +40,7 @@ const ServicePage = () => {
                 {currentService.description}
               </p>
 
-              <ul className="mb-3">
+              <ul className="lg:space-y-4 space-y-2">
                 {currentService.steps.map((step, index) => (
                   <li key={index} className="flex gap-2 items-center">
                     <span className="text-[--text1]">

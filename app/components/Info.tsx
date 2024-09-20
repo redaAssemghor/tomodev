@@ -4,8 +4,6 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { useRef } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import Aws from "../svgs/Aws";
-import Pms from "../svgs/Pms";
 
 const Info = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -80,14 +78,20 @@ const Info = () => {
             <h1 className="font-semibold text-xl pl-10">1 minute video</h1>
           </div>
           <div className="flex gap-4 items-center pt-4">
-            <Pms />
-            <Image
-              height={60}
-              width={60}
-              src="/company2022.png"
-              alt="info-img"
-            />
-            <Aws />
+            <ul className="flex gap-8 mt-8">
+              <li className="border-r pr-8 border-[--text2]">
+                <h1 className="text-xl font-normal">Expert</h1>
+                <h1 className="text-xl font-bold">Team Members</h1>
+              </li>
+              <li className="border-r pr-8 border-[--text2]">
+                <h1 className="text-xl font-normal">Results-Driven</h1>
+                <h2 className="text-xl font-bold">Approach</h2>
+              </li>
+              <li className="border-r pr-8 border-[--text2]">
+                <h1 className="text-xl font-normal">Streamlined</h1>
+                <h2 className="text-xl font-bold">Execution</h2>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

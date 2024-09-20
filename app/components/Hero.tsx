@@ -33,7 +33,7 @@ const Hero = () => {
           ref={text2Ref}
           className="z-10 text-lg max-w-3xl leading-relaxed lg:text-xl lg:max-w-3xl"
         >
-          Top Web Design Agency
+          Web Development Agency
         </h1>
         <BlurIn word={"Transforming Ideas into Digital Reality"} />
 
