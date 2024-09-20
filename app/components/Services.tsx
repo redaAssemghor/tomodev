@@ -102,8 +102,11 @@ const Services = () => {
         <h1 className="text-[--text1] lg:text-6xl text-3xl font-bold">
           Our services
         </h1>
-        <p ref={textRef} className="lg:text-4xl text-xl text-[--text2]"></p>
-        <h2 className="lg:text-4xl text-xl font-medium text-[--text2]">
+        <p
+          ref={textRef}
+          className="lg:text-4xl text-lg text-center text-[--text2]"
+        ></p>
+        <h2 className="lg:text-4xl text-lg text-center font-medium text-[--text2]">
           Customized and goal-oriented digital solutions.
         </h2>
       </div>
@@ -122,7 +125,7 @@ const Services = () => {
           onClick={() => dispatch(setServices(selected.title))}
           className="flex flex-col gap-4 items-center w-[100px] justify-between cursor-pointer -mb-[50px] z-40"
         >
-          <h1 className="text-sm font-semibold text-center hover:text-[--text1]">
+          <h1 className="text-sm font-bold text-center hover:text-[--text1]">
             {selected.title}
           </h1>
           <button

@@ -32,15 +32,15 @@ const ServicePage = () => {
         >
           <div className="lg:flex justify-between w-full gap-4">
             <div className="flex flex-col gap-8">
-              <h2 className="text-3xl text-[--text1] font-bold">
+              <h2 className="lg:text-3xl text-lg text-center text-[--text1] font-bold">
                 {currentService.title}
               </h2>
 
-              <p className="text-lg text-[--text2]">
+              <p className="text-sm text-center text-[--text2]">
                 {currentService.description}
               </p>
 
-              <ul>
+              <ul className="mb-3">
                 {currentService.steps.map((step, index) => (
                   <li key={index} className="flex gap-2 items-center">
                     <span className="text-[--text1]">
