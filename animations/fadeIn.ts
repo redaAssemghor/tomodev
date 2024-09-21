@@ -108,8 +108,6 @@ export const horizontalScrollAnimation = (
   element: HTMLDivElement,
   trigger: HTMLDivElement
 ) => {
-  // const sections = gsap.utils.toArray(element.children) as HTMLElement[];
-
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: trigger,
@@ -121,30 +119,7 @@ export const horizontalScrollAnimation = (
   });
 
   tl.to(element, {
-    xPercent: -100 * 1.5,
-    ease: "none",
-  });
-};
-
-// mobile horizontal scroll animation
-export const mobileHorizontalScrollAnimation = (
-  element: HTMLDivElement,
-  trigger: HTMLDivElement
-) => {
-  // const sections = gsap.utils.toArray(element.children) as HTMLElement[];
-
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: trigger,
-      pin: true,
-      start: "top top",
-      scrub: 1,
-      end: `+=${element.offsetWidth}`,
-    },
-  });
-
-  tl.to(element, {
-    xPercent: -100 * 8,
+    xPercent: -160,
     ease: "none",
   });
 };
@@ -158,10 +133,10 @@ export const lineAnimation = (
     element,
     { width: "30%" },
     {
-      width: "200%",
+      width: "300%",
       duration: 4,
       ease: "power2.inOut",
-      scrollTrigger: { trigger: elementRef, start: "bottom bottom", scrub: 1 },
+      scrollTrigger: { trigger: elementRef, start: "bottom bottom", scrub: 4 },
     }
   );
 };

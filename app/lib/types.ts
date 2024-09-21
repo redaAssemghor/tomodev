@@ -20,3 +20,12 @@ export interface Project {
   name: string;
   img: string;
 }
+
+// process container
+export interface SectionProps {
+  id: string;
+  title: string;
+  description: string;
+  listItems: string[];
+  imageSrc: string;
+}

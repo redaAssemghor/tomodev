@@ -4,21 +4,13 @@ import {
   circleAnimation,
   horizontalScrollAnimation,
   lineAnimation,
-  mobileHorizontalScrollAnimation,
 } from "@/animations/fadeIn";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import { useRef } from "react";
 import { PiPaperPlaneRightFill } from "react-icons/pi";
-
-interface SectionProps {
-  id: string;
-  title: string;
-  description: string;
-  listItems: string[];
-  imageSrc: string;
-}
+import { SectionProps } from "../lib/types";
 
 const Section = ({
   id,
@@ -70,8 +62,7 @@ const Section = ({
 
 const Process = ({ sections }: { sections: SectionProps[] }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const conatinerRef = useRef<HTMLDivElement>(null);
-  const mobileConatinerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLSpanElement>(null);
 
@@ -79,17 +70,11 @@ const Process = ({ sections }: { sections: SectionProps[] }) => {
     if (ref.current) {
       backgroundAnimation(ref.current);
     }
-    if (conatinerRef.current && triggerRef.current) {
-      horizontalScrollAnimation(conatinerRef.current, triggerRef.current);
+    if (containerRef.current && triggerRef.current) {
+      horizontalScrollAnimation(containerRef.current, triggerRef.current);
     }
     if (lineRef.current && triggerRef.current) {
       lineAnimation(lineRef.current, triggerRef.current);
-    }
-    if (mobileConatinerRef.current && triggerRef.current) {
-      mobileHorizontalScrollAnimation(
-        mobileConatinerRef.current,
-        triggerRef.current
-      );
     }
   });
 
@@ -119,24 +104,13 @@ const Process = ({ sections }: { sections: SectionProps[] }) => {
           .
         </p>
       </div>
+
       <span
         ref={lineRef}
         className="absolute z-10 lg:top-44 top-48 h-2 bg-gradient-to-r from-[--accent] to-[--text]"
       ></span>
 
-      <div ref={conatinerRef} className="hidden lg:flex lg:p-5 z-40">
-        {sections.map((section) => (
-          <Section
-            key={section.id}
-            id={section.id}
-            title={section.title}
-            description={section.description}
-            listItems={section.listItems}
-            imageSrc={section.imageSrc}
-          />
-        ))}
-      </div>
-      <div ref={mobileConatinerRef} className="lg:hidden flex lg:p-5 z-40">
+      <div ref={containerRef} className="flex lg:p-5 z-40">
         {sections.map((section) => (
           <Section
             key={section.id}
