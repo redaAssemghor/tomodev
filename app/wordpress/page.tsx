@@ -4,6 +4,13 @@ import ServiceHero from "../components/ServiceHero";
 import { wordpressData } from "../data/formData";
 import { wordpressModels } from "../data/imgModels";
 import { wordpressDevelopmentSteps } from "../data/process";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Wordpress - Tomodev",
+  description:
+    "From corporate WordPress websites to WooCommerce stores, work with our experts to make the most of this robust platform.",
+};
 
 const page = () => {
   const name = "Wordpress";

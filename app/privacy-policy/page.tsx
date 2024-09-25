@@ -1,3 +1,11 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy-Policy - Tomodev",
+  description:
+    "TOMODEV is committed to protecting your privacy. Learn more about our privacy policy and how we collect, use, and protect your information.",
+};
+
 const page = () => {
   return (
     <div className="flex flex-col items-center bg-[--light] lg:px-64 py-24 px-5">

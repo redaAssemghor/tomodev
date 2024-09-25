@@ -5,6 +5,13 @@ import ServiceHero from "../components/ServiceHero";
 import { chatbotData } from "../data/formData";
 import { chatbotModels } from "../data/imgModels";
 import { chatbotServiceSteps } from "../data/process";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ChatBot - Tomodev",
+  description:
+    "From AI-driven customer support to advanced conversational experiences, work with our experts to integrate and optimize chatbot solutions tailored to your business needs.",
+};
 
 const page = () => {
   const name = "Chatbot Integration";

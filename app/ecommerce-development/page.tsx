@@ -4,6 +4,13 @@ import ServiceHero from "../components/ServiceHero";
 import { ecommerceData } from "../data/formData";
 import { ecommerceModels } from "../data/imgModels";
 import { shopifyDevelopmentSteps } from "../data/process";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "E-commerce-services - Tomodev",
+  description:
+    "From building powerful online stores to integrating custom features, work with our team of experts to create a seamless eCommerce experience that drives growth and maximizes your online potential.",
+};
 
 const page = () => {
   const name = "eCommerce";

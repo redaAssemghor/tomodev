@@ -1,4 +1,9 @@
-// app/not-found.tsx
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "404 - Tomodev",
+  description: "Sorry, the page you’re looking for doesn’t exist.",
+};
 export default function NotFound() {
   return (
     <div className="bg-[--dark] text-[--light] flex flex-col items-center justify-center h-screen">

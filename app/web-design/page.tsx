@@ -4,6 +4,13 @@ import ServiceHero from "../components/ServiceHero";
 import { webDesignData } from "../data/formData";
 import { designModels } from "../data/imgModels";
 import { webDesignServiceSteps } from "../data/process";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Design - Tomodev",
+  description:
+    "At TOMODEV, we specialize in creating visually stunning, highly responsive, and user-friendly websites. Whether you're looking to enhance your digital presence or build a completely new website, our team delivers tailored solutions that align with your brand and business goals.",
+};
 
 const page = () => {
   const name = "Web Design";

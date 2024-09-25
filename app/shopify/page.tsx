@@ -4,6 +4,13 @@ import ServiceHero from "../components/ServiceHero";
 import { shopifyData } from "../data/formData";
 import { wordpressModels } from "../data/imgModels";
 import { shopifyDevelopmentSteps } from "../data/process";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Shopify - Tomodev",
+  description:
+    "From powerful eCommerce stores to custom Shopify apps, work with our experts to unlock the full potential of this leading platform.",
+};
 
 const page = () => {
   const name = "Shopify";
