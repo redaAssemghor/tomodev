@@ -8,6 +8,7 @@ import { FaChevronDown } from "react-icons/fa6";
 import { RxCross1 } from "react-icons/rx";
 import { useGSAP } from "@gsap/react";
 import { burgerMenuAnimation } from "@/animations/fadeIn";
+import Image from "next/image";
 
 const Header = () => {
   const burgerRef = useRef(null);
@@ -49,7 +50,7 @@ const Header = () => {
       }`}
     >
       <Link href={"/"}>
-        <h1>TOMODEV</h1>
+        <Image src="/logo-name.png" alt="logo" height={64} width={160} />
       </Link>
       {/* Mobile Menu Toggle Button */}
       <button
