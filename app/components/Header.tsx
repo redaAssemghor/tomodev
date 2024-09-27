@@ -45,7 +45,7 @@ const Header = () => {
 
   return (
     <nav
-      className={`flex justify-between items-center p-5 w-full z-50 fixed border-b-[--light] text-white duration-700 bg-[--primary] ${
+      className={`flex bg-[--primary] justify-between items-center p-5 w-full z-50 fixed border-b-[--light] text-white duration-700 ${
         scrolled ? "opacity-90" : "border-b-[0.1px]"
       }`}
     >

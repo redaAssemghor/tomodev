@@ -22,7 +22,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="relative text-white h-screen bg-[--primary]">
+    <div className="relative text-white h-screen">
       <div className="absolute right-0 top-0 w-full z-0">
         <Marquee3D />
       </div>

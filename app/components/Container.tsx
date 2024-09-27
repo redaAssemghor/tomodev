@@ -17,7 +17,7 @@ const Container = () => {
   const Showtemplate = useSelector((state: RootState) => state.template.show);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-[--primary]">
       <Hero />
       <HorizontalBand />
       <Info />

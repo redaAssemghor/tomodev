@@ -12,7 +12,16 @@ const FooterLogo = () => {
         <div className="text-sm">
           <ul className="flex lg:flex-row flex-col gap-10">
             <li>
-              <h1>©2024 TOMODEV. All rights reserved</h1>
+              <h1>
+                ©2024 TOMODEV. Created by{" "}
+                <Link
+                  href={"https://portfolio-mocha-eta-22.vercel.app/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  REDA
+                </Link>
+              </h1>
             </li>
             <li className="underline">
               <Link href="privacy-policy">
