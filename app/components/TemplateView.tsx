@@ -15,7 +15,7 @@ const TemplateView = () => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black bg-opacity-75">
       <button
         onClick={handleCloseTemplate}
         className="absolute top-10 right-10 z-50 text-5xl text-white"

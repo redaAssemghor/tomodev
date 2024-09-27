@@ -16,7 +16,7 @@ const HorizontalBand = () => {
   ];
 
   return (
-    <div className="overflow-hidden relative bg-inherit">
+    <div className="overflow-hidden relative bg-inherit backdrop-blur-3xl">
       <div className="flex gap-10">
         <Marquee gradient={false} speed={40}>
           <div className="flex justify-evenly p-2 w-screen px-16 opacity-70">

@@ -9,7 +9,6 @@ import {
   setShowTemplateAction,
   setTemplateAction,
 } from "@/store/features/templateSlice";
-import TemplateView from "./TemplateView";
 
 type Projects = {
   landingPages: Project[];
@@ -25,7 +24,6 @@ const Projects = ({ landingPages, business, ecommerce }: Projects) => {
   const ref = useRef(null);
 
   const dispatch = useDispatch();
-  const Showtemplate = useSelector((state: RootState) => state.template.show);
 
   useGSAP(() => {
     if (ref.current) {
@@ -60,7 +58,7 @@ const Projects = ({ landingPages, business, ecommerce }: Projects) => {
   };
 
   return (
-    <div className="relative z-50 text-white bg-inherit py-20 lg:px-8 px-4 grid lg:grid-cols-2 grid-cols-1 gap-6">
+    <div className="relative z-30 text-white bg-inherit py-20 lg:px-8 px-4 grid lg:grid-cols-2 grid-cols-1 gap-6">
       <div
         ref={ref}
         className="z-10 absolute h-full w-full bg-[--primary] bg-opacity-50"
@@ -69,7 +67,7 @@ const Projects = ({ landingPages, business, ecommerce }: Projects) => {
           backgroundSize: "200% 200%",
         }}
       ></div>
-      {Showtemplate && <TemplateView />}
+      {/* {Showtemplate && <TemplateView />} */}
       {selectedPage &&
         selectedPage.map((project, i) => (
           <div

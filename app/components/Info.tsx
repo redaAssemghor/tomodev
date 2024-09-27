@@ -15,7 +15,7 @@ const Info = () => {
   });
 
   return (
-    <div className="w-full h-full lg:p-32 px-4 py-20 bg-inherit text-white relative">
+    <div className="w-full h-full lg:p-32 px-4 py-20 text-white bg-[--primary] relative">
       <div
         ref={ref}
         className="relative flex lg:flex-row flex-col justify-between"

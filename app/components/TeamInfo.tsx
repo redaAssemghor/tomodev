@@ -14,17 +14,17 @@ const teamInfo = [
   {
     name: "Reda Assemghor",
     image: "/team/reda.png",
-    role: "full-stack developer",
+    role: "full-stack Developer",
   },
   {
     name: "Djardi Messaoud",
     image: "/team/messaoud.png",
-    role: "Backend developer",
+    role: "C# Developer",
   },
   {
     name: "Mohamed Safi",
     image: "/team/safi.png",
-    role: "head of design department",
+    role: "UI Designer",
   },
 ];
 
