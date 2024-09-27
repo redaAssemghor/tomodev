@@ -45,8 +45,8 @@ const Header = () => {
 
   return (
     <nav
-      className={`flex justify-between items-center p-5 w-full z-50 fixed border-b-[--light] text-white duration-700 ${
-        scrolled ? "bg-[--primary] opacity-90" : "border-b-[0.1px]"
+      className={`flex justify-between items-center p-5 w-full z-50 fixed border-b-[--light] text-white duration-700 bg-[--primary] ${
+        scrolled ? "opacity-90" : "border-b-[0.1px]"
       }`}
     >
       <Link href={"/"}>

@@ -34,7 +34,7 @@ const Featured = () => {
   return (
     <div
       id="projects"
-      className="text-white z-40 backdrop-blur-3xl flex flex-col justify-center items-center relative"
+      className="text-[--primary] z-40 backdrop-blur-3xl flex flex-col justify-center items-center relative"
     >
       <div className="p-3 w-full h-full flex flex-col items-center gap-5 bg-gradient-to-t from-[--accent] to-bg-inherit">
         <div ref={ref} className="flex flex-col items-center gap-5">
@@ -53,7 +53,7 @@ const Featured = () => {
           </h6>
         </div>
 
-        <ul className="flex lg:gap-10 mt-10">
+        <ul className="flex lg:gap-10 mt-10 text-white">
           {/* Button 1 */}
           <button
             onClick={() => handleClick("landing-pages")}
