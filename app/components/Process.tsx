@@ -81,7 +81,7 @@ const Process = ({ sections }: { sections: SectionProps[] }) => {
   return (
     <div
       ref={triggerRef}
-      className="relative z-40 flex flex-col text-white overflow-hidden"
+      className="relative h-screen z-40 flex flex-col text-white overflow-hidden"
     >
       <div
         ref={ref}
