@@ -53,11 +53,11 @@ const group3 = [
 const Marquee3D = () => {
   return (
     <div className="absolute right-0 top-0 z-0">
-      <div className="flex right-0 flex-row gap-32 h-full w-full justify-end">
+      <div className="flex right-0 flex-row gap-40 h-full w-full justify-end">
         <Marquee
           pauseOnHover
           reverse
-          className="justify-center overflow-hidden [--duration:100s] [--gap:1rem]"
+          className="justify-center overflow-hidden [--duration:100s] [--gap:0.4rem]"
           vertical
           style={{
             transform:
@@ -66,18 +66,18 @@ const Marquee3D = () => {
         >
           {group1.map((data, idx) => (
             <Image
-              width={300}
-              height={300}
+              width={400}
+              height={400}
               key={idx}
               src={data.img}
               alt={data.name}
-              className="rounded-xl border border-neutral-300 transition-all duration-300 hover:ring-1 hover:ring-neutral-300"
+              className="rounded-sm border border-neutral-300 transition-all duration-300 hover:ring-1 hover:ring-neutral-300"
             />
           ))}
         </Marquee>
         <Marquee
           pauseOnHover
-          className="justify-center overflow-hidden [--duration:100s] [--gap:1rem]"
+          className="justify-center overflow-hidden [--duration:100s] [--gap:0.4rem]"
           vertical
           style={{
             transform:
@@ -86,19 +86,19 @@ const Marquee3D = () => {
         >
           {group2.map((data, idx) => (
             <Image
-              width={300}
-              height={300}
+              width={400}
+              height={400}
               key={idx}
               src={data.img}
               alt={data.name}
-              className="mx-auto h-full   rounded-xl  "
+              className="mx-auto h-full rounded-sm"
             />
           ))}
         </Marquee>
         <Marquee
           reverse
           pauseOnHover
-          className="justify-center overflow-hidden [--duration:100s] [--gap:1rem]"
+          className="justify-center overflow-hidden [--duration:100s] [--gap:0.4rem]"
           vertical
           style={{
             transform:
@@ -107,12 +107,12 @@ const Marquee3D = () => {
         >
           {group3.map((data, idx) => (
             <Image
-              width={300}
-              height={300}
+              width={400}
+              height={400}
               key={idx}
               src={data.img}
               alt={data.name}
-              className=" mx-auto h-full rounded-xl"
+              className="mx-auto h-full rounded-sm"
             />
           ))}
         </Marquee>

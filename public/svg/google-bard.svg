@@ -3,17 +3,17 @@
     <title>Bard</title>
     <defs>
         <radialGradient cx="78.3021802%" cy="55.5203129%" fx="78.3021802%" fy="55.5203129%" r="78.1147983%" gradientTransform="translate(0.783022,0.555203),scale(0.999475,1.000000),rotate(78.858000),translate(-0.783022,-0.555203)" id="radialGradient-1">
-            <stop stop-color="#1BA1E3" offset="0%"></stop>
-            <stop stop-color="#1BA1E3" offset="0.01%"></stop>
-            <stop stop-color="#5489D6" offset="30.0221%"></stop>
+            <stop stop-color="#333" offset="0%"></stop>
+            <stop stop-color="#333" offset="0.01%"></stop>
+            <stop stop-color="#000000" offset="30.0221%"></stop>
             <stop stop-color="#9B72CB" offset="54.5524%"></stop>
             <stop stop-color="#D96570" offset="82.5372%"></stop>
             <stop stop-color="#F49C46" offset="100%"></stop>
         </radialGradient>
         <radialGradient cx="-3.4086494%" cy="-54.2187761%" fx="-3.4086494%" fy="-54.2187761%" r="169.363094%" gradientTransform="translate(-0.034086,-0.542188),scale(0.999462,1.000000),rotate(78.858000),translate(0.034086,0.542188)" id="radialGradient-2">
-            <stop stop-color="#1BA1E3" offset="0%"></stop>
-            <stop stop-color="#1BA1E3" offset="0.01%"></stop>
-            <stop stop-color="#5489D6" offset="30.0221%"></stop>
+            <stop stop-color="#333" offset="0%"></stop>
+            <stop stop-color="#333" offset="0.01%"></stop>
+            <stop stop-color="#000000" offset="30.0221%"></stop>
             <stop stop-color="#9B72CB" offset="54.5524%"></stop>
             <stop stop-color="#D96570" offset="82.5372%"></stop>
             <stop stop-color="#F49C46" offset="100%"></stop>

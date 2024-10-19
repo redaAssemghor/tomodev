@@ -59,14 +59,14 @@ const Header = () => {
 
   return (
     <nav
-      className={`flex bg-[--primary] justify-between items-center p-2 w-full z-50 fixed border-b-[--light] text-white duration-700 ${
+      className={`flex bg-[--primary] justify-between items-center lg:py-5 lg:px-11 p-2 w-full z-50 fixed border-b-[--light] text-white duration-700 ${
         scrolled ? "opacity-90" : "border-b-[0.1px]"
       }`}
     >
       <Link className="z-50" href={"/"}>
         <Image src="/logo-name.png" alt="logo" height={64} width={160} />
       </Link>
-      <div className="z-50">
+      <div className="z-50 block lg:hidden">
         <Checkbox handleMenu={handleMenu} />
       </div>
 
@@ -148,7 +148,7 @@ const Header = () => {
         </div>
         <div className="pb-5 mt-auto">
           <Link href="/contact">
-            <Button handleClick={handleMenu} />
+            <Button text="REQUEST YOUR QUOTE" handleClick={handleMenu} />
           </Link>
         </div>
       </div>

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import MobileFooter from "./components/MobileFooter";
 import Footer from "./components/Footer";
+import RootStyleRegistry from "./RootStyleRegistry";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,17 +33,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        {children}
-        <div className="block lg:hidden">
-          <MobileFooter />
-        </div>
-
-        <div>
-          <div className="lg:block hidden">
-            <Footer />
+        <RootStyleRegistry>
+          <Header />
+          {children}
+          <div className="block lg:hidden">
+            <MobileFooter />
           </div>
-        </div>
+
+          <div>
+            <div className="lg:block hidden">
+              <Footer />
+            </div>
+          </div>
+        </RootStyleRegistry>
       </body>
     </html>
   );

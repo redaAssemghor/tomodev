@@ -27,28 +27,28 @@ const Featured = () => {
   });
 
   const handleClick = (button: string) => {
-    setSelectedButton(button === selectedButton ? null : button);
+    setSelectedButton(button === selectedButton ? selectedButton : button);
     dispatch(setPage(button));
   };
 
   return (
     <div
       id="projects"
-      className="text-[--primary] z-40 backdrop-blur-3xl flex flex-col justify-center items-center relative"
+      className="text-[--primary] lg:pt-20 z-40 backdrop-blur-3xl flex flex-col justify-center items-center relative"
     >
       <div className="p-3 w-full h-full flex flex-col items-center gap-5 bg-gradient-to-t from-[--accent] to-bg-inherit">
         <div ref={ref} className="flex flex-col items-center gap-5">
-          <h1 className="font-bold lg:text-xl text-lg text-glow-blue">
+          <h1 className="font-bold lg:text-3xl text-lg text-glow-blue">
             OUR WORK
           </h1>
-          <h2 className="font-bold lg:text-3xl text-xl">
+          <h2 className="font-bold lg:text-4xl text-xl">
             Featured Website Design Projects
           </h2>
-          <h3 className="font-thin lg:text-xl text-lg text-center">
+          <h3 className="font-semibold lg:text-2xl text-lg text-center">
             Our web development agency reimagines digital experiences for brands
             of all sizes and across industries.
           </h3>
-          <h6 className="font-thin text-xl text-center">
+          <h6 className="font-semibold text-2xl text-center">
             optimized for traffic, engagement and conversion.
           </h6>
         </div>

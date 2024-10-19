@@ -9,6 +9,8 @@ import {
   setShowTemplateAction,
   setTemplateAction,
 } from "@/store/features/templateSlice";
+import TemplateView from "./TemplateView";
+import Link from "next/link";
 
 type Projects = {
   landingPages: Project[];
@@ -20,8 +22,11 @@ const Projects = ({ landingPages, business, ecommerce }: Projects) => {
   const [selectedPage, setSelectedPage] = useState<Project[] | null>(null);
   const [mouseEnter, setMouseEnter] = useState<number | null>(null);
 
+  const Showtemplate = useSelector((state: RootState) => state.template.show);
   const projects = useSelector((state: RootState) => state.featuredPage.value);
   const ref = useRef(null);
+
+  const projectsRef = useRef(null);
 
   const dispatch = useDispatch();
 
@@ -52,13 +57,13 @@ const Projects = ({ landingPages, business, ecommerce }: Projects) => {
     setMouseEnter(null);
   };
 
-  const handleShowTemplate = (link: string) => {
+  const handleShowTemplate = (link: object) => {
     dispatch(setShowTemplateAction(true));
     dispatch(setTemplateAction(link));
   };
 
   return (
-    <div className="relative z-30 text-white bg-inherit py-20 lg:px-8 px-4 grid lg:grid-cols-2 grid-cols-1 gap-6">
+    <div className="relative z-30 text-white">
       <div
         ref={ref}
         className="z-10 absolute h-full w-full bg-[--primary] bg-opacity-50"
@@ -67,41 +72,48 @@ const Projects = ({ landingPages, business, ecommerce }: Projects) => {
           backgroundSize: "200% 200%",
         }}
       ></div>
-      {/* {Showtemplate && <TemplateView />} */}
-      {selectedPage &&
-        selectedPage.map((project, i) => (
-          <div
-            onMouseEnter={() => handleMouseEnter(i)}
-            onMouseLeave={handleMouseLeave}
-            key={i}
-            className="relative"
-          >
-            <div className="absolute text-white bottom-0 left-0 py-14 px-10 flex flex-col gap-4">
-              <h1 className="font-bold z-30 lg:text-3xl text-sm">
-                {project.name}
-              </h1>
-            </div>
-            <button
-              onClick={() => handleShowTemplate(project.img)}
-              className={`absolute flex items-center justify-center z-40 w-[150px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-black bg-opacity-50 p-10 font-light text-2xl transition-opacity duration-700 ${
-                mouseEnter === i ? "opacity-100" : "opacity-0"
-              }`}
+      <div
+        ref={projectsRef}
+        className="py-20  bg-inherit lg:px-36 px-4 grid lg:grid-cols-2 grid-cols-1 gap-6"
+      >
+        {selectedPage &&
+          selectedPage.map((project, i) => (
+            <div
+              onMouseEnter={() => handleMouseEnter(i)}
+              onMouseLeave={handleMouseLeave}
+              key={i}
+              className="relative"
             >
-              View Template
-            </button>
-            <div>
-              <div className="absolute inset-0 bg-black bg-opacity-50 z-20"></div>
+              <div className="absolute text-white bottom-0 left-0 py-14 px-10 flex flex-col gap-4">
+                <h1 className="font-bold z-30 lg:text-3xl text-sm">
+                  {project.name}
+                </h1>
+              </div>
+              <Link href="#templateView">
+                <button
+                  onClick={() => handleShowTemplate(project)}
+                  className={`absolute flex items-center justify-center z-40 w-[150px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-black bg-opacity-50 p-10 font-light text-2xl transition-opacity duration-700 ${
+                    mouseEnter === i ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  View Template
+                </button>
+              </Link>
+              <div>
+                <div className="absolute inset-0 bg-black bg-opacity-50 z-20"></div>
+              </div>
+              <div className="relative z-10 h-[480px] overflow-hidden">
+                <Image
+                  width={800}
+                  height={800}
+                  src={project.img}
+                  alt={project.name}
+                />
+              </div>
             </div>
-            <div className="relative z-10 h-[480px] overflow-hidden">
-              <Image
-                width={800}
-                height={800}
-                src={project.img}
-                alt={project.name}
-              />
-            </div>
-          </div>
-        ))}
+          ))}
+      </div>
+      {Showtemplate && <TemplateView />}
     </div>
   );
 };

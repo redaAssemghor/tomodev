@@ -1,12 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { Project } from "@/app/lib/types";
 
 interface TemplateState {
-  value: string;
+  value: Project;
   show: boolean;
 }
 
 const initialState: TemplateState = {
-  value: "",
+  value: {
+    name: "",
+    img: "",
+    fullImg: "",
+  },
   show: false,
 };
 

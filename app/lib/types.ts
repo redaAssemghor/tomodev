@@ -19,6 +19,8 @@ export type ServiceHeroProps = {
 export interface Project {
   name: string;
   img: string;
+  fullImg: string;
+  description: string;
 }
 
 // process container

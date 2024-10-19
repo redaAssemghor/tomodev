@@ -15,7 +15,7 @@ const Info = () => {
   });
 
   return (
-    <div className="w-full h-full lg:p-32 px-4 py-20 text-white bg-[--primary] relative">
+    <div className="w-full h-full lg:p-40 px-2 lg:py-40 pb-24 text-white bg-[--primary] relative">
       <div
         ref={ref}
         className="relative flex lg:flex-row flex-col justify-between"
@@ -26,8 +26,8 @@ const Info = () => {
             <span className="font-bold"> fields of expertise</span>
           </h1>
 
-          <ul className="flex flex-col gap-6 py-8">
-            <li className="flex gap-4 items-center lg:text-2xl">
+          <ul className="flex flex-col gap-6 py-8 lg:text-2xl text-sm">
+            <li className="flex gap-4 items-center">
               <FaExternalLinkAlt className="text-[#04E4FF]" />
               <h2>
                 Custom Development{" "}
@@ -37,7 +37,7 @@ const Info = () => {
               </h2>
             </li>
 
-            <li className="flex gap-4 items-center lg:text-2xl">
+            <li className="flex gap-4 items-center">
               <FaExternalLinkAlt className="text-[#04E4FF]" />
               <h2>
                 CMS and E-commerce{" "}
@@ -47,7 +47,7 @@ const Info = () => {
               </h2>
             </li>
 
-            <li className="flex gap-4 items-center lg:text-2xl">
+            <li className="flex gap-4 items-center">
               <FaExternalLinkAlt className="text-[--secondary]" />
               <h2>
                 Tailored Branding Strategies{" "}
