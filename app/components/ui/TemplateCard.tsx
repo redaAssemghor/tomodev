@@ -59,14 +59,10 @@ const StyledWrapper = styled.div`
   .sub-card.category {
     justify-content: space-between;
 
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
-
     transition: all 0.5s cubic-bezier(1, 0, 0, 1);
   }
   .sub-card.named {
     justify-content: center;
-
-    border-radius: 0rem 0rem 0.5rem 0.5rem;
 
     transition: all 0.5s cubic-bezier(1, 0, 0, 1);
   }

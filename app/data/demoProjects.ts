@@ -34,29 +34,29 @@ export const mobile = [
     name: "Computer Repair",
     description:
       "A responsive website template for computer repair services, highlighting technical expertise, services offered, and easy booking for repair appointments.",
-    img: "/business-template/computer-repair.jpg",
-    fullImg: "/ecommerce/full-view/5.webp",
+    img: "/templates/mobile-view/banners/1.jpg",
+    fullImg: "/templates/mobile-view/full-view/1.webp",
   },
   {
     name: "Construction Company",
     description:
       "A robust website template designed for construction companies, featuring project portfolios, service descriptions, and client testimonials to build trust and attract new projects.",
-    img: "/business-template/construction-company.jpg",
-    fullImg: "/ecommerce/full-view/6.webp",
+    img: "/templates/mobile-view/banners/2.png",
+    fullImg: "/templates/mobile-view/full-view/2.webp",
   },
   {
     name: "Group Hotel",
     description:
       "A modern website template for hotel chains or groups, showcasing multiple properties, amenities, and seamless booking experiences across locations.",
-    img: "/business-template/group-hotel.jpg",
-    fullImg: "/ecommerce/full-view/7.webp",
+    img: "/templates/mobile-view/banners/3.png",
+    fullImg: "/templates/mobile-view/full-view/3.webp",
   },
   {
     name: "Rental Car",
     description:
       "A user-friendly website template for car rental services, offering easy vehicle browsing, pricing, and reservation functionalities to enhance customer convenience.",
-    img: "/business-template/rental-car.jpg",
-    fullImg: "/ecommerce/full-view/8.webp",
+    img: "/templates/mobile-view/banners/4.png",
+    fullImg: "/templates/mobile-view/full-view/4.webp",
   },
 ];
 
