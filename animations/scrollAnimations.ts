@@ -3,12 +3,12 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-export const imageScroll = (element: HTMLElement) => {
+export const imageScroll = (element: HTMLElement, val?: number | string) => {
   if (element) {
     gsap.to(element, {
       scrollTo: {
-        y: "max",
-        autoKill: true,
+        y: val ? val : "max",
+        autoKill: false,
       },
       duration: 15,
       ease: "power2.inOut",

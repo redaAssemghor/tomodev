@@ -5,10 +5,12 @@ import Image from "next/image";
 import { IoCloseSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "./ui/Button";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { imageScroll, scrollToel } from "@/animations/scrollAnimations";
 
 const TemplateView = () => {
+  const [showArrow, setShowArrow] = useState<number | null>(null);
+
   const imgRef = useRef(null);
   const template = useSelector((state: RootState) => state.template.value);
 
@@ -24,11 +26,31 @@ const TemplateView = () => {
     }
   }, [imgRef.current]);
 
-  const handleScrollTo = (num: number | string) => {
+  const handleScrollTo = (index: number, num: number | string) => {
+    setShowArrow(index);
     if (imgRef.current) {
-      scrollToel(imgRef.current, num);
+      imageScroll(imgRef.current, num);
     }
   };
+
+  const templateBtns = [
+    {
+      val: "min",
+      position: "top",
+    },
+    {
+      val: "600",
+      position: "center 30%",
+    },
+    {
+      val: "1000",
+      position: "center 60%",
+    },
+    {
+      val: "max",
+      position: "bottom",
+    },
+  ];
 
   return (
     <div
@@ -47,88 +69,36 @@ const TemplateView = () => {
       </button>
       <div className="flex justify-center items-center w-full h-[900px] z-50">
         <div className="p-8 bg-white flex flex-col gap-4">
-          <button className="shadow-xl" onClick={() => handleScrollTo("min")}>
-            <div
-              className="relative"
-              style={{
-                width: "180px",
-                height: "120px",
-                position: "relative",
-              }}
+          {templateBtns.map((btn, i) => (
+            <button
+              key={i}
+              className="shadow-xl"
+              onClick={() => handleScrollTo(i, btn.val)}
             >
-              <span className="absolute left-3 top-1 w-[175px] h-[125px] border-[--text3] border-b-8 border-r-8"></span>
-              <Image
-                src={template.fullImg}
-                alt="template"
-                fill
+              <div
+                className="relative"
                 style={{
-                  objectFit: "cover",
-                  objectPosition: "top",
+                  width: "180px",
+                  height: "120px",
+                  position: "relative",
                 }}
-              />
-            </div>
-          </button>
-          <button className="text-black " onClick={() => handleScrollTo(600)}>
-            <div
-              style={{
-                width: "180px",
-                height: "120px",
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              <Image
-                src={template.fullImg}
-                alt="template"
-                fill
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center 30%",
-                }}
-              />
-            </div>
-          </button>
-          <button className="text-black " onClick={() => handleScrollTo(1000)}>
-            <div
-              style={{
-                width: "180px",
-                height: "120px",
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              <Image
-                src={template.fullImg}
-                alt="template"
-                fill
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center 60%",
-                }}
-              />
-            </div>
-          </button>
-
-          <button className="text-black " onClick={() => handleScrollTo("max")}>
-            <div
-              style={{
-                width: "180px",
-                height: "120px",
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              <Image
-                src={template.fullImg}
-                alt="template"
-                fill
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "bottom",
-                }}
-              />
-            </div>
-          </button>
+              >
+                <div className={`${showArrow === i ? "" : "hidden"}`}>
+                  <span className="absolute left-3 top-1 w-[175px] h-[125px] border-[--text3] border-b-8 border-r-8"></span>
+                  <span className="absolute -right-5 top-1/2 -translate-y-1/2 block w-0 h-0 border-t-8 border-b-8 border-l-[13px] border-t-transparent border-b-transparent border-l-[--text3]"></span>
+                </div>
+                <Image
+                  src={template.fullImg}
+                  alt="template"
+                  fill
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: btn.position,
+                  }}
+                />
+              </div>
+            </button>
+          ))}
         </div>
         <div ref={imgRef} className="overflow-y-scroll hide-scrollbar h-full">
           <Image
