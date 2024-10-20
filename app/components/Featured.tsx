@@ -5,8 +5,9 @@ import { setShowTemplateAction } from "@/store/features/templateSlice";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef, useState } from "react";
-import { CiShoppingCart, CiWallet } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
 import { FaAngleDown } from "react-icons/fa6";
+import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { IoIosStarOutline } from "react-icons/io";
 import { useDispatch } from "react-redux";
 
@@ -75,7 +76,7 @@ const Featured = () => {
               selectedButton === "mobile" ? "bg-white text-black" : ""
             }`}
           >
-            <CiWallet size={40} />
+            <HiOutlineDevicePhoneMobile size={40} />
             <h1>Mobile</h1>
             {selectedButton === "mobile" && <FaAngleDown />}
           </button>

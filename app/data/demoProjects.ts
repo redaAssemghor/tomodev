@@ -31,10 +31,10 @@ export const landingPages = [
 
 export const mobile = [
   {
-    name: "Computer Repair",
+    name: "Community Driven eCommerce Development",
     description:
       "A responsive website template for computer repair services, highlighting technical expertise, services offered, and easy booking for repair appointments.",
-    img: "/templates/mobile-view/banners/1.jpg",
+    img: "/templates/mobile-view/banners/1.png",
     fullImg: "/templates/mobile-view/full-view/1.webp",
   },
   {
@@ -65,28 +65,28 @@ export const ecommerce = [
     name: "Clothing Store",
     description:
       "An attractive e-commerce template for clothing retailers, featuring product galleries, detailed descriptions, and a smooth checkout process to boost online sales.",
-    img: "/ecommerce/2.jpg",
-    fullImg: "/ecommerce/full-view/9.webp",
+    img: "/templates/ecommerce/2.jpg",
+    fullImg: "/templates/ecommerce/full-view/9.webp",
   },
   {
     name: "Tech Store",
     description:
       "A sleek e-commerce template designed for electronics and tech products, showcasing the latest gadgets, customer reviews, and secure purchasing options.",
-    img: "/ecommerce/3.jpg",
-    fullImg: "/ecommerce/full-view/10.webp",
+    img: "/templates/ecommerce/3.jpg",
+    fullImg: "/templates/ecommerce/full-view/10.webp",
   },
   {
     name: "Animals Store",
     description:
       "A delightful e-commerce template for pet supplies and accessories, providing easy navigation through products for pets of all kinds and secure shopping cart integration.",
-    img: "/ecommerce/4.jpg",
-    fullImg: "/ecommerce/full-view/11.webp",
+    img: "/templates/ecommerce/4.jpg",
+    fullImg: "/templates/ecommerce/full-view/11.webp",
   },
   {
     name: "Kids Store",
     description:
       "A vibrant e-commerce template tailored for children's products, featuring colorful designs, product categories for toys and clothing, and a user-friendly shopping experience.",
-    img: "/ecommerce/5.jpg",
-    fullImg: "/ecommerce/full-view/12.webp",
+    img: "/templates/ecommerce/5.jpg",
+    fullImg: "/templates/ecommerce/full-view/12.webp",
   },
 ];
