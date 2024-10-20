@@ -6,7 +6,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "./ui/Button";
 import { useEffect, useRef, useState } from "react";
-import { imageScroll, scrollToel } from "@/animations/scrollAnimations";
+import { imageScroll } from "@/animations/scrollAnimations";
 
 const TemplateView = () => {
   const [showArrow, setShowArrow] = useState<number | null>(null);
