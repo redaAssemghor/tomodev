@@ -5,14 +5,16 @@ import Image from "next/image";
 import { IoCloseSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "./ui/Button";
-import { useEffect, useRef, useState } from "react";
-import { imageScroll } from "@/animations/scrollAnimations";
+import { useLayoutEffect, useRef, useState } from "react";
+import { imageScroll, scrollToel } from "@/animations/scrollAnimations";
+import MobileCard from "./ui/MobileCard";
 
 const TemplateView = () => {
-  const [showArrow, setShowArrow] = useState<number | null>(null);
+  const [showArrow, setShowArrow] = useState<number | null>(0);
 
   const imgRef = useRef(null);
   const template = useSelector((state: RootState) => state.template.value);
+  const projects = useSelector((state: RootState) => state.featuredPage.value);
 
   const dispatch = useDispatch();
 
@@ -20,16 +22,24 @@ const TemplateView = () => {
     dispatch(setShowTemplateAction(false));
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    let animation: gsap.core.Tween | null;
     if (imgRef.current) {
-      imageScroll(imgRef.current);
+      animation = imageScroll(imgRef.current);
     }
-  }, [imgRef.current]);
+
+    return () => {
+      setShowArrow(0);
+      if (animation) {
+        animation.kill();
+      }
+    };
+  }, [template]);
 
   const handleScrollTo = (index: number, num: number | string) => {
     setShowArrow(index);
     if (imgRef.current) {
-      imageScroll(imgRef.current, num);
+      scrollToel(imgRef.current, num);
     }
   };
 
@@ -100,14 +110,35 @@ const TemplateView = () => {
             </button>
           ))}
         </div>
-        <div ref={imgRef} className="overflow-y-scroll hide-scrollbar h-full">
-          <Image
-            src={template.fullImg}
-            alt="template"
-            width={800}
-            height={800}
-          />
-        </div>
+        {projects === "mobile" ? (
+          <MobileCard>
+            <div
+              ref={imgRef}
+              className="relative overflow-y-scroll hide-scrollbar h-full w-[600px] z-30"
+            >
+              <Image
+                className="z-30"
+                src={template.fullImg}
+                alt="template"
+                width={600}
+                height={800}
+              />
+            </div>
+          </MobileCard>
+        ) : (
+          <div
+            ref={imgRef}
+            className="relative overflow-y-scroll hide-scrollbar h-full w-[600px] z-30"
+          >
+            <Image
+              className="z-30"
+              src={template.fullImg}
+              alt="template"
+              width={600}
+              height={800}
+            />
+          </div>
+        )}
         <div className="h-1/2 w-[500px] p-14 flex flex-col justify-center bg-[--dark]">
           <h1 className="text-4xl font-bold">{template.name}</h1>
           <p className="py-10 text-xl text-balance">{template.description}</p>

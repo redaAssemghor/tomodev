@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: auto;
+}
+
 :root {
   --primary: #00042a;
   --secondary: #01afe9;

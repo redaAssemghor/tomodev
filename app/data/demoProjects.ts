@@ -1,35 +1,35 @@
 export const landingPages = [
   {
-    name: "Dentist Landing Pages",
+    name: "Custom Web Design & Brand Positioning",
     description:
-      "A professionally designed landing page tailored for dental practices, aiming to attract new patients and showcase dental services effectively.",
-    img: "/landing-pages/dentist.jpg",
-    fullImg: "/ecommerce/full-view/1.webp",
+      "By creating a distinctive design tailored for a high-end electronics eCommerce store, we helped position Bang & Olufsen as a tech market innovator.With a unique design and a streamlined sales funnel, our digital solutions targeted both UX and UI to grow brand visibility and customer engagement.",
+    img: "/templates/web-view/banners/1.png",
+    fullImg: "/templates/web-view/full-view/1.webp",
   },
   {
-    name: "Hotel Landing Pages",
+    name: "Website Redesign With Custom Features",
     description:
-      "A captivating landing page designed for hotels, featuring high-quality imagery and booking functionality to enhance guest experience and increase reservations.",
-    img: "/landing-pages/hotel.jpg",
-    fullImg: "/ecommerce/full-view/2.webp",
+      "We redesigned Ventura Foods’ corporate website to create a fully optimized digital experience.Included in the user-centric design is a video in the hero section, engaging micro-animations, a custom cursor and chatbot functionality.",
+    img: "/templates/web-view/banners/2.png",
+    fullImg: "/templates/web-view/full-view/2.webp",
   },
   {
-    name: "Restaurant Landing Pages",
+    name: "Supporting Expansion by Driving Revenue",
     description:
-      "A stylish landing page for restaurants, highlighting menus, specials, and reservation options to entice diners and boost bookings.",
-    img: "/landing-pages/restaurant.jpg",
-    fullImg: "/ecommerce/full-view/3.webp",
+      "From website design to digital marketing, brand strategy and SEO, our end-to-end digital solutions helped Rollink grow their revenue by 500% as they entered the U.S. market.",
+    img: "/templates/web-view/banners/3.png",
+    fullImg: "/templates/web-view/full-view/3.webp",
   },
   {
-    name: "Attorney Landing Pages",
+    name: "Responsive Redesign With Superior Navigation",
     description:
-      "A compelling landing page crafted for law firms and attorneys, showcasing legal expertise, practice areas, and encouraging client consultations.",
-    img: "/landing-pages/attorney.jpg",
-    fullImg: "/ecommerce/full-view/4.webp",
+      "Our full suite of agency solutions, from digital strategy to messaging, site architecture and responsive development, transformed Northwestern Medill’s online experience.",
+    img: "/templates/web-view/banners/4.png",
+    fullImg: "/templates/web-view/full-view/4.webp",
   },
 ];
 
-export const business = [
+export const mobile = [
   {
     name: "Computer Repair",
     description:

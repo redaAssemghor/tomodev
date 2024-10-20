@@ -1,6 +1,7 @@
 "use client";
 import { scrollAnimation } from "@/animations/fadeIn";
 import { setPage } from "@/store/features/featuredPageSlice";
+import { setShowTemplateAction } from "@/store/features/templateSlice";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef, useState } from "react";
@@ -29,6 +30,7 @@ const Featured = () => {
   const handleClick = (button: string) => {
     setSelectedButton(button === selectedButton ? selectedButton : button);
     dispatch(setPage(button));
+    dispatch(setShowTemplateAction(false));
   };
 
   return (
@@ -39,10 +41,10 @@ const Featured = () => {
       <div className="p-3 w-full h-full flex flex-col items-center gap-5 bg-gradient-to-t from-[--accent] to-bg-inherit">
         <div ref={ref} className="flex flex-col items-center gap-5">
           <h1 className="font-bold lg:text-3xl text-lg text-glow-blue">
-            OUR WORK
+            GET Inspired
           </h1>
           <h2 className="font-bold lg:text-4xl text-xl">
-            Featured Website Design Projects
+            Featured Work Design Projects
           </h2>
           <h3 className="font-semibold lg:text-2xl text-lg text-center">
             Our web development agency reimagines digital experiences for brands
@@ -68,14 +70,14 @@ const Featured = () => {
 
           {/* Button 2 */}
           <button
-            onClick={() => handleClick("business")}
+            onClick={() => handleClick("mobile")}
             className={`btn flex -mb-5 z-40 w-[150px] flex-col p-4 rounded-lg gap-2 font-bold text-xs lg:text-xl items-center  ${
-              selectedButton === "business" ? "bg-white text-black" : ""
+              selectedButton === "mobile" ? "bg-white text-black" : ""
             }`}
           >
             <CiWallet size={40} />
-            <h1>Business</h1>
-            {selectedButton === "business" && <FaAngleDown />}
+            <h1>Mobile</h1>
+            {selectedButton === "mobile" && <FaAngleDown />}
           </button>
 
           {/* Button 3 */}

@@ -11,6 +11,7 @@ const initialState: TemplateState = {
     name: "",
     img: "",
     fullImg: "",
+    description: "",
   },
   show: false,
 };

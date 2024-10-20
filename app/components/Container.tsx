@@ -6,7 +6,7 @@ import Projects from "./Projects";
 import Services from "./Services";
 import ServicePage from "./ServicePage";
 import ContactPage from "./ContactPage";
-import { business, ecommerce, landingPages } from "../data/demoProjects";
+import { mobile, ecommerce, landingPages } from "../data/demoProjects";
 
 const Container = () => {
   return (
@@ -17,7 +17,7 @@ const Container = () => {
       <Projects
         ecommerce={ecommerce}
         landingPages={landingPages}
-        business={business}
+        mobile={mobile}
       />
 
       <Services />

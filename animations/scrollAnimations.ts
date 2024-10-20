@@ -3,17 +3,21 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-export const imageScroll = (element: HTMLElement, val?: number | string) => {
+export const imageScroll = (element: HTMLElement) => {
   if (element) {
-    gsap.to(element, {
+    const animation = gsap.to(element, {
       scrollTo: {
-        y: val ? val : "max",
-        autoKill: false,
+        y: "max",
+        autoKill: true,
       },
-      duration: 15,
+      duration: 10,
+      yoyo: true,
+      repeat: -1,
       ease: "power2.inOut",
     });
+    return animation;
   }
+  return null;
 };
 
 export const scrollToel = (element: HTMLElement, val?: number | string) => {
@@ -21,9 +25,9 @@ export const scrollToel = (element: HTMLElement, val?: number | string) => {
     gsap.to(element, {
       scrollTo: {
         y: val,
-        autoKill: false,
+        autoKill: true,
       },
-      duration: 1,
+      duration: 0.1,
       ease: "power2.inOut",
     });
   }
