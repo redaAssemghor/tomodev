@@ -148,7 +148,7 @@ const Header = () => {
         </div>
         <div className="pb-5 mt-auto">
           <Link href="/contact">
-            <Button text="REQUEST YOUR QUOTE" handleClick={handleMenu} />
+            <Button text="REQUEST YOUR QUOTE" handleclick={handleMenu} />
           </Link>
         </div>
       </div>
