@@ -4,49 +4,45 @@ import Image from "next/image";
 const group1 = [
   {
     name: "Microsoft",
-    img: "/template/0.jpg",
-  },
-  {
-    name: "Microsoft",
-    img: "/template/1.webp",
+    img: "/hero/1.jpg",
   },
   {
     name: "Apple",
-    img: "/template/2.jpg",
+    img: "/hero/2.jpg",
+  },
+  {
+    name: "Microsoft",
+    img: "/hero/3.jpg",
   },
 ];
 
 const group2 = [
   {
-    name: "Google",
-    img: "/template/3.jpg",
-  },
-  {
     name: "Facebook",
-    img: "/template/4.jpg",
+    img: "/hero/4.jpg",
   },
   {
     name: "LinkedIn",
-    img: "/template/5.png",
+    img: "/hero/5.jpg",
   },
   {
-    name: "Twitter",
-    img: "/template/6.jpg",
+    name: "Google",
+    img: "/hero/6.jpg",
   },
 ];
 
 const group3 = [
   {
     name: "Apple",
-    img: "/template/7.webp",
+    img: "/hero/7.jpg",
   },
   {
     name: "Twitter",
-    img: "/template/8.jpg",
+    img: "/hero/8.jpg",
   },
   {
     name: "Twitter",
-    img: "/template/9.png",
+    img: "/hero/9.jpg",
   },
 ];
 
