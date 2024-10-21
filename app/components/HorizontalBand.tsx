@@ -17,9 +17,16 @@ const Logos = () => {
   ];
   return (
     <>
-      <div className="flex justify-around w-screen opacity-70">
+      <div className="flex justify-between w-screen opacity-70">
         {svgLinks.map((link, i) => (
-          <Image key={i} src={link} alt="tech-icon" height={60} width={60} />
+          <Image
+            className="object-contain w-28 h-14 mx-4"
+            key={i}
+            src={link}
+            alt="tech-icon"
+            height={40}
+            width={100}
+          />
         ))}
       </div>
     </>
@@ -29,8 +36,8 @@ const Logos = () => {
 const HorizontalBand = () => {
   return (
     <div className="overflow-hidden absolute bg-[--primary] bottom-0">
-      <div className="relative flex gap-4">
-        <Marquee gradient={false} speed={500}>
+      <div className="relative flex gap-2 w-screen">
+        <Marquee gradient={false} speed={100}>
           <Logos />
         </Marquee>
       </div>

@@ -20,7 +20,10 @@ export const imageScroll = (element: HTMLElement) => {
   return null;
 };
 
-export const scrollToel = (element: HTMLElement, val?: number | string) => {
+export const scrollToel = (
+  element: HTMLElement | string,
+  val?: number | string
+) => {
   if (element) {
     gsap.to(element, {
       scrollTo: {
